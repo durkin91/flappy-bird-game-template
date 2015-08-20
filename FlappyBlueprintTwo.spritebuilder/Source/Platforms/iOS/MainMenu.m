@@ -27,28 +27,9 @@
 #import "Options.h"
 
 @implementation MainMenu {
-    CCLabelBMFont *_allCoinsLabel;
+    CCButton *_toggleSoundOnOffButton;
     NSUInteger allCoins;
     NSString *allCoinsString;
-}
-
-- (void)didLoadFromCCB {
-    
-    
-    [self addAllCoinsLabel];
-    
-}
-
-- (void) addAllCoinsLabel {
-    allCoins = [StoreInventory getItemBalance:COINS_CURRENCY_ITEM_ID];
-    allCoinsString = [NSString stringWithFormat:@"%li",(long)allCoins];
-    
-    _allCoinsLabel = [CCLabelBMFont labelWithString:allCoinsString fntFile:@"MyAwesomeBMFont.fnt"];
-    _allCoinsLabel.anchorPoint = ccp(1.0, 0.5);
-    _allCoinsLabel.position = ccp(280, 500);
-    _allCoinsLabel.scale = 0.7f;
-    
-    [self addChild:_allCoinsLabel];
 }
 
 - (void) playButtonTapped {
@@ -59,26 +40,6 @@
     [[CCDirector sharedDirector] replaceScene:gameplayScene];
 }
 
-- (void) nextpeerButtonTapped {
-    
-    [Options playTapSound];
-    
-}
-
-- (void) shopButtonTapped {
-    
-    [Options playTapSound];
-    
-    CCScene *shopScene = [CCBReader loadAsScene:@"ShopMenu"];
-    [[CCDirector sharedDirector] replaceScene:shopScene];
-}
-
-- (void) shopCoinsButtonTapped {
-    [Options playTapSound];
-    
-    CCScene *shopCoinsScene = [CCBReader loadAsScene:@"ShopCoins"];
-    [[CCDirector sharedDirector] replaceScene:shopCoinsScene];
-}
 
 - (void) optionsButtonTapped {
     
@@ -86,6 +47,27 @@
     
     CCScene *optionsScene = [CCBReader loadAsScene:@"Options"];
     [[CCDirector sharedDirector] replaceScene:optionsScene];
+}
+
+- (void) toggleSoundOnOffButtonTapped:(id) sender {
+    
+    [Options playTapSound];
+    
+    _toggleSoundOnOffButton = sender;
+    
+    if (_toggleSoundOnOffButton.selected)
+    {
+        NSLog(@"Sound is OFF.");
+        //[Options stopBackgroundMusic];
+        [Options registerFXState:NO];
+    }
+    else
+    {
+        NSLog(@"Sound is ON.");
+        [Options registerFXState:YES];
+        //[Options playBackgroundMusic];
+    }
+    
 }
 
 @end

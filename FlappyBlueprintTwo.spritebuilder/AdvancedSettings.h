@@ -35,7 +35,7 @@ static float const SCROLL_SPEED_GADGET_05 = 90;
  * Distance between pipes
  */
 
-static float const DISTANCE_BETWEEN_PIPES_NORMAL = 180;
+static float const DISTANCE_BETWEEN_PIPES_NORMAL = 260;
 static float const DISTANCE_BETWEEN_PIPES_GADGET_01 = 260;
 
 //---------------------------------------------------------------------------
@@ -50,7 +50,7 @@ static const CGFloat firstObstaclePosition = 280.f;
  * Use random pipes or use yust one pipe set (PipeBottom01.png & PipeTop01.png)
  */
 
-static BOOL const USE_RANDOM_PIPES = YES;
+static BOOL const USE_RANDOM_PIPES = NO;
 
 //---------------------------------------------------------------------------
 /*

@@ -27,48 +27,8 @@
 
 @implementation Options {
     CCButton *_toggleSoundOnOffButton;
-    
-    CCLabelBMFont *_allCoinsLabel;
     NSUInteger allCoins;
     NSString *allCoinsString;
-}
-
-- (void)didLoadFromCCB {
-    
-    [self addAllCoinsLabel];
-    
-}
-
-- (void) addAllCoinsLabel {
-    allCoins = [StoreInventory getItemBalance:COINS_CURRENCY_ITEM_ID];
-    allCoinsString = [NSString stringWithFormat:@"%li",(long)allCoins];
-    
-    _allCoinsLabel = [CCLabelBMFont labelWithString:allCoinsString fntFile:@"MyAwesomeBMFont.fnt"];
-    _allCoinsLabel.anchorPoint = ccp(1.0, 0.5);
-    _allCoinsLabel.position = ccp(280, 500);
-    _allCoinsLabel.scale = 0.7f;
-    
-    [self addChild:_allCoinsLabel];
-}
-
-- (void) moreGamesButtonTapped {
-    
-    [Options playTapSound];
-    
-}
-
-- (void) rateButtonTapped {
-    
-    [Options playTapSound];
-    
-}
-
-- (void) shopCoinsButtonTapped {
-
-    [Options playTapSound];
-    
-    CCScene *shopCoinsScene = [CCBReader loadAsScene:@"ShopCoins"];
-    [[CCDirector sharedDirector] replaceScene:shopCoinsScene];
 }
 
 - (void) backButtonTapped {
