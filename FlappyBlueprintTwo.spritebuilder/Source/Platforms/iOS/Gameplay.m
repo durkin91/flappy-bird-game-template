@@ -139,66 +139,23 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
   
     //IS_BOOST_ACTIVE = NO;
     //IS_SUPER_BOOST_ACTIVE = NO;
-  
-    if ([StoreInventory getItemBalance:HEAD_START_GOOD_ITEM_ID] >= 1) {
-        _boostButton.visible = YES;
-    } else {
-        _boostButton.visible = NO;
-    }
-  
-    if ([StoreInventory getItemBalance:SUPER_HEAD_START_GOOD_ITEM_ID] >= 1) {
-        _superBoostButton.visible = YES;
-    } else {
-        _superBoostButton.visible = NO;
-    }
     
-  
-    if ([StoreInventory getItemBalance:X2_COINS_ITEM_ID] >= 1) {
-        coinsToAdd = 2;
-    } else {
-        coinsToAdd = 1;
-    }
+    //Set these up. They were originally checking whether there was enough store inventory, but that is irrelevant now.
+    _boostButton.visible = NO;
+    _superBoostButton.visible = NO;
+    coinsToAdd = 1;
+    _distanceBetweenObstacles = DISTANCE_BETWEEN_PIPES_NORMAL;
+    _fog.visible = NO;
+    _scrollSpeed = SCROLL_SPEED_NORMAL;
     
-    if ([StoreInventory isVirtualGoodWithItemIdEquipped:GADGETS_GOOD_01_ITEM_ID]) {
-        _distanceBetweenObstacles = DISTANCE_BETWEEN_PIPES_GADGET_01;
-    } else {
-        _distanceBetweenObstacles = DISTANCE_BETWEEN_PIPES_NORMAL;
-    }
-    
-    if ([StoreInventory isVirtualGoodWithItemIdEquipped:GADGETS_GOOD_02_ITEM_ID]) {
-        _fog.visible = YES;
-        _fog.zOrder = GameplayZeeOrderFog;
-    } else {
-        _fog.visible = NO;
-    }
-    
-    if ([StoreInventory isVirtualGoodWithItemIdEquipped:GADGETS_GOOD_03_ITEM_ID]) {
-        _physicsNode.gravity = ccp(0, -350);
-        _deltaSinceTouch = 1.f;
-    } else {
-        _physicsNode.gravity = ccp(0, -700);
-        _deltaSinceTouch = 0.5f;
-    }
-    
-    if ([StoreInventory isVirtualGoodWithItemIdEquipped:GADGETS_GOOD_04_ITEM_ID]) {
-        _physicsNode.gravity = ccp(0, 700);
-        _heroImpulse = -400;
-        _heroAngularImpulse = -10000;
-        _heroClampVelocity = 200;
-        _heroAngularImpulse2 = 40000;
-    } else {
-        _physicsNode.gravity = ccp(0, -700);
-        _heroImpulse = 400;
-        _heroAngularImpulse = 10000;
-        _heroClampVelocity = 200;
-        _heroAngularImpulse2 = -40000;
-    }
-    
-    if ([StoreInventory isVirtualGoodWithItemIdEquipped:GADGETS_GOOD_05_ITEM_ID]) {
-        _scrollSpeed = SCROLL_SPEED_GADGET_05;
-    } else {
-        _scrollSpeed = SCROLL_SPEED_NORMAL;
-    }
+    _physicsNode.gravity = ccp(0, -700);
+    _deltaSinceTouch = 0.5f;
+    _physicsNode.gravity = ccp(0, -700);
+    _heroImpulse = 400;
+    _heroAngularImpulse = 10000;
+    _heroClampVelocity = 200;
+    _heroAngularImpulse2 = -40000;
+    _currentScoreLabel.visible = YES;
   
     theViewSize = [[CCDirector sharedDirector] viewSize];
 
@@ -209,12 +166,6 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     [self addScoreLabel];
     
     [self addGamePausedLabel];
-    
-    if ([StoreInventory isVirtualGoodWithItemIdEquipped:GADGETS_GOOD_07_ITEM_ID]) {
-        _currentScoreLabel.visible = NO;
-    } else {
-        _currentScoreLabel.visible = YES;
-    }
     
     hasTouched = NO;
   
@@ -229,7 +180,6 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     _physicsNode.zOrder = GameplayZeeOrderPhysicsNode;
   
     _hero = [CCBReader load:[self heroName]];
-  //_hero = [CCBReader load:@"Hero01"];
     _hero.position = ccp(90, 420);
   
     // setting hero as a static body
@@ -476,15 +426,6 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
         // showing pause button
         _togglePauseOnOffButton.visible = YES;
         
-        if ([[NSUserDefaults standardUserDefaults] boolForKey:IS_BOOST_ACTIVE] || [[NSUserDefaults standardUserDefaults] boolForKey:IS_SUPER_BOOST_ACTIVE]) {
-            
-            // starting timer for boost
-            [self startBoostTimer];
-          
-          // hiding pause button
-          _togglePauseOnOffButton.visible = NO;
-        }
-        
         // stopping all current actions on hero
         [_hero stopAllActions];
         
@@ -623,49 +564,11 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
         CCActionRepeat *repeatBounce = [CCActionRepeat actionWithAction:bounce times:5];
         [self runAction:repeatBounce];
         
-        if ([StoreInventory getItemBalance:FINAL_BLAST_GOOD_ITEM_ID] >= 1) {
-            _finalBlastButton.visible = YES;
-            _finalBlastCanceledButton.visible = YES;
-        } else {
-            [self gameOver];
-        }
-        
+        [self gameOver];
         
     }
 }
 
-- (void) finalBlastButtonTapped {
-    
-    [Options playBombSound];
-    
-    [StoreInventory takeAmount:1 ofItem:FINAL_BLAST_GOOD_ITEM_ID];
-    
-    _finalBlastButton.visible = NO;
-    _finalBlastCanceledButton.visible = NO;
-    
-    _physicsNode.gravity = ccp(0, -700);
-
-    _hero.rotation = -90.f;
-    
-    _heroClampVelocity = 600;
-    _scrollSpeed = SCROLL_SPEED_NORMAL*3;
-    [_hero.physicsBody applyImpulse:ccp(0, _heroImpulse*6)];
-    [_hero.physicsBody applyAngularImpulse:_heroAngularImpulse*6];
-    
-    dispatch_after_delta(2.5f, ^{
-        _scrollSpeed = 0;
-        
-        [AppController deleteScreenshot];
-        [AppController captureScreenshot];
-        
-        [self gameOver];
-    });
-}
-
-- (void) finalBlastCanceledButtonTapped {
-    [Options playTapSound];
-    [self gameOver];
-}
 
 - (void)gameOver {
     if (!_gameOver) {
@@ -674,11 +577,7 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
         
         dispatch_after_delta(1.f , ^{
             
-            if ([StoreInventory getItemBalance:COINS_CURRENCY_ITEM_ID] >= PLAY_ON_PRICE) {
-                [self showContinuePanel];
-            } else {
-                [self showGameOverScene];
-            }
+            [self showGameOverScene];
             
         });
         
@@ -718,95 +617,6 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     
     CCScene *gameOverScene = [CCBReader loadAsScene:@"GameOver"];
     [[CCDirector sharedDirector] replaceScene:gameOverScene];
-}
-
-- (void) playOnButtonTapped {
-    [Options playTapSound];
-    [AppController deleteScreenshot];
-    
-    if (currentCoins >= PLAY_ON_PRICE) {
-        currentCoins = currentCoins - PLAY_ON_PRICE;
-    }
-    
-    [StoreInventory takeAmount:PLAY_ON_PRICE ofItem:COINS_CURRENCY_ITEM_ID];
-
-  [[NSUserDefaults standardUserDefaults] setInteger:currentScore forKey:theCurrentScore];
-  [[NSUserDefaults standardUserDefaults] setInteger:currentScore forKey:theCurrentCoins];
-  [[NSUserDefaults standardUserDefaults] synchronize];
-    //theCurrentScore = currentScore;
-    //theCurrentCoins = currentCoins;
-    
-    CCScene *gameplayScene = [CCBReader loadAsScene:@"Gameplay"];
-    [[CCDirector sharedDirector] replaceScene:gameplayScene];
-}
-
-- (void) endGameButtonTapped {
-    [Options playTapSound];
-    
-    [self showGameOverScene];
-}
-
-- (void) boostButtonTapped {
-    [Options playTapSound];
-    [StoreInventory takeAmount:1 ofItem:HEAD_START_GOOD_ITEM_ID];
-  [[NSUserDefaults standardUserDefaults] setBool:YES forKey:IS_BOOST_ACTIVE];
-  [[NSUserDefaults standardUserDefaults] synchronize];
-    //IS_BOOST_ACTIVE = YES;
-    _boostButton.visible = NO;
-    _superBoostButton.visible = NO;
-}
-
-- (void) superBoostButtonTapped {
-    [Options playTapSound];
-    [StoreInventory takeAmount:1 ofItem:SUPER_HEAD_START_GOOD_ITEM_ID];
-  [[NSUserDefaults standardUserDefaults] setBool:YES forKey:IS_SUPER_BOOST_ACTIVE];
-  [[NSUserDefaults standardUserDefaults] synchronize];
-    //IS_SUPER_BOOST_ACTIVE = YES;
-    _boostButton.visible = NO;
-    _superBoostButton.visible = NO;
-}
-
-- (void) startBoostTimer {
-    
-    NSUInteger seconds;
-    NSUInteger secondsToEnableCollisions;
-    
-    if ([StoreInventory isVirtualGoodWithItemIdEquipped:GADGETS_GOOD_05_ITEM_ID]) {
-        if ([[NSUserDefaults standardUserDefaults] boolForKey:IS_BOOST_ACTIVE]) {
-            seconds = SECONDS_FOR_HEAD_START;
-            secondsToEnableCollisions = seconds - 4;
-        }
-        
-        if ([[NSUserDefaults standardUserDefaults] boolForKey:IS_SUPER_BOOST_ACTIVE]) {
-            seconds = SECONDS_FOR_SUPER_HEAD_START;
-            secondsToEnableCollisions = seconds - 6;
-        }
-    } else {
-        if ([[NSUserDefaults standardUserDefaults] boolForKey:IS_BOOST_ACTIVE]) {
-            seconds = SECONDS_FOR_HEAD_START;
-            secondsToEnableCollisions = seconds - 3;
-        }
-        
-        if ([[NSUserDefaults standardUserDefaults] boolForKey:IS_SUPER_BOOST_ACTIVE]) {
-            seconds = SECONDS_FOR_SUPER_HEAD_START;
-            secondsToEnableCollisions = seconds - 4;
-        }
-    }
-    
-    
-    
-    [self showCountdownForSeconds:seconds];
-
-    
-  
-    dispatch_after_delta(secondsToEnableCollisions, ^{
-      [[NSUserDefaults standardUserDefaults] setBool:NO forKey:IS_BOOST_ACTIVE];
-      [[NSUserDefaults standardUserDefaults] setBool:NO forKey:IS_SUPER_BOOST_ACTIVE];
-      [[NSUserDefaults standardUserDefaults] synchronize];
-        //IS_BOOST_ACTIVE = NO;
-        //IS_SUPER_BOOST_ACTIVE = NO;
-    });
-    
 }
 
 - (void) showCountdownForSeconds: (NSUInteger) seconds {
@@ -903,11 +713,7 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
         
         _gamePausedLabel.visible = NO;
         
-        if ([StoreInventory isVirtualGoodWithItemIdEquipped:GADGETS_GOOD_05_ITEM_ID]) {
-            _scrollSpeed = SCROLL_SPEED_GADGET_05;
-        } else {
-            _scrollSpeed = SCROLL_SPEED_NORMAL;
-        }
+        _scrollSpeed = SCROLL_SPEED_NORMAL;
         
         // setting hero as a dynamic body
         [[_physicsNode space] addPostStepBlock:^{
