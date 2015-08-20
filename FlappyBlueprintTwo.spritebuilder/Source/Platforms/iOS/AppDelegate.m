@@ -40,7 +40,6 @@
 #import "RootViewControllerInterface.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <AdSupport/AdSupport.h>
-#import <RevMobAds/RevMobAds.h>
 #import "Options.h"
 
 @interface AppController ()
@@ -61,9 +60,6 @@
   id<IStoreAssets> storeAssets = [[FlappyBlueprintTwoStoreAssets alloc] init];
   [Soomla initializeWithSecret:[PlistManager getStringValueFromNSUserDefaultsWithKey:kSoomlaCustomSecret]];
   [[SoomlaStore getInstance] initializeWithStoreAssets:storeAssets];
-  
-  // setup RevMob
-  [self setupRevMob];
   
   //set sound ON
   [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kFXState];
@@ -285,12 +281,6 @@
   //ADS_FREQUENCY_GAME_OVER = [PlistManager getIntValueFromNSUserDefaultsWithKey:kAdsFrequencyGameOver];
   
   //NEXTPEER_GAME_KEY = [PlistManager getStringValueFromNSUserDefaultsWithKey:kNextpeerGameKey];
-}
-
-- (void) setupRevMob {
-  
-  [RevMobAds startSessionWithAppID:[PlistManager getStringValueFromNSUserDefaultsWithKey:kRevMobMediaID]];
-  
 }
 
 - (void) startMultiPlayerGame: (NSNotification *) notification

@@ -53,12 +53,6 @@
 #define kSoomlaIAPDoubleCoinsID @"Soomla IAP Double Coins ID"
 #define kSoomlaIAPNoAdsID @"Soomla IAP No Ads ID"
 
-#define kRevMobMediaID @"RevMob Media ID"
-#define kRevMobStartupPlacemetID @"RevMob Startup Placement ID"
-#define kRevMobGameOverPlacementID @"RevMob Game Over Placement ID"
-#define kRevMobShowAdAtStartup @"RevMob Show Ad At Startup"
-#define kRevMobShowAdAtGameOver @"RevMob Show Ad At Game Over"
-
 #define kAdsFrequencyStartup @"Ads Frequency Startup"
 #define kAdsFrequencyGameOver @"Ads Frequency Game Over"
 

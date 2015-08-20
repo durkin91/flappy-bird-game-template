@@ -19,16 +19,6 @@
 		<string>com.SandorNagy.FlappyBlueprintTwo.X2Coins</string>
 		<key>Soomla IAP No Ads ID</key>
 		<string>com.SandorNagy.FlappyBlueprintTwo.NoAds</string>
-		<key>RevMob Media ID</key>
-		<string>54317a5ec0e1ca4807f6cbc9</string>
-		<key>RevMob Startup Placement ID</key>
-		<string>54317aa17e7c2fd206c0d711</string>
-		<key>RevMob Game Over Placement ID</key>
-		<string>54317ad2306a4b3207e835f0</string>
-		<key>RevMob Show Ad At Startup</key>
-		<string>YES</string>
-		<key>RevMob Show Ad At Game Over</key>
-		<string>NO</string>
 		<key>Game Center Leaderboard ID</key>
 		<string>com.SandorNagy.FlappyBlueprintTwo.Scores</string>
 		<key>Ads Frequency Startup</key>

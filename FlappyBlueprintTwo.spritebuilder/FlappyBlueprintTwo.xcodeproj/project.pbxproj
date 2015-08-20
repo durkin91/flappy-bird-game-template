@@ -44,7 +44,6 @@
 		88035A061A20E773006AF815 /* ShopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 880359FC1A20E773006AF815 /* ShopMenu.m */; };
 		88035A0B1A20E834006AF815 /* MyAwesomeBMFont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 88035A091A20E834006AF815 /* MyAwesomeBMFont.fnt */; };
 		88035A0C1A20E834006AF815 /* MyAwesomeBMFont.png in Resources */ = {isa = PBXBuildFile; fileRef = 88035A0A1A20E834006AF815 /* MyAwesomeBMFont.png */; };
-		88035A5D1A20E85B006AF815 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A0E1A20E85B006AF815 /* Chartboost.framework */; };
 		88035A661A20E85B006AF815 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 88035A221A20E85B006AF815 /* ProgressHUD.bundle */; };
 		88035A671A20E85B006AF815 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 88035A241A20E85B006AF815 /* ProgressHUD.m */; };
 		88035A681A20E85B006AF815 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A251A20E85B006AF815 /* RevMobAds.framework */; };
@@ -204,7 +203,6 @@
 		88035A071A20E81B006AF815 /* AdvancedSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedSettings.h; sourceTree = "<group>"; };
 		88035A091A20E834006AF815 /* MyAwesomeBMFont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyAwesomeBMFont.fnt; sourceTree = "<group>"; };
 		88035A0A1A20E834006AF815 /* MyAwesomeBMFont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyAwesomeBMFont.png; sourceTree = "<group>"; };
-		88035A0E1A20E85B006AF815 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
 		88035A221A20E85B006AF815 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		88035A231A20E85B006AF815 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		88035A241A20E85B006AF815 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
@@ -372,7 +370,6 @@
 				B77F1B3A17B978D7009739AE /* AVFoundation.framework in Frameworks */,
 				B77F1B3C17B978D7009739AE /* UIKit.framework in Frameworks */,
 				B77F1B3E17B978D7009739AE /* Foundation.framework in Frameworks */,
-				88035A5D1A20E85B006AF815 /* Chartboost.framework in Frameworks */,
 				88035A6A1A20E85B006AF815 /* libSoomlaiOSStore.a in Frameworks */,
 				B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */,
 				B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */,
@@ -569,7 +566,6 @@
 		88035A0D1A20E85B006AF815 /* ThirdPartyLibs */ = {
 			isa = PBXGroup;
 			children = (
-				88035A0E1A20E85B006AF815 /* Chartboost.framework */,
 				88035A211A20E85B006AF815 /* ProgressHUD */,
 				88035A251A20E85B006AF815 /* RevMobAds.framework */,
 				88035A261A20E85B006AF815 /* Store */,
