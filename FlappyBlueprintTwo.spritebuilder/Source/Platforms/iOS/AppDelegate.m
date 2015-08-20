@@ -43,7 +43,6 @@
 #import <CommonCrypto/CommonDigest.h>
 #import <AdSupport/AdSupport.h>
 #import <RevMobAds/RevMobAds.h>
-#import "iRate.h"
 #import "Options.h"
 
 @interface AppController () <ChartboostDelegate, CBNewsfeedDelegate>
@@ -74,9 +73,6 @@
   //set sound ON
   [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kFXState];
   
-  
-  // setup iRate
-  [self setupiRate];
   
   // running setup of third party libs asynchronously on background thread
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
@@ -294,31 +290,6 @@
   //ADS_FREQUENCY_GAME_OVER = [PlistManager getIntValueFromNSUserDefaultsWithKey:kAdsFrequencyGameOver];
   
   //NEXTPEER_GAME_KEY = [PlistManager getStringValueFromNSUserDefaultsWithKey:kNextpeerGameKey];
-}
-
-
-- (void) setupiRate {
-  
-  //enable preview mode
-  [iRate sharedInstance].previewMode = IRATE_ENABLE_PREVIEW_MODE;
-  
-  if (IRATE_ENABLE_PREVIEW_MODE) {
-    [iRate sharedInstance].appStoreID = IRATE_TEST_APP_ID;
-    [iRate sharedInstance].applicationBundleID = IRATE_TEST_APP_BUNDLE_ID;
-  }
-  
-  //configure iRate
-  [iRate sharedInstance].daysUntilPrompt = IRATE_DAYS_UNTIL_PROMPT;
-  [iRate sharedInstance].usesUntilPrompt = IRATE_USES_UNTIL_PROMPT;
-  [iRate sharedInstance].onlyPromptIfLatestVersion = IRATE_ONLY_PROMPT_IF_LATEST_VERSION;
-  [iRate sharedInstance].remindPeriod = IRATE_REMIND_PERIOD;
-  
-  //overriding the default iRate strings
-  [iRate sharedInstance].messageTitle = NSLocalizedString(IRATE_MESSAGE_TITLE, @"iRate message title");
-  [iRate sharedInstance].message = NSLocalizedString(IRATE_MESSAGE, @"iRate message");
-  [iRate sharedInstance].cancelButtonLabel = NSLocalizedString(IRATE_CANCEL_BUTTON, @"iRate decline button");
-  [iRate sharedInstance].remindButtonLabel = NSLocalizedString(IRATE_REMIND_BUTTON, @"iRate remind button");
-  [iRate sharedInstance].rateButtonLabel = NSLocalizedString(IRATE_RATE_BUTTON, @"iRate accept button");
 }
 
 - (void) setupChartboost {

@@ -24,7 +24,6 @@
 #import "StoreInventory.h"
 #import "FlappyBlueprintTwoStoreAssets.h"
 #import <Chartboost/Chartboost.h>
-#import "iRate.h"
 
 
 @implementation Options {
@@ -70,7 +69,6 @@
     
     [Options playTapSound];
     
-    [[iRate sharedInstance] openRatingsPageInAppStore];
 }
 
 - (void) shopCoinsButtonTapped {

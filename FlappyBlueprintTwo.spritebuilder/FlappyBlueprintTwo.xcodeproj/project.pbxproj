@@ -45,8 +45,6 @@
 		88035A0B1A20E834006AF815 /* MyAwesomeBMFont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 88035A091A20E834006AF815 /* MyAwesomeBMFont.fnt */; };
 		88035A0C1A20E834006AF815 /* MyAwesomeBMFont.png in Resources */ = {isa = PBXBuildFile; fileRef = 88035A0A1A20E834006AF815 /* MyAwesomeBMFont.png */; };
 		88035A5D1A20E85B006AF815 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A0E1A20E85B006AF815 /* Chartboost.framework */; };
-		88035A621A20E85B006AF815 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 88035A1A1A20E85B006AF815 /* iRate.bundle */; };
-		88035A631A20E85B006AF815 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88035A1C1A20E85B006AF815 /* iRate.m */; };
 		88035A661A20E85B006AF815 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 88035A221A20E85B006AF815 /* ProgressHUD.bundle */; };
 		88035A671A20E85B006AF815 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 88035A241A20E85B006AF815 /* ProgressHUD.m */; };
 		88035A681A20E85B006AF815 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A251A20E85B006AF815 /* RevMobAds.framework */; };
@@ -207,9 +205,6 @@
 		88035A091A20E834006AF815 /* MyAwesomeBMFont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyAwesomeBMFont.fnt; sourceTree = "<group>"; };
 		88035A0A1A20E834006AF815 /* MyAwesomeBMFont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyAwesomeBMFont.png; sourceTree = "<group>"; };
 		88035A0E1A20E85B006AF815 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
-		88035A1A1A20E85B006AF815 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
-		88035A1B1A20E85B006AF815 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
-		88035A1C1A20E85B006AF815 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 		88035A221A20E85B006AF815 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		88035A231A20E85B006AF815 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		88035A241A20E85B006AF815 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
@@ -575,22 +570,11 @@
 			isa = PBXGroup;
 			children = (
 				88035A0E1A20E85B006AF815 /* Chartboost.framework */,
-				88035A191A20E85B006AF815 /* iRate */,
 				88035A211A20E85B006AF815 /* ProgressHUD */,
 				88035A251A20E85B006AF815 /* RevMobAds.framework */,
 				88035A261A20E85B006AF815 /* Store */,
 			);
 			path = ThirdPartyLibs;
-			sourceTree = "<group>";
-		};
-		88035A191A20E85B006AF815 /* iRate */ = {
-			isa = PBXGroup;
-			children = (
-				88035A1A1A20E85B006AF815 /* iRate.bundle */,
-				88035A1B1A20E85B006AF815 /* iRate.h */,
-				88035A1C1A20E85B006AF815 /* iRate.m */,
-			);
-			path = iRate;
 			sourceTree = "<group>";
 		};
 		88035A211A20E85B006AF815 /* ProgressHUD */ = {
@@ -1015,7 +999,6 @@
 				88035A7D1A20E894006AF815 /* bomb.wav in Resources */,
 				88035A0B1A20E834006AF815 /* MyAwesomeBMFont.fnt in Resources */,
 				88035A7F1A20E894006AF815 /* hit.wav in Resources */,
-				88035A621A20E85B006AF815 /* iRate.bundle in Resources */,
 				88035A7E1A20E894006AF815 /* coin.wav in Resources */,
 				88035A741A20E87A006AF815 /* FlappyBlueprintTwoSettings.plist in Resources */,
 				88035A0C1A20E834006AF815 /* MyAwesomeBMFont.png in Resources */,
@@ -1108,7 +1091,6 @@
 				88035A671A20E85B006AF815 /* ProgressHUD.m in Sources */,
 				880359FE1A20E773006AF815 /* Gameplay.m in Sources */,
 				88035A021A20E773006AF815 /* ShopBoosts.m in Sources */,
-				88035A631A20E85B006AF815 /* iRate.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				88035A031A20E773006AF815 /* ShopCharacters.m in Sources */,
 				88035A001A20E773006AF815 /* Obstacle.m in Sources */,
