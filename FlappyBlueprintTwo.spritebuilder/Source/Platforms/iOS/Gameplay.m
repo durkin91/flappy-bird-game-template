@@ -163,8 +163,6 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     
     [self addCoinsLabel];
     
-    [self addScoreLabel];
-    
     [self addGamePausedLabel];
     
     hasTouched = NO;
@@ -474,6 +472,8 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     _currentCoinsLabel.string = currentCoinsString;
     [StoreInventory giveAmount:coinsToAdd ofItem:COINS_CURRENCY_ITEM_ID];
     
+    currentScore = currentScore + 1;
+    
     return TRUE;
 }
 
@@ -484,9 +484,9 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     NSLog(@"Gate!");
     
     // updating score
-    currentScore = currentScore + 1;
-    currentScoreString = [NSString stringWithFormat:@"%li",(long)currentScore];
-    _currentScoreLabel.string = currentScoreString;
+//    currentScore = currentScore + 1;
+//    currentScoreString = [NSString stringWithFormat:@"%li",(long)currentScore];
+//    _currentScoreLabel.string = currentScoreString;
     
     return TRUE;
 }
