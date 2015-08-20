@@ -46,7 +46,6 @@
 		88035A0C1A20E834006AF815 /* MyAwesomeBMFont.png in Resources */ = {isa = PBXBuildFile; fileRef = 88035A0A1A20E834006AF815 /* MyAwesomeBMFont.png */; };
 		88035A661A20E85B006AF815 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 88035A221A20E85B006AF815 /* ProgressHUD.bundle */; };
 		88035A671A20E85B006AF815 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 88035A241A20E85B006AF815 /* ProgressHUD.m */; };
-		88035A681A20E85B006AF815 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A251A20E85B006AF815 /* RevMobAds.framework */; };
 		88035A691A20E85B006AF815 /* libSoomlaiOSCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A521A20E85B006AF815 /* libSoomlaiOSCore.a */; };
 		88035A6A1A20E85B006AF815 /* libSoomlaiOSStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A531A20E85B006AF815 /* libSoomlaiOSStore.a */; };
 		88035A741A20E87A006AF815 /* FlappyBlueprintTwoSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88035A731A20E87A006AF815 /* FlappyBlueprintTwoSettings.plist */; };
@@ -206,7 +205,6 @@
 		88035A221A20E85B006AF815 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		88035A231A20E85B006AF815 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		88035A241A20E85B006AF815 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
-		88035A251A20E85B006AF815 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
 		88035A2A1A20E85B006AF815 /* BadgeReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeReward.h; sourceTree = "<group>"; };
 		88035A2B1A20E85B006AF815 /* KeyValDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyValDatabase.h; sourceTree = "<group>"; };
 		88035A2C1A20E85B006AF815 /* KeyValueStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyValueStorage.h; sourceTree = "<group>"; };
@@ -373,7 +371,6 @@
 				88035A6A1A20E85B006AF815 /* libSoomlaiOSStore.a in Frameworks */,
 				B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */,
 				B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */,
-				88035A681A20E85B006AF815 /* RevMobAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,7 +564,6 @@
 			isa = PBXGroup;
 			children = (
 				88035A211A20E85B006AF815 /* ProgressHUD */,
-				88035A251A20E85B006AF815 /* RevMobAds.framework */,
 				88035A261A20E85B006AF815 /* Store */,
 			);
 			path = ThirdPartyLibs;

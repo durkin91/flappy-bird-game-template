@@ -107,15 +107,6 @@
   // delete remaining screenshots if any
   [AppController deleteScreenshot];
   
-  // asking for permission for local notification
-  if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
-    [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
-  }
-  // setting badge number to 0
-  application.applicationIconBadgeNumber = 0;
-  // setting up and scheduling local notification
-  [self setupLocalNotifications];
-  
     return YES;
 }
 
@@ -128,66 +119,9 @@
     return [CCBReader loadAsScene:@"MainMenu"];
 }
 
-- (void) setupLocalNotifications {
-  
-  int randomNotification = arc4random() % 10;
-  NSString *notificationMessage;
-  
-  switch (randomNotification) {
-    case 0:
-      notificationMessage = LOCAL_NOTIFICATION_TEXT_01;
-      break;
-    case 1:
-      notificationMessage = LOCAL_NOTIFICATION_TEXT_02;
-      break;
-    case 2:
-      notificationMessage = LOCAL_NOTIFICATION_TEXT_03;
-      break;
-    case 3:
-      notificationMessage = LOCAL_NOTIFICATION_TEXT_04;
-      break;
-    case 4:
-      notificationMessage = LOCAL_NOTIFICATION_TEXT_05;
-      break;
-    case 5:
-      notificationMessage = LOCAL_NOTIFICATION_TEXT_05;
-      break;
-    case 6:
-      notificationMessage = LOCAL_NOTIFICATION_TEXT_07;
-      break;
-    case 7:
-      notificationMessage = LOCAL_NOTIFICATION_TEXT_08;
-      break;
-    case 8:
-      notificationMessage = LOCAL_NOTIFICATION_TEXT_09;
-      break;
-    case 9:
-      notificationMessage = LOCAL_NOTIFICATION_TEXT_10;
-      break;
-      
-    default:
-      break;
-  }
-  
-  localNotification = [[UILocalNotification alloc] init];
-  localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:LOCAL_PUSH_NOTIFICATION_TIME_TO_WAIT];
-  localNotification.alertBody = notificationMessage;
-  localNotification.soundName = UILocalNotificationDefaultSoundName;
-  localNotification.applicationIconBadgeNumber++;
-  localNotification.timeZone = [NSTimeZone defaultTimeZone];
-  // canceling all current notifications
-  [[UIApplication sharedApplication] cancelAllLocalNotifications];
-  // scheduling new notification
-  [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-}
-
 
 - (void) setupAppWithThirdPartyLibs {
   
-  // notification observers
-  
-  // notification observer for multiplayer Nextpeer game launch
-  [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(startMultiPlayerGame:) name: NOTIFICATION_START_MULTIPLAYER object: nil];
   
   // store
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goodBalanceChanged) name:EVENT_GOOD_BALANCE_CHANGED object:nil];
@@ -283,11 +217,7 @@
   //NEXTPEER_GAME_KEY = [PlistManager getStringValueFromNSUserDefaultsWithKey:kNextpeerGameKey];
 }
 
-- (void) startMultiPlayerGame: (NSNotification *) notification
-{
-  CCScene *gameplayScene = [CCBReader loadAsScene:@"Gameplay"];
-  [[CCDirector sharedDirector] replaceScene:gameplayScene];
-}
+
 
 - (void) goodBalanceChanged {
   NSLog(@"Item purchased.");
