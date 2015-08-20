@@ -27,7 +27,6 @@
 #import "RootViewControllerInterface.h"
 #import "AppDelegate.h"
 #import "Options.h"
-#import "Flurry.h"
 
 #import "PlistManager.h"
 
@@ -141,8 +140,6 @@
 
 
 - (void) homeButtonTapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Game Over] Main Menu button tapped."];
     
     [Options playTapSound];
     
@@ -158,8 +155,6 @@
 }
 
 - (void) shopButtonTapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Game Over] Shop Menu button tapped."];
     
     [Options playTapSound];
     

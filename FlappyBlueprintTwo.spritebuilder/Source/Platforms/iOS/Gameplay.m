@@ -887,9 +887,7 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
 }
 
 - (void) togglePauseOnOffButtonTapped:(id) sender {
-    
-    // FLURRY LOG
-    //[Flurry logEvent:@"[Options] Toggle sound button tapped."];
+
     [Options playTapSound];
     
     _togglePauseOnOffButton = sender;

@@ -126,8 +126,6 @@ NSMutableArray *settingsArray;
     [self savePlistDataToNSUserDefaultsWithKey:kVungleShowAdAtStartup];
     [self savePlistDataToNSUserDefaultsWithKey:kVungleShowAdAtGameOver];
     
-    [self savePlistDataToNSUserDefaultsWithKey:kFlurryAPIKey];
-    
     [self savePlistDataToNSUserDefaultsWithKey:kAdsFrequencyStartup];
     [self savePlistDataToNSUserDefaultsWithKey:kAdsFrequencyGameOver];
     

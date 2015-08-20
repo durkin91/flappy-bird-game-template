@@ -47,7 +47,6 @@
 #import <VungleSDK/VungleSDK.h>
 #import "iRate.h"
 #import "Options.h"
-#import "Flurry.h"
 
 @interface AppController () <NextpeerDelegate, NPTournamentDelegate, ChartboostDelegate, CBNewsfeedDelegate, VungleSDKDelegate>
 @end
@@ -264,9 +263,6 @@
     
   }
   
-    
-  // setup Flurry
-  [self setupFlurry];
   
 }
 
@@ -306,16 +302,6 @@
   //ADS_FREQUENCY_GAME_OVER = [PlistManager getIntValueFromNSUserDefaultsWithKey:kAdsFrequencyGameOver];
   
   //NEXTPEER_GAME_KEY = [PlistManager getStringValueFromNSUserDefaultsWithKey:kNextpeerGameKey];
-}
-
-- (void) setupFlurry {
-  
-  // crash reporting
-  // note: iOS only allows one crash reporting tool per app; if using another, set to: NO
-  [Flurry setCrashReportingEnabled:YES];
-  
-  // start the Flurry Analytics session
-  [Flurry startSession:[PlistManager getStringValueFromNSUserDefaultsWithKey:kFlurryAPIKey]];
 }
 
 
@@ -459,9 +445,6 @@
       // showing ad
       
       
-      // FLURRY LOG
-      [Flurry logEvent:@"[Startup] Showing Ads."];
-      
       if ([PlistManager getBoolValueFromNSUserDefaultsWithKey:kVungleShowAdAtStartup]) {
         NSLog(@"Showing Vungle ad...");
         // passing the ad to be shown by RootViewControllerInterface
@@ -511,8 +494,6 @@
       NSLog(@"Showing ad at Game Over because Game Over Count is: %li and Ads Frequency is: %i.", (long)gameOverCount, [PlistManager getIntValueFromNSUserDefaultsWithKey:kAdsFrequencyGameOver]);
       // showing ad
       
-      // FLURRY LOG
-      [Flurry logEvent:@"[Game Over] Showing Ads."];
       
       if ([PlistManager getBoolValueFromNSUserDefaultsWithKey:kVungleShowAdAtGameOver]) {
         NSLog(@"Showing Vungle ad...");
@@ -564,9 +545,6 @@
 
 - (void) alertUnexpectedErrorInStore {
   
-  // FLURRY LOG
-  [Flurry logEvent:@"[IAP] Purchase: Something Went Wrong!"];
-  
   //[SVProgressHUD showErrorWithStatus:@"Something Went Wrong!"];
   [ProgressHUD showError:@"Something Went Wrong!"];
   
@@ -582,9 +560,6 @@
 }
 
 - (void) alertTransactionRestoreFinished {
-  
-  // FLURRY LOG
-  [Flurry logEvent:@"[IAP] Purchases Restored!"];
   
   //[SVProgressHUD showSuccessWithStatus:@"Restoring Finished!"];
   [ProgressHUD showSuccess:@"Restoring Finished!"];
@@ -603,9 +578,6 @@
 
 - (void) alertAppStorePurchased {
   
-  // FLURRY LOG
-  [Flurry logEvent:@"[IAP] Purchase completed."];
-  
   //[SVProgressHUD showWithStatus:@"Purchased..."];
   //[SVProgressHUD showSuccessWithStatus:@"Purchased..."];
   [ProgressHUD showSuccess:@"Purchased..."];
@@ -617,9 +589,6 @@
 }
 
 - (void) alertAppStorePurchaseCanceled {
-  
-  // FLURRY LOG
-  [Flurry logEvent:@"[IAP] Purchase canceled."];
   
   //[SVProgressHUD showErrorWithStatus:@"Purchase Canceled!"];
   [ProgressHUD showError:@"Purchase Canceled!"];

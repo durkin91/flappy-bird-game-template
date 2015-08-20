@@ -23,7 +23,7 @@
 #import "StoreInventory.h"
 #import "FlappyBlueprintTwoStoreAssets.h"
 #import "Options.h"
-#import "Flurry.h"
+
 
 @implementation ShopMenu {
     CCLabelBMFont *_allCoinsLabel;
@@ -50,8 +50,7 @@
 }
 
 - (void) shopCharactersTapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Shop Menu] Shop Characters button tapped."];
+
     [Options playTapSound];
     
     CCScene *shopCharactersScene = [CCBReader loadAsScene:@"ShopCharacters"];
@@ -59,8 +58,7 @@
 }
 
 - (void) shopBoostsTapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Shop Menu] Shop Boosts button tapped."];
+
     [Options playTapSound];
     
     CCScene *shopBoostsScene = [CCBReader loadAsScene:@"ShopBoosts"];
@@ -68,8 +66,7 @@
 }
 
 - (void) shopGadgetsTapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Shop Menu] Shop Gadgets button tapped."];
+
     [Options playTapSound];
     
     CCScene *shopGadgetsScene = [CCBReader loadAsScene:@"ShopGadgets"];
@@ -77,8 +74,7 @@
 }
 
 - (void) shopCoinsTapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Shop Menu] Shop Coins button tapped."];
+
     [Options playTapSound];
     
     CCScene *shopCoinsScene = [CCBReader loadAsScene:@"ShopCoins"];

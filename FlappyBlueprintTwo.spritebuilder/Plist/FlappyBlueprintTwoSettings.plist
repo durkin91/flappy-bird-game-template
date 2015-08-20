@@ -45,8 +45,6 @@
 		<string>YES</string>
 		<key>Game Center Leaderboard ID</key>
 		<string>com.SandorNagy.FlappyBlueprintTwo.Scores</string>
-		<key>Flurry API Key</key>
-		<string>5RYRNH95YNG37BR84ND2</string>
 		<key>Ads Frequency Startup</key>
 		<string>4</string>
 		<key>Ads Frequency Game Over</key>

@@ -24,13 +24,12 @@
 #import "FlappyBlueprintTwoStoreAssets.h"
 #import "SoomlaStore.h"
 #import "Options.h"
-#import "Flurry.h"
+
 
 @implementation ShopCoins
 
 - (void) coin01Tapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Shop Coins] Buy 200 button tapped."];
+
     
     [Options playTapSound];
     
@@ -40,8 +39,6 @@
 }
 
 - (void) coin02Tapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Shop Coins] Buy 500 button tapped."];
     
     [Options playTapSound];
     
@@ -50,8 +47,6 @@
 }
 
 - (void) coin03Tapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Shop Coins] Buy 1000 button tapped."];
     
     [Options playTapSound];
     
@@ -60,8 +55,6 @@
 }
 
 - (void) coin04Tapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Shop Coins] Buy 2500 button tapped."];
     
     [Options playTapSound];
     
@@ -70,8 +63,6 @@
 }
 
 - (void) coin05Tapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Shop Coins] Buy 10000 button tapped."];
     
     [Options playTapSound];
     
@@ -80,8 +71,6 @@
 }
 
 - (void) noAdsTapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Shop Coins] Buy No Ads button tapped."];
     
     [Options playTapSound];
     
@@ -90,8 +79,6 @@
 }
 
 - (void) doubleCoinsTapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Shop Coins] Buy Double Coins button tapped."];
     
     [Options playTapSound];
     
@@ -100,8 +87,6 @@
 }
 
 - (void) restorePurchasesTapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Shop Coins] Buy Restore button tapped."];
     
     [Options playTapSound];
     

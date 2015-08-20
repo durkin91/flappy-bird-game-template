@@ -45,7 +45,6 @@
 		88035A0B1A20E834006AF815 /* MyAwesomeBMFont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 88035A091A20E834006AF815 /* MyAwesomeBMFont.fnt */; };
 		88035A0C1A20E834006AF815 /* MyAwesomeBMFont.png in Resources */ = {isa = PBXBuildFile; fileRef = 88035A0A1A20E834006AF815 /* MyAwesomeBMFont.png */; };
 		88035A5D1A20E85B006AF815 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A0E1A20E85B006AF815 /* Chartboost.framework */; };
-		88035A5E1A20E85B006AF815 /* libFlurry_5.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A111A20E85B006AF815 /* libFlurry_5.4.0.a */; };
 		88035A621A20E85B006AF815 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 88035A1A1A20E85B006AF815 /* iRate.bundle */; };
 		88035A631A20E85B006AF815 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88035A1C1A20E85B006AF815 /* iRate.m */; };
 		88035A641A20E85B006AF815 /* Nextpeer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A1E1A20E85B006AF815 /* Nextpeer.framework */; };
@@ -217,8 +216,6 @@
 		88035A091A20E834006AF815 /* MyAwesomeBMFont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyAwesomeBMFont.fnt; sourceTree = "<group>"; };
 		88035A0A1A20E834006AF815 /* MyAwesomeBMFont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyAwesomeBMFont.png; sourceTree = "<group>"; };
 		88035A0E1A20E85B006AF815 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
-		88035A101A20E85B006AF815 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		88035A111A20E85B006AF815 /* libFlurry_5.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_5.4.0.a; sourceTree = "<group>"; };
 		88035A1A1A20E85B006AF815 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
 		88035A1B1A20E85B006AF815 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
 		88035A1C1A20E85B006AF815 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
@@ -401,7 +398,6 @@
 				B77F1B3C17B978D7009739AE /* UIKit.framework in Frameworks */,
 				B77F1B3E17B978D7009739AE /* Foundation.framework in Frameworks */,
 				88035A5D1A20E85B006AF815 /* Chartboost.framework in Frameworks */,
-				88035A5E1A20E85B006AF815 /* libFlurry_5.4.0.a in Frameworks */,
 				88035A6A1A20E85B006AF815 /* libSoomlaiOSStore.a in Frameworks */,
 				B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */,
 				B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */,
@@ -599,7 +595,6 @@
 			isa = PBXGroup;
 			children = (
 				88035A0E1A20E85B006AF815 /* Chartboost.framework */,
-				88035A0F1A20E85B006AF815 /* Flurry */,
 				88035A191A20E85B006AF815 /* iRate */,
 				88035A1D1A20E85B006AF815 /* Nextpeer */,
 				88035A211A20E85B006AF815 /* ProgressHUD */,
@@ -608,15 +603,6 @@
 				88035A541A20E85B006AF815 /* VungleSDK.embeddedframework */,
 			);
 			path = ThirdPartyLibs;
-			sourceTree = "<group>";
-		};
-		88035A0F1A20E85B006AF815 /* Flurry */ = {
-			isa = PBXGroup;
-			children = (
-				88035A101A20E85B006AF815 /* Flurry.h */,
-				88035A111A20E85B006AF815 /* libFlurry_5.4.0.a */,
-			);
-			path = Flurry;
 			sourceTree = "<group>";
 		};
 		88035A191A20E85B006AF815 /* iRate */ = {

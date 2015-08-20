@@ -26,7 +26,6 @@
 #import "Nextpeer/Nextpeer.h"
 #import "AppDelegate.h"
 #import "Options.h"
-#import "Flurry.h"
 
 @implementation MainMenu {
     CCLabelBMFont *_allCoinsLabel;
@@ -56,8 +55,7 @@
 }
 
 - (void) playButtonTapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Main Menu] Play button tapped."];
+    
     [Options playTapSound];
     
     CCScene *gameplayScene = [CCBReader loadAsScene:@"Gameplay"];
@@ -65,16 +63,14 @@
 }
 
 - (void) nextpeerButtonTapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Main Menu] Play Nextpeer button tapped."];
+    
     [Options playTapSound];
     
     [Nextpeer launchDashboard];
 }
 
 - (void) shopButtonTapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Main Menu] Shop button tapped."];
+    
     [Options playTapSound];
     
     CCScene *shopScene = [CCBReader loadAsScene:@"ShopMenu"];
@@ -82,8 +78,6 @@
 }
 
 - (void) shopCoinsButtonTapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Main Menu] Shop Coins button tapped."];
     [Options playTapSound];
     
     CCScene *shopCoinsScene = [CCBReader loadAsScene:@"ShopCoins"];
@@ -91,8 +85,7 @@
 }
 
 - (void) optionsButtonTapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Main Menu] Options button tapped."];
+    
     [Options playTapSound];
     
     CCScene *optionsScene = [CCBReader loadAsScene:@"Options"];

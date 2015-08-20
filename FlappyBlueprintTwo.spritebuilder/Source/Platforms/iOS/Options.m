@@ -25,7 +25,7 @@
 #import "FlappyBlueprintTwoStoreAssets.h"
 #import <Chartboost/Chartboost.h>
 #import "iRate.h"
-#import "Flurry.h"
+
 
 @implementation Options {
     CCButton *_toggleSoundOnOffButton;
@@ -55,8 +55,6 @@
 
 - (void) moreGamesButtonTapped {
     
-    // FLURRY LOG
-    [Flurry logEvent:@"[Options] More games button tapped."];
     [Options playTapSound];
     
     // Show more apps
@@ -70,16 +68,13 @@
 
 - (void) rateButtonTapped {
     
-    // FLURRY LOG
-    [Flurry logEvent:@"[Options] Rate button tapped."];
     [Options playTapSound];
     
     [[iRate sharedInstance] openRatingsPageInAppStore];
 }
 
 - (void) shopCoinsButtonTapped {
-    // FLURRY LOG
-    [Flurry logEvent:@"[Options] Shop Coins button tapped."];
+
     [Options playTapSound];
     
     CCScene *shopCoinsScene = [CCBReader loadAsScene:@"ShopCoins"];
@@ -99,8 +94,6 @@
 
 - (void) toggleSoundOnOffButtonTapped:(id) sender {
     
-    // FLURRY LOG
-    [Flurry logEvent:@"[Options] Toggle sound button tapped."];
     [Options playTapSound];
     
     _toggleSoundOnOffButton = sender;
