@@ -34,8 +34,6 @@
 
 - (void)didLoadFromCCB {
     
-    // showing ads at startup
-    [AppController showAdsAtStartup];
     
     [self addAllCoinsLabel];
     

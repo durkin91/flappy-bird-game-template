@@ -34,7 +34,6 @@
 +(UIImage*) screenshotWithStartNode:(CCNode*)startNode;
 + (void) captureScreenshot;
 + (void) deleteScreenshot;
-+ (void) showAdsAtStartup;
-+ (void) showAdsAtGameOver;
+
 
 @end

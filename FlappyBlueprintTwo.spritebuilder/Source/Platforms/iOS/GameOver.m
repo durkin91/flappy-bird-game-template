@@ -53,7 +53,6 @@
 
 - (void)didLoadFromCCB {
     
-    [AppController showAdsAtGameOver];
     
   if ([[NSUserDefaults standardUserDefaults] boolForKey:isNewBestScore]) {
         

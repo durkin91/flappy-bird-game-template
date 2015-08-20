@@ -21,7 +21,6 @@
 
 #import <Foundation/Foundation.h>
 #import "Defaults.h"
-#import <VungleSDK/VungleSDK.h>
 #import <Social/Social.h>
 
 
@@ -38,8 +37,6 @@
 + (id)sharedManager;
 
 - (void) presentViewController:(UIViewController*)controller animated:(BOOL)animated;
-
-- (void) playVungleAd;
 
 - (void) presentUIActivityViewControllerWithCurrentScoreInString:(NSString*) scoreCurrentInString;
 

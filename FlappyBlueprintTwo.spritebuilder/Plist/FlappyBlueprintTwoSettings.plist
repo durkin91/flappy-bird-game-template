@@ -37,12 +37,6 @@
 		<string>YES</string>
 		<key>RevMob Show Ad At Game Over</key>
 		<string>NO</string>
-		<key>Vungle App ID</key>
-		<string>54317c6da361795405000057</string>
-		<key>Vungle Show Ad At Startup</key>
-		<string>NO</string>
-		<key>Vungle Show Ad At Game Over</key>
-		<string>YES</string>
 		<key>Game Center Leaderboard ID</key>
 		<string>com.SandorNagy.FlappyBlueprintTwo.Scores</string>
 		<key>Ads Frequency Startup</key>

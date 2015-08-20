@@ -122,10 +122,6 @@ NSMutableArray *settingsArray;
     [self savePlistDataToNSUserDefaultsWithKey:kRevMobShowAdAtStartup];
     [self savePlistDataToNSUserDefaultsWithKey:kRevMobShowAdAtGameOver];
     
-    [self savePlistDataToNSUserDefaultsWithKey:kVungleAppID];
-    [self savePlistDataToNSUserDefaultsWithKey:kVungleShowAdAtStartup];
-    [self savePlistDataToNSUserDefaultsWithKey:kVungleShowAdAtGameOver];
-    
     [self savePlistDataToNSUserDefaultsWithKey:kAdsFrequencyStartup];
     [self savePlistDataToNSUserDefaultsWithKey:kAdsFrequencyGameOver];
     

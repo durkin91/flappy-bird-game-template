@@ -43,11 +43,6 @@
     }];
 }
 
-- (void) playVungleAd {
-    VungleSDK* sdk = [VungleSDK sharedSDK];
-    [sdk playAd:rootViewController];
-}
-
 - (void) presentUIActivityViewControllerWithCurrentScoreInString:(NSString*) scoreCurrentInString {
     
     // getting saved screenshot

@@ -47,20 +47,11 @@
 		88035A5D1A20E85B006AF815 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A0E1A20E85B006AF815 /* Chartboost.framework */; };
 		88035A621A20E85B006AF815 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 88035A1A1A20E85B006AF815 /* iRate.bundle */; };
 		88035A631A20E85B006AF815 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88035A1C1A20E85B006AF815 /* iRate.m */; };
-		88035A641A20E85B006AF815 /* Nextpeer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A1E1A20E85B006AF815 /* Nextpeer.framework */; };
-		88035A651A20E85B006AF815 /* NPResources_iPad_iPhone_Portrait.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 88035A201A20E85B006AF815 /* NPResources_iPad_iPhone_Portrait.bundle */; };
 		88035A661A20E85B006AF815 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 88035A221A20E85B006AF815 /* ProgressHUD.bundle */; };
 		88035A671A20E85B006AF815 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 88035A241A20E85B006AF815 /* ProgressHUD.m */; };
 		88035A681A20E85B006AF815 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A251A20E85B006AF815 /* RevMobAds.framework */; };
 		88035A691A20E85B006AF815 /* libSoomlaiOSCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A521A20E85B006AF815 /* libSoomlaiOSCore.a */; };
 		88035A6A1A20E85B006AF815 /* libSoomlaiOSStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A531A20E85B006AF815 /* libSoomlaiOSStore.a */; };
-		88035A6B1A20E85B006AF815 /* __vungle.db in Resources */ = {isa = PBXBuildFile; fileRef = 88035A561A20E85B006AF815 /* __vungle.db */; };
-		88035A6C1A20E85B006AF815 /* vg_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 88035A571A20E85B006AF815 /* vg_close.png */; };
-		88035A6D1A20E85B006AF815 /* vg_cta.png in Resources */ = {isa = PBXBuildFile; fileRef = 88035A581A20E85B006AF815 /* vg_cta.png */; };
-		88035A6E1A20E85B006AF815 /* vg_mute_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 88035A591A20E85B006AF815 /* vg_mute_off.png */; };
-		88035A6F1A20E85B006AF815 /* vg_mute_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 88035A5A1A20E85B006AF815 /* vg_mute_on.png */; };
-		88035A701A20E85B006AF815 /* vg_timer.png in Resources */ = {isa = PBXBuildFile; fileRef = 88035A5B1A20E85B006AF815 /* vg_timer.png */; };
-		88035A711A20E85B006AF815 /* VungleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A5C1A20E85B006AF815 /* VungleSDK.framework */; };
 		88035A741A20E87A006AF815 /* FlappyBlueprintTwoSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88035A731A20E87A006AF815 /* FlappyBlueprintTwoSettings.plist */; };
 		88035A7C1A20E894006AF815 /* BackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 88035A761A20E894006AF815 /* BackgroundMusic.mp3 */; };
 		88035A7D1A20E894006AF815 /* bomb.wav in Resources */ = {isa = PBXBuildFile; fileRef = 88035A771A20E894006AF815 /* bomb.wav */; };
@@ -219,8 +210,6 @@
 		88035A1A1A20E85B006AF815 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
 		88035A1B1A20E85B006AF815 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
 		88035A1C1A20E85B006AF815 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
-		88035A1E1A20E85B006AF815 /* Nextpeer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nextpeer.framework; sourceTree = "<group>"; };
-		88035A201A20E85B006AF815 /* NPResources_iPad_iPhone_Portrait.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NPResources_iPad_iPhone_Portrait.bundle; sourceTree = "<group>"; };
 		88035A221A20E85B006AF815 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		88035A231A20E85B006AF815 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		88035A241A20E85B006AF815 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
@@ -266,13 +255,6 @@
 		88035A511A20E85B006AF815 /* VirtualItemReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualItemReward.h; sourceTree = "<group>"; };
 		88035A521A20E85B006AF815 /* libSoomlaiOSCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSoomlaiOSCore.a; sourceTree = "<group>"; };
 		88035A531A20E85B006AF815 /* libSoomlaiOSStore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSoomlaiOSStore.a; sourceTree = "<group>"; };
-		88035A561A20E85B006AF815 /* __vungle.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = __vungle.db; sourceTree = "<group>"; };
-		88035A571A20E85B006AF815 /* vg_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vg_close.png; sourceTree = "<group>"; };
-		88035A581A20E85B006AF815 /* vg_cta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vg_cta.png; sourceTree = "<group>"; };
-		88035A591A20E85B006AF815 /* vg_mute_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vg_mute_off.png; sourceTree = "<group>"; };
-		88035A5A1A20E85B006AF815 /* vg_mute_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vg_mute_on.png; sourceTree = "<group>"; };
-		88035A5B1A20E85B006AF815 /* vg_timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vg_timer.png; sourceTree = "<group>"; };
-		88035A5C1A20E85B006AF815 /* VungleSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VungleSDK.framework; sourceTree = "<group>"; };
 		88035A731A20E87A006AF815 /* FlappyBlueprintTwoSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FlappyBlueprintTwoSettings.plist; sourceTree = "<group>"; };
 		88035A761A20E894006AF815 /* BackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic.mp3; sourceTree = "<group>"; };
 		88035A771A20E894006AF815 /* bomb.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bomb.wav; sourceTree = "<group>"; };
@@ -388,12 +370,10 @@
 				7A97911819E631CD001FFC4D /* libcocos2d.a in Frameworks */,
 				8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */,
 				B77F1B3217B978D7009739AE /* QuartzCore.framework in Frameworks */,
-				88035A641A20E85B006AF815 /* Nextpeer.framework in Frameworks */,
 				B77F1B3417B978D7009739AE /* OpenGLES.framework in Frameworks */,
 				B77F1B3617B978D7009739AE /* OpenAL.framework in Frameworks */,
 				B77F1B3817B978D7009739AE /* AudioToolbox.framework in Frameworks */,
 				88035A691A20E85B006AF815 /* libSoomlaiOSCore.a in Frameworks */,
-				88035A711A20E85B006AF815 /* VungleSDK.framework in Frameworks */,
 				B77F1B3A17B978D7009739AE /* AVFoundation.framework in Frameworks */,
 				B77F1B3C17B978D7009739AE /* UIKit.framework in Frameworks */,
 				B77F1B3E17B978D7009739AE /* Foundation.framework in Frameworks */,
@@ -596,11 +576,9 @@
 			children = (
 				88035A0E1A20E85B006AF815 /* Chartboost.framework */,
 				88035A191A20E85B006AF815 /* iRate */,
-				88035A1D1A20E85B006AF815 /* Nextpeer */,
 				88035A211A20E85B006AF815 /* ProgressHUD */,
 				88035A251A20E85B006AF815 /* RevMobAds.framework */,
 				88035A261A20E85B006AF815 /* Store */,
-				88035A541A20E85B006AF815 /* VungleSDK.embeddedframework */,
 			);
 			path = ThirdPartyLibs;
 			sourceTree = "<group>";
@@ -613,23 +591,6 @@
 				88035A1C1A20E85B006AF815 /* iRate.m */,
 			);
 			path = iRate;
-			sourceTree = "<group>";
-		};
-		88035A1D1A20E85B006AF815 /* Nextpeer */ = {
-			isa = PBXGroup;
-			children = (
-				88035A1E1A20E85B006AF815 /* Nextpeer.framework */,
-				88035A1F1A20E85B006AF815 /* Resources */,
-			);
-			path = Nextpeer;
-			sourceTree = "<group>";
-		};
-		88035A1F1A20E85B006AF815 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				88035A201A20E85B006AF815 /* NPResources_iPad_iPhone_Portrait.bundle */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		88035A211A20E85B006AF815 /* ProgressHUD */ = {
@@ -720,28 +681,6 @@
 				88035A511A20E85B006AF815 /* VirtualItemReward.h */,
 			);
 			path = SoomlaiOSStore;
-			sourceTree = "<group>";
-		};
-		88035A541A20E85B006AF815 /* VungleSDK.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				88035A551A20E85B006AF815 /* Resources */,
-				88035A5C1A20E85B006AF815 /* VungleSDK.framework */,
-			);
-			path = VungleSDK.embeddedframework;
-			sourceTree = "<group>";
-		};
-		88035A551A20E85B006AF815 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				88035A561A20E85B006AF815 /* __vungle.db */,
-				88035A571A20E85B006AF815 /* vg_close.png */,
-				88035A581A20E85B006AF815 /* vg_cta.png */,
-				88035A591A20E85B006AF815 /* vg_mute_off.png */,
-				88035A5A1A20E85B006AF815 /* vg_mute_on.png */,
-				88035A5B1A20E85B006AF815 /* vg_timer.png */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		88035A721A20E87A006AF815 /* Plist */ = {
@@ -1069,7 +1008,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				880359C11A20E583006AF815 /* Media.xcassets in Resources */,
-				88035A6D1A20E85B006AF815 /* vg_cta.png in Resources */,
 				88035A801A20E894006AF815 /* tap.wav in Resources */,
 				B737893B180761570076A88C /* Published-iOS in Resources */,
 				88035A661A20E85B006AF815 /* ProgressHUD.bundle in Resources */,
@@ -1077,17 +1015,11 @@
 				88035A7D1A20E894006AF815 /* bomb.wav in Resources */,
 				88035A0B1A20E834006AF815 /* MyAwesomeBMFont.fnt in Resources */,
 				88035A7F1A20E894006AF815 /* hit.wav in Resources */,
-				88035A6C1A20E85B006AF815 /* vg_close.png in Resources */,
-				88035A651A20E85B006AF815 /* NPResources_iPad_iPhone_Portrait.bundle in Resources */,
 				88035A621A20E85B006AF815 /* iRate.bundle in Resources */,
 				88035A7E1A20E894006AF815 /* coin.wav in Resources */,
-				88035A6F1A20E85B006AF815 /* vg_mute_on.png in Resources */,
-				88035A6B1A20E85B006AF815 /* __vungle.db in Resources */,
 				88035A741A20E87A006AF815 /* FlappyBlueprintTwoSettings.plist in Resources */,
 				88035A0C1A20E834006AF815 /* MyAwesomeBMFont.png in Resources */,
 				88035A7C1A20E894006AF815 /* BackgroundMusic.mp3 in Resources */,
-				88035A701A20E85B006AF815 /* vg_timer.png in Resources */,
-				88035A6E1A20E85B006AF815 /* vg_mute_off.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

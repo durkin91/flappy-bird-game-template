@@ -64,10 +64,6 @@
 #define kRevMobShowAdAtStartup @"RevMob Show Ad At Startup"
 #define kRevMobShowAdAtGameOver @"RevMob Show Ad At Game Over"
 
-#define kVungleAppID @"Vungle App ID"
-#define kVungleShowAdAtStartup @"Vungle Show Ad At Startup"
-#define kVungleShowAdAtGameOver @"Vungle Show Ad At Game Over"
-
 #define kAdsFrequencyStartup @"Ads Frequency Startup"
 #define kAdsFrequencyGameOver @"Ads Frequency Game Over"
 

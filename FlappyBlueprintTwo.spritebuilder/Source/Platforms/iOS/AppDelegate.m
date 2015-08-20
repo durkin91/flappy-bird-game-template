@@ -43,11 +43,10 @@
 #import <CommonCrypto/CommonDigest.h>
 #import <AdSupport/AdSupport.h>
 #import <RevMobAds/RevMobAds.h>
-#import <VungleSDK/VungleSDK.h>
 #import "iRate.h"
 #import "Options.h"
 
-@interface AppController () <ChartboostDelegate, CBNewsfeedDelegate, VungleSDKDelegate>
+@interface AppController () <ChartboostDelegate, CBNewsfeedDelegate>
 @end
 
 @implementation AppController
@@ -78,9 +77,6 @@
   
   // setup iRate
   [self setupiRate];
-  
-  // setup Vungle
-  [self setupVungle];
   
   // running setup of third party libs asynchronously on background thread
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
@@ -336,149 +332,6 @@
 - (void) setupRevMob {
   
   [RevMobAds startSessionWithAppID:[PlistManager getStringValueFromNSUserDefaultsWithKey:kRevMobMediaID]];
-  
-}
-
-- (void) setupVungle {
-  NSString* appID = [PlistManager getStringValueFromNSUserDefaultsWithKey:kVungleAppID];
-  VungleSDK* sdk = [VungleSDK sharedSDK];
-  // start vungle publisher library
-  [sdk startWithAppId:appID];
-  
-  [[VungleSDK sharedSDK] setDelegate:self];
-}
-
-- (void) dealloc {
-  [[VungleSDK sharedSDK] setDelegate:nil];
-}
-
-- (void)vungleSDKwillShowAd {
-  NSLog(@"Strating Vungle Ad.");
-  
-  // stoping background music
-  //[Options stopBackgroundMusic];
-}
-
-- (void) vungleSDKwillCloseAdWithViewInfo:(NSDictionary *)viewInfo willPresentProductSheet:(BOOL)willPresentProductSheet {
-  NSLog(@"Exiting Vungle Ad..");
-  // the Vungle SDK does NOT restart the cocos2d animations
-  // we need to restart them manually here
-  [[CCDirector sharedDirector] resume];
-  
-  // restarting background music
-  //[Options playBackgroundMusic];
-  
-}
-
-- (void) vungleSDKwillCloseProductSheet:(id)productSheet {
-  NSLog(@"Exiting Vungle Ad.");
-  // the Vungle SDK does NOT restart the cocos2d animations
-  // we need to restart them manually here
-  [[CCDirector sharedDirector] resume];
-  
-  // restarting background music
-  //[Options playBackgroundMusic];
-  
-}
-
-
-+ (void) showAdsAtStartup {
-  
-  NSInteger startupCount = [[NSUserDefaults standardUserDefaults] integerForKey:kCountStartup];
-  
-  // showing ads
-  if (![StoreInventory getItemBalance:NO_ADS_ITEM_ID] >= 1) {
-    
-    if (startupCount % [PlistManager getIntValueFromNSUserDefaultsWithKey:kAdsFrequencyStartup] == 0) {
-      NSLog(@"Showing ad at Startup because Startup Count is: %li and Ads Frequency is: %i.", (long)startupCount, [PlistManager getIntValueFromNSUserDefaultsWithKey:kAdsFrequencyStartup]);
-      // showing ad
-      
-      
-      if ([PlistManager getBoolValueFromNSUserDefaultsWithKey:kVungleShowAdAtStartup]) {
-        NSLog(@"Showing Vungle ad...");
-        // passing the ad to be shown by RootViewControllerInterface
-        [[RootViewControllerInterface sharedManager] playVungleAd];
-      }
-      
-      if ([PlistManager getBoolValueFromNSUserDefaultsWithKey:kChartboostShowAdAtStartup]) {
-        NSLog(@"Showing Chartboost ad...");
-        // Show an interstitial
-        [Chartboost showInterstitial:CBLocationStartup];
-        
-        // Cache Startup interstitial
-        if (![Chartboost hasInterstitial:CBLocationStartup]) {
-          [Chartboost cacheInterstitial:CBLocationStartup];
-        }
-      }
-      
-      if ([PlistManager getBoolValueFromNSUserDefaultsWithKey:kRevMobShowAdAtStartup]) {
-        NSLog(@"Showing RevMob ad...");
-        // Show RevMob interstitial
-        RevMobFullscreen *fullscreen = [[RevMobAds session] fullscreenWithPlacementId:[PlistManager getStringValueFromNSUserDefaultsWithKey:kRevMobStartupPlacemetID]];
-        [fullscreen showAd];
-      }
-      
-    } else {
-      NSLog(@"Not showing ad at Startup because Startup Count is: %li and Ads Frequency is: %i.", (long)startupCount, [PlistManager getIntValueFromNSUserDefaultsWithKey:kAdsFrequencyStartup]);
-    }
-    
-  } else {
-    NSLog(@"Ads are off.");
-  }
-  
-  startupCount++;
-  [[NSUserDefaults standardUserDefaults] setInteger:startupCount forKey:kCountStartup];
-  [[NSUserDefaults standardUserDefaults] synchronize];
-  
-}
-
-+ (void) showAdsAtGameOver {
-  
-  NSInteger gameOverCount = [[NSUserDefaults standardUserDefaults] integerForKey:kCountGameOver];
-  
-  // showing ads
-  if (![StoreInventory getItemBalance:NO_ADS_ITEM_ID] >= 1) {
-    
-    if (gameOverCount % [PlistManager getIntValueFromNSUserDefaultsWithKey:kAdsFrequencyGameOver] == 0) {
-      NSLog(@"Showing ad at Game Over because Game Over Count is: %li and Ads Frequency is: %i.", (long)gameOverCount, [PlistManager getIntValueFromNSUserDefaultsWithKey:kAdsFrequencyGameOver]);
-      // showing ad
-      
-      
-      if ([PlistManager getBoolValueFromNSUserDefaultsWithKey:kVungleShowAdAtGameOver]) {
-        NSLog(@"Showing Vungle ad...");
-        // passing the ad to be shown by RootViewControllerInterface
-        [[RootViewControllerInterface sharedManager] playVungleAd];
-      }
-      
-      if ([PlistManager getBoolValueFromNSUserDefaultsWithKey:kChartboostShowAdAtGameOver]) {
-        NSLog(@"Showing Chartboost ad...");
-        // Show an interstitial
-        [Chartboost showInterstitial:CBLocationGameOver];
-        
-        // Cache Startup interstitial
-        if (![Chartboost hasInterstitial:CBLocationGameOver]) {
-          [Chartboost cacheInterstitial:CBLocationGameOver];
-        }
-      }
-      
-      if ([PlistManager getBoolValueFromNSUserDefaultsWithKey:kRevMobShowAdAtGameOver]) {
-        NSLog(@"Showing RevMob ad...");
-        // Show RevMob interstitial
-        RevMobFullscreen *fullscreen = [[RevMobAds session] fullscreenWithPlacementId:[PlistManager getStringValueFromNSUserDefaultsWithKey:kRevMobGameOverPlacementID]];
-        [fullscreen showAd];
-      }
-      
-    } else {
-      NSLog(@"Not showing ad at Game Over because Game Over Count is: %li and Ads Frequency is: %i.", (long)gameOverCount, [PlistManager getIntValueFromNSUserDefaultsWithKey:kAdsFrequencyGameOver]);
-    }
-    
-  } else {
-    NSLog(@"Ads are off.");
-  }
-  
-  gameOverCount++;
-  [[NSUserDefaults standardUserDefaults] setInteger:gameOverCount forKey:kCountGameOver];
-  [[NSUserDefaults standardUserDefaults] synchronize];
   
 }
 
