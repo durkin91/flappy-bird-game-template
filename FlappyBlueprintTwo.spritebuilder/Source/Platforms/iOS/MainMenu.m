@@ -72,16 +72,6 @@
     [Nextpeer launchDashboard];
 }
 
-- (void) gameCenterButtonTapped {
-    
-    // FLURRY LOG
-    [Flurry logEvent:@"[Main Menu] Game Center button tapped."];
-    [Options playTapSound];
-    
-    NSLog(@"Passing Game Center opening to rootViewControllerInterface");
-    [[RootViewControllerInterface sharedManager] openGameCenterFromRootViewController];
-}
-
 - (void) shopButtonTapped {
     // FLURRY LOG
     [Flurry logEvent:@"[Main Menu] Shop button tapped."];

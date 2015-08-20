@@ -43,20 +43,6 @@
     }];
 }
 
-- (void) openGameCenterFromRootViewController {
-    
-    NSLog(@"OPENING GAME CENTER LEADERBOARD.");
-    
-    if ([[GameCenterManager sharedManager] checkGameCenterAvailability]) {
-        [[GameCenterManager sharedManager] presentLeaderboardsOnViewController:rootViewController];
-    } else {
-        NSLog(@"Game Center is unavailable.");
-    }
-    
-    //[[GameCenterManager sharedManager] presentLeaderboardsOnViewController:rootViewController];
-    //[[GameCenterManager sharedManager] presentAchievementsOnViewController:rootViewController];
-}
-
 - (void) playVungleAd {
     VungleSDK* sdk = [VungleSDK sharedSDK];
     [sdk playAd:rootViewController];
@@ -91,19 +77,5 @@
     [rootViewController presentViewController:controller animated:YES completion:nil];
 }
 
-//------------------------------------------------------------------------------------------------------------//
-//------- GameCenter Manager Delegate ------------------------------------------------------------------------//
-//------------------------------------------------------------------------------------------------------------//
-#pragma mark - GameCenter Manager Delegate
-
-- (void)gameCenterManager:(GameCenterManager *)manager authenticateUser:(UIViewController *)gameCenterLoginController {
-    /*
-     [self presentViewController:gameCenterLoginController animated:YES completion:^{
-     NSLog(@"Finished Presenting Authentication Controller");
-     }];*/
-    
-    [[RootViewControllerInterface sharedManager] presentViewController:gameCenterLoginController animated:YES];
-    NSLog(@"Finished Presenting Authentication Controller");
-}
 
 @end

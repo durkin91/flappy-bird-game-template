@@ -20,14 +20,12 @@
  */
 
 #import <Foundation/Foundation.h>
-
-#import "GameCenterManager.h"
 #import "Defaults.h"
 #import <VungleSDK/VungleSDK.h>
 #import <Social/Social.h>
 
 
-@interface RootViewControllerInterface : NSObject <GameCenterManagerDelegate> {
+@interface RootViewControllerInterface : NSObject {
     UIViewController *rootViewController;
     SLComposeViewController *mySLComposerSheet;
 }
@@ -40,8 +38,6 @@
 + (id)sharedManager;
 
 - (void) presentViewController:(UIViewController*)controller animated:(BOOL)animated;
-
-- (void) openGameCenterFromRootViewController;
 
 - (void) playVungleAd;
 

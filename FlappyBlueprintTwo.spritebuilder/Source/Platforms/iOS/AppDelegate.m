@@ -38,7 +38,6 @@
 #import "PlistManager.h"
 #import "ProgressHUD.h"
 #import "RootViewControllerInterface.h"
-#import "GameCenterManager.h"
 #import "Nextpeer/Nextpeer.h"
 #import <Chartboost/Chartboost.h>
 #import <Chartboost/CBNewsfeed.h>
@@ -50,7 +49,7 @@
 #import "Options.h"
 #import "Flurry.h"
 
-@interface AppController () <GameCenterManagerDelegate, NextpeerDelegate, NPTournamentDelegate, ChartboostDelegate, CBNewsfeedDelegate, VungleSDKDelegate>
+@interface AppController () <NextpeerDelegate, NPTournamentDelegate, ChartboostDelegate, CBNewsfeedDelegate, VungleSDKDelegate>
 @end
 
 @implementation AppController
@@ -265,12 +264,7 @@
     
   }
   
-  // game center manager setup
-  [[GameCenterManager sharedManager] setupManager];
-  
-  // Set GameCenter Manager Delegate
-  [[GameCenterManager sharedManager] setDelegate:self];
-  
+    
   // setup Flurry
   [self setupFlurry];
   
@@ -700,53 +694,7 @@
   }
 }
 
-//------------------------------------------------------------------------------------------------------------//
-//------- GameCenter Manager Delegate ------------------------------------------------------------------------//
-//------------------------------------------------------------------------------------------------------------//
-#pragma mark - GameCenter Manager Delegate
 
-- (void)gameCenterManager:(GameCenterManager *)manager authenticateUser:(UIViewController *)gameCenterLoginController {
-  /*
-   [self presentViewController:gameCenterLoginController animated:YES completion:^{
-   NSLog(@"Finished Presenting Authentication Controller");
-   }];*/
-  
-  [[RootViewControllerInterface sharedManager] presentViewController:gameCenterLoginController animated:YES];
-}
-
-- (void)gameCenterManager:(GameCenterManager *)manager error:(NSError *)error {
-  NSLog(@"GCM Error: %@", error);
-  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game Center" message:@"Sorry. Something went wrong." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-  [alert show];
-}
-
-- (void)gameCenterManager:(GameCenterManager *)manager reportedScore:(GKScore *)score withError:(NSError *)error {
-  if (!error) {
-    NSLog(@"GCM Reported Score.");
-    
-  } else {
-    NSLog(@"GCM Error while reporting score: %@", error);
-  }
-}
-
-- (void)gameCenterManager:(GameCenterManager *)manager didSaveScore:(GKScore *)score {
-  NSLog(@"Saved GCM Score.");
-  
-}
-
-- (void)gameCenterManager:(GameCenterManager *)manager reportedAchievement:(GKAchievement *)achievement withError:(NSError *)error
-{
-  if (!error) {
-    NSLog(@"GCM Reported Achievement.");
-    
-  } else {
-    NSLog(@"GCM Error while reporting achievement: %@", error);
-  }
-}
-
-- (void)gameCenterManager:(GameCenterManager *)manager didSaveAchievement:(GKAchievement *)achievement {
-  NSLog(@"Saved GCM Achievement with ID.");
-}
 
 
 @end

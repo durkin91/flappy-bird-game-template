@@ -26,7 +26,6 @@
 #import "FlappyBlueprintTwoStoreAssets.h"
 #import "RootViewControllerInterface.h"
 #import "AppDelegate.h"
-#import "GameCenterManager.h"
 #import "Options.h"
 #import "Flurry.h"
 
@@ -149,8 +148,6 @@
     
     [AppController deleteScreenshot];
     
-    [[GameCenterManager sharedManager] saveAndReportScore:currentScore leaderboard:[PlistManager getStringValueFromNSUserDefaultsWithKey:kGameCenterLeaderboardID] sortOrder:GameCenterSortOrderHighToLow];
-    
     CCScene *homeScene = [CCBReader loadAsScene:@"MainMenu"];
     [[CCDirector sharedDirector] replaceScene:homeScene];
 }
@@ -167,8 +164,6 @@
     [Options playTapSound];
     
     [AppController deleteScreenshot];
-    
-    [[GameCenterManager sharedManager] saveAndReportScore:currentScore leaderboard:[PlistManager getStringValueFromNSUserDefaultsWithKey:kGameCenterLeaderboardID] sortOrder:GameCenterSortOrderHighToLow];
     
     CCScene *shopScene = [CCBReader loadAsScene:@"ShopMenu"];
     [[CCDirector sharedDirector] replaceScene:shopScene];
