@@ -28,7 +28,6 @@
 #import "StoreInventory.h"
 #import "FlappyBlueprintTwoStoreAssets.h"
 #import "AppDelegate.h"
-#import "Nextpeer/Nextpeer.h"
 #import "Options.h"
 
 void dispatch_after_delta(float delta, dispatch_block_t block){
@@ -548,13 +547,6 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     currentScoreString = [NSString stringWithFormat:@"%li",(long)currentScore];
     _currentScoreLabel.string = currentScoreString;
     
-    // reporting to Nextpeer
-    if ([Nextpeer isCurrentlyInTournament]) {
-        
-        // Report the score to Nextpeer
-        [Nextpeer reportScoreForCurrentTournament:currentScore];
-    }
-    
     return TRUE;
 }
 
@@ -714,12 +706,6 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     
     [Score setCurrentCoins:currentCoins];
     
-    // reporting to Nextpeer
-    if ([Nextpeer isCurrentlyInTournament]) {
-        
-        // ending Nextpeer tournament
-        [Nextpeer reportControlledTournamentOverWithScore:currentScore];
-    }
     
     // resetting params
   [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:theCurrentScore];

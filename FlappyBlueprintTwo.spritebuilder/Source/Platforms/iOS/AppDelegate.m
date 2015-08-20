@@ -38,7 +38,6 @@
 #import "PlistManager.h"
 #import "ProgressHUD.h"
 #import "RootViewControllerInterface.h"
-#import "Nextpeer/Nextpeer.h"
 #import <Chartboost/Chartboost.h>
 #import <Chartboost/CBNewsfeed.h>
 #import <CommonCrypto/CommonDigest.h>
@@ -48,7 +47,7 @@
 #import "iRate.h"
 #import "Options.h"
 
-@interface AppController () <NextpeerDelegate, NPTournamentDelegate, ChartboostDelegate, CBNewsfeedDelegate, VungleSDKDelegate>
+@interface AppController () <ChartboostDelegate, CBNewsfeedDelegate, VungleSDKDelegate>
 @end
 
 @implementation AppController
@@ -82,9 +81,6 @@
   
   // setup Vungle
   [self setupVungle];
-  
-  // initialize Nextpeer
-  [self initializeNextpeer];
   
   // running setup of third party libs asynchronously on background thread
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
@@ -327,53 +323,6 @@
   [iRate sharedInstance].cancelButtonLabel = NSLocalizedString(IRATE_CANCEL_BUTTON, @"iRate decline button");
   [iRate sharedInstance].remindButtonLabel = NSLocalizedString(IRATE_REMIND_BUTTON, @"iRate remind button");
   [iRate sharedInstance].rateButtonLabel = NSLocalizedString(IRATE_RATE_BUTTON, @"iRate accept button");
-}
-
-- (void)initializeNextpeer
-{
-  NSDictionary* settings = [NSDictionary dictionaryWithObjectsAndKeys:
-                            
-                            // Support orientation change for the dashboard notifications
-                            [NSNumber numberWithBool:YES], NextpeerSettingSupportsDashboardRotation,
-                            //  Place the in-game ranking display in the top-left of the screen and align it vertically, so as to not hide the scores.
-                            [NSNumber numberWithInt:NPNotificationPosition_TOP_LEFT], NextpeerSettingNotificationPosition,
-                            [NSNumber numberWithInt:NPRankingDisplayAlignmentHorizontal], NextpeerSettingRankingDisplayAlignment,
-                            nil];
-  
-  
-  [Nextpeer initializeWithProductKey:[PlistManager getStringValueFromNSUserDefaultsWithKey:kNextpeerGameKey] andSettings:settings andDelegates:
-   [NPDelegatesContainer containerWithNextpeerDelegate:self tournamentDelegate:self]];
-  
-}
-
--(void)nextpeerDidTournamentStartWithDetails:(NPTournamentStartDataContainer *)tournamentContainer {
-  // Add code that starts a tournament:
-  // 1. Load scene
-  // 2. Start game
-  
-  [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_START_MULTIPLAYER object:nil];
-  
-}
-
-
--(void)nextpeerDidTournamentEnd {
-  // Add code that ends the current tournament
-  // 1. Stop game and animations
-  // 2. Release any unneeded resources
-}
-
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation
-{
-  if ([Nextpeer handleOpenURL:url]) {
-    return YES;
-  }
-  
-  // Handle other possible URLS
-  
-  return NO;
 }
 
 - (void) setupChartboost {

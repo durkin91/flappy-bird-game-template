@@ -23,7 +23,6 @@
 #import "StoreInventory.h"
 #import "FlappyBlueprintTwoStoreAssets.h"
 #import "RootViewControllerInterface.h"
-#import "Nextpeer/Nextpeer.h"
 #import "AppDelegate.h"
 #import "Options.h"
 
@@ -66,7 +65,6 @@
     
     [Options playTapSound];
     
-    [Nextpeer launchDashboard];
 }
 
 - (void) shopButtonTapped {

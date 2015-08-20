@@ -71,8 +71,6 @@
 #define kAdsFrequencyStartup @"Ads Frequency Startup"
 #define kAdsFrequencyGameOver @"Ads Frequency Game Over"
 
-#define kNextpeerGameKey @"Nextpeer Game Key"
-
 //NSString *CUSTOM_SECRET;
 //NSString *COIN_BOOSTER_PACK_IAP_ID;
 //NSString *COIN_MEGA_PACK_IAP_ID;

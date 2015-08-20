@@ -129,7 +129,6 @@ NSMutableArray *settingsArray;
     [self savePlistDataToNSUserDefaultsWithKey:kAdsFrequencyStartup];
     [self savePlistDataToNSUserDefaultsWithKey:kAdsFrequencyGameOver];
     
-    [self savePlistDataToNSUserDefaultsWithKey:kNextpeerGameKey];
     
 }
 
