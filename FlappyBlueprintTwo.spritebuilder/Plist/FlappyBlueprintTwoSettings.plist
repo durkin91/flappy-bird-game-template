@@ -19,14 +19,6 @@
 		<string>com.SandorNagy.FlappyBlueprintTwo.X2Coins</string>
 		<key>Soomla IAP No Ads ID</key>
 		<string>com.SandorNagy.FlappyBlueprintTwo.NoAds</string>
-		<key>Chartboost App ID</key>
-		<string>543178b8c26ee4782ffa28ac</string>
-		<key>Chartboost App Signature</key>
-		<string>3bb07eafd0604ab4f158dfd98e38e8fc6d861e49</string>
-		<key>Chartboost Show Ad At Startup</key>
-		<string>YES</string>
-		<key>Chartboost Show Ad At Game Over</key>
-		<string>NO</string>
 		<key>RevMob Media ID</key>
 		<string>54317a5ec0e1ca4807f6cbc9</string>
 		<key>RevMob Startup Placement ID</key>

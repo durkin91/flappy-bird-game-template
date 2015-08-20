@@ -53,11 +53,6 @@
 #define kSoomlaIAPDoubleCoinsID @"Soomla IAP Double Coins ID"
 #define kSoomlaIAPNoAdsID @"Soomla IAP No Ads ID"
 
-#define kChartboostAppID @"Chartboost App ID"
-#define kChartboostAppSignature @"Chartboost App Signature"
-#define kChartboostShowAdAtStartup @"Chartboost Show Ad At Startup"
-#define kChartboostShowAdAtGameOver @"Chartboost Show Ad At Game Over"
-
 #define kRevMobMediaID @"RevMob Media ID"
 #define kRevMobStartupPlacemetID @"RevMob Startup Placement ID"
 #define kRevMobGameOverPlacementID @"RevMob Game Over Placement ID"

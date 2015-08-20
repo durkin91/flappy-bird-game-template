@@ -111,11 +111,6 @@ NSMutableArray *settingsArray;
     //[self savePlistDataToNSUserDefaultsWithKey:kSoomlaIAPRevealSecretID];
     [self savePlistDataToNSUserDefaultsWithKey:kSoomlaIAPNoAdsID];
     
-    [self savePlistDataToNSUserDefaultsWithKey:kChartboostAppID];
-    [self savePlistDataToNSUserDefaultsWithKey:kChartboostAppSignature];
-    [self savePlistDataToNSUserDefaultsWithKey:kChartboostShowAdAtStartup];
-    [self savePlistDataToNSUserDefaultsWithKey:kChartboostShowAdAtGameOver];
-    
     [self savePlistDataToNSUserDefaultsWithKey:kRevMobMediaID];
     [self savePlistDataToNSUserDefaultsWithKey:kRevMobStartupPlacemetID];
     [self savePlistDataToNSUserDefaultsWithKey:kRevMobGameOverPlacementID];
@@ -124,7 +119,6 @@ NSMutableArray *settingsArray;
     
     [self savePlistDataToNSUserDefaultsWithKey:kAdsFrequencyStartup];
     [self savePlistDataToNSUserDefaultsWithKey:kAdsFrequencyGameOver];
-    
     
 }
 

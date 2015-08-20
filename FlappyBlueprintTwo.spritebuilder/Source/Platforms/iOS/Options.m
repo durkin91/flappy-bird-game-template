@@ -23,7 +23,6 @@
 #import "Defaults.h"
 #import "StoreInventory.h"
 #import "FlappyBlueprintTwoStoreAssets.h"
-#import <Chartboost/Chartboost.h>
 
 
 @implementation Options {
@@ -56,13 +55,6 @@
     
     [Options playTapSound];
     
-    // Show more apps
-    [Chartboost showMoreApps:CBLocationSettings];
-    
-    // Cache more apps
-    if (![Chartboost hasMoreApps:CBLocationSettings]) {
-        [Chartboost cacheMoreApps:CBLocationSettings];
-    }
 }
 
 - (void) rateButtonTapped {

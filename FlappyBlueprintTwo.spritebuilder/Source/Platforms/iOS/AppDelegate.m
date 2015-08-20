@@ -38,14 +38,12 @@
 #import "PlistManager.h"
 #import "ProgressHUD.h"
 #import "RootViewControllerInterface.h"
-#import <Chartboost/Chartboost.h>
-#import <Chartboost/CBNewsfeed.h>
 #import <CommonCrypto/CommonDigest.h>
 #import <AdSupport/AdSupport.h>
 #import <RevMobAds/RevMobAds.h>
 #import "Options.h"
 
-@interface AppController () <ChartboostDelegate, CBNewsfeedDelegate>
+@interface AppController ()
 @end
 
 @implementation AppController
@@ -63,9 +61,6 @@
   id<IStoreAssets> storeAssets = [[FlappyBlueprintTwoStoreAssets alloc] init];
   [Soomla initializeWithSecret:[PlistManager getStringValueFromNSUserDefaultsWithKey:kSoomlaCustomSecret]];
   [[SoomlaStore getInstance] initializeWithStoreAssets:storeAssets];
-  
-  // setup Chartboost
-  [self setupChartboost];
   
   // setup RevMob
   [self setupRevMob];
@@ -290,14 +285,6 @@
   //ADS_FREQUENCY_GAME_OVER = [PlistManager getIntValueFromNSUserDefaultsWithKey:kAdsFrequencyGameOver];
   
   //NEXTPEER_GAME_KEY = [PlistManager getStringValueFromNSUserDefaultsWithKey:kNextpeerGameKey];
-}
-
-- (void) setupChartboost {
-  
-  // Begin a user session.
-  // Must not be dependent on user actions or any prior network requests.
-  [Chartboost startWithAppId:[PlistManager getStringValueFromNSUserDefaultsWithKey:kChartboostAppID] appSignature:[PlistManager getStringValueFromNSUserDefaultsWithKey:kChartboostAppSignature] delegate:self];
-  
 }
 
 - (void) setupRevMob {
