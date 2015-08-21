@@ -32,11 +32,14 @@
     NSString *allCoinsString;
     CCButton *_playButton;
     CCButton *_optionsButton;
-    CCNode *_optionsMenu;
+    OptionsWindow *_optionsMenu;
     CCNode *_darkOverlay;
 }
 
 - (void)didLoadFromCCB {
+    
+    _optionsMenu.delegate = self;
+    
     [self animatePlayButton];
 }
 
@@ -57,14 +60,6 @@
     [self animateOptionsButton];
     [self showOptionsMenu];
     
-}
-
-- (void) okButtonTapped {
-    
-    [Options playTapSound];
-    
-    [self returnOptionsButton];
-    [self hideOptionsMenu];
 }
 
 
@@ -117,6 +112,16 @@
     _optionsMenu.visible = NO;
     
     _playButton.enabled = YES;
+}
+
+#pragma mark  - Options window 
+
+- (void) okButtonTapped {
+    
+    [Options playTapSound];
+    
+    [self returnOptionsButton];
+    [self hideOptionsMenu];
 }
 
 @end

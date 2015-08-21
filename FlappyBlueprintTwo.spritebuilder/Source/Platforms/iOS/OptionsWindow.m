@@ -34,4 +34,10 @@
     
 }
 
+- (void)okButtonTapped {
+    
+    [self.delegate okButtonTapped];
+    
+}
+
 @end

@@ -20,7 +20,8 @@
  */
 
 #import "CCNode.h"
+#import "OptionsWindow.h"
 
-@interface MainMenu : CCNode
+@interface MainMenu : CCNode <OptionsWindowDelegate>
 
 @end

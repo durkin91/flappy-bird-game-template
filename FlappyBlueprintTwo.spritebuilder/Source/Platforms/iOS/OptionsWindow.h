@@ -8,6 +8,16 @@
 
 #import "CCSprite.h"
 
+@protocol OptionsWindowDelegate <NSObject>
+
+@required
+
+- (void)okButtonTapped;
+
+@end
+
 @interface OptionsWindow : CCSprite
+
+@property (weak, nonatomic) id <OptionsWindowDelegate> delegate;
 
 @end
