@@ -29,6 +29,7 @@
 #import "FlappyBlueprintTwoStoreAssets.h"
 #import "AppDelegate.h"
 #import "Options.h"
+#import "GameOverWindow.h"
 
 void dispatch_after_delta(float delta, dispatch_block_t block){
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delta * NSEC_PER_SEC), dispatch_get_main_queue(), block);
@@ -47,6 +48,8 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     BOOL _gameOver;
     BOOL _nearGameOver;
     CGFloat _scrollSpeed;
+    
+    GameOverWindow *_gameOverWindow;
     
     CCSprite *_continuePanel;
     CCButton *_playOnButton;
@@ -341,7 +344,7 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
         CGPoint cityScreenPosition = [self convertToNodeSpace:cityWorldPosition];
         // if the left corner is one complete width off the screen, move it to the right
         if (cityScreenPosition.x <= (-1 * city.contentSize.width)) {
-            city.position = ccp(city.position.x + 2 * city.contentSize.width, city.position.y);
+            city.position = ccp(city.position.x + 2 * city.contentSize.width - 2, city.position.y);
         }
     }
     
@@ -622,8 +625,18 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     
     [Options stopBackgroundMusic];
     
-    CCScene *gameOverScene = [CCBReader loadAsScene:@"GameOver"];
-    [[CCDirector sharedDirector] replaceScene:gameOverScene];
+//    CCScene *gameOverScene = [CCBReader loadAsScene:@"GameOver"];
+//    [[CCDirector sharedDirector] replaceScene:gameOverScene];
+    
+    _togglePauseOnOffButton.visible = NO;
+    _darkOverlay.visible = YES;
+    _darkOverlay.zOrder = GameplayZeeOrderContinuePanel;
+    _darkOverlay.opacity = 0;
+    [_darkOverlay runAction:[CCActionFadeTo actionWithDuration:0.3 opacity:0.5]];
+    
+    _gameOverWindow.zOrder = GameplayZeeOrderContinuePanel;
+    _gameOverWindow.visible = YES;
+    [_gameOverWindow updateScores];
 }
 
 - (void) showCountdownForSeconds: (NSUInteger) seconds {
