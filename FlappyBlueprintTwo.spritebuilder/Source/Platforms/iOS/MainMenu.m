@@ -30,7 +30,16 @@
     CCButton *_toggleSoundOnOffButton;
     NSUInteger allCoins;
     NSString *allCoinsString;
+    CCButton *_playButton;
+    CCButton *_optionsButton;
+    CCNode *_optionsMenu;
+    CCNode *_darkOverlay;
 }
+
+- (void)didLoadFromCCB {
+    [self animatePlayButton];
+}
+
 
 - (void) playButtonTapped {
     
@@ -45,8 +54,17 @@
     
     [Options playTapSound];
     
-    CCScene *optionsScene = [CCBReader loadAsScene:@"Options"];
-    [[CCDirector sharedDirector] replaceScene:optionsScene];
+    [self animateOptionsButton];
+    [self showOptionsMenu];
+    
+}
+
+- (void) okButtonTapped {
+    
+    [Options playTapSound];
+    
+    [self returnOptionsButton];
+    [self hideOptionsMenu];
 }
 
 - (void) toggleSoundOnOffButtonTapped:(id) sender {
@@ -68,6 +86,58 @@
         //[Options playBackgroundMusic];
     }
     
+}
+
+
+
+#pragma mark - animations
+
+- (void)animatePlayButton {
+    
+    float duration = 1.0;
+    CCActionScaleTo *scaleDown = [CCActionScaleTo actionWithDuration:duration scale:0.95];
+    //CCActionEaseBackIn *down = [CCActionEaseBackIn actionWithAction:scaleDown];
+    CCActionScaleTo *scaleUp = [CCActionScaleTo actionWithDuration:duration scale:1.0];
+    //CCActionEaseBackIn *up = [CCActionEaseBackIn actionWithAction:scaleUp];
+    CCActionSequence *sequence = [CCActionSequence actions:scaleDown, scaleUp, nil];
+    CCActionRepeatForever *repeat = [CCActionRepeatForever actionWithAction:sequence];
+    
+    [_playButton runAction:repeat];
+    
+}
+
+- (void)animateOptionsButton {
+    float duration = 0.3;
+    CCActionRotateBy *rotate = [CCActionRotateBy actionWithDuration:duration angle:360 * 8];
+    CCActionFadeOut *fadeOut = [CCActionFadeOut actionWithDuration:duration];
+    CCActionSpawn *spawn = [CCActionSpawn actions:rotate, fadeOut, nil];
+    
+    _optionsButton.cascadeOpacityEnabled = YES;
+    [_optionsButton runAction:spawn];
+}
+
+- (void)returnOptionsButton {
+    float duration = 0.3;
+    CCActionRotateBy *rotate = [CCActionRotateBy actionWithDuration:duration angle:360 * 8];
+    CCActionFadeIn *fadeIn = [CCActionFadeIn actionWithDuration:duration];
+    CCActionSpawn *spawn = [CCActionSpawn actions:rotate, fadeIn, nil];
+    
+    _optionsButton.cascadeOpacityEnabled = YES;
+    [_optionsButton runAction:spawn];
+}
+
+- (void)showOptionsMenu {
+    [_darkOverlay runAction:[CCActionFadeTo actionWithDuration:0.3 opacity:0.5]];
+    _optionsMenu.visible = YES;
+    
+    _playButton.enabled = NO;
+}
+
+- (void)hideOptionsMenu {
+    [_darkOverlay runAction:[CCActionFadeTo actionWithDuration:0.3 opacity:0]];
+    _optionsMenu.visible = NO;
+    
+    _playButton.enabled = YES;
 }
 
 @end
