@@ -35,6 +35,7 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
 }
 
 @implementation Gameplay {
+    
     CCPhysicsNode *_physicsNode;
     CCNode *_hero;
     CCNode *_ground1;
@@ -62,6 +63,9 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     CCLabelBMFont *_currentCoinsLabel;
     uint32_t currentCoins;
     NSString *currentCoinsString;
+    
+    CCNodeColor *_darkOverlay;
+    CCSprite *_pauseText;
     
     CGSize theViewSize;
     
@@ -163,7 +167,7 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     
     [self addCoinsLabel];
     
-    [self addGamePausedLabel];
+    //[self addGamePausedLabel];
     
     hasTouched = NO;
   
@@ -496,13 +500,16 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     currentCoins = [[NSUserDefaults standardUserDefaults] integerForKey:theCurrentCoins];
     currentCoinsString = [NSString stringWithFormat:@"%li",(long)currentCoins];
     
-    _currentCoinsLabel = [CCLabelBMFont labelWithString:currentCoinsString fntFile:@"MyAwesomeBMFont.fnt"];
-    _currentCoinsLabel.anchorPoint = ccp(1.0, 0.5);
-    _currentCoinsLabel.position = ccp(295, 495);
-    _currentCoinsLabel.scale = 0.4f;
     _currentCoinsLabel.zOrder = GameplayZeeOrderCoinsCount;
+    _currentCoinsLabel.string = currentCoinsString;
     
-    [self addChild:_currentCoinsLabel];
+//    _currentCoinsLabel = [CCLabelBMFont labelWithString:currentCoinsString fntFile:@"MyAwesomeBMFont.fnt"];
+//    _currentCoinsLabel.anchorPoint = ccp(1.0, 1.0);
+//    _currentCoinsLabel.position = ccp(_coinCountSymbol.position.x, _coinCountSymbol.position.y);
+//    _currentCoinsLabel.scale = 0.4f;
+//    _currentCoinsLabel.zOrder = GameplayZeeOrderCoinsCount;
+    
+//    [self addChild:_currentCoinsLabel];
 }
 
 - (void) addScoreLabel {
@@ -693,7 +700,11 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
         NSLog(@"Pause is ON.");
         _gameIsPaused = YES;
         
-        _gamePausedLabel.visible = YES;
+        //_gamePausedLabel.visible = YES;
+        _darkOverlay.visible = YES;
+        _darkOverlay.zOrder = GameplayZeeOrderContinuePanel;
+        _pauseText.visible = YES;
+        _pauseText.zOrder = GameplayZeeOrderContinuePanel;
     
         _scrollSpeed = 0.f;
         
@@ -711,7 +722,9 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
         NSLog(@"Pause is OFF.");
         _gameIsPaused = NO;
         
-        _gamePausedLabel.visible = NO;
+        //_gamePausedLabel.visible = NO;
+        _darkOverlay.visible = NO;
+        _pauseText.visible = NO;
         
         _scrollSpeed = SCROLL_SPEED_NORMAL;
         
