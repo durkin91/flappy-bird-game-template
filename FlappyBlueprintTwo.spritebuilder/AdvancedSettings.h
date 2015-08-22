@@ -36,7 +36,7 @@ static float const SCROLL_SPEED_GADGET_05 = 90;
  */
 
 static float const DISTANCE_BETWEEN_PIPES_NORMAL = 260;
-static float const DISTANCE_BETWEEN_PIPES_GADGET_01 = 260;
+static float const DISTANCE_BETWEEN_PIPES_GADGET_01 = 400;
 
 //---------------------------------------------------------------------------
 /*

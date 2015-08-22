@@ -9,7 +9,16 @@
 #import "GiftInfo.h"
 #import "Options.h"
 
-@implementation GiftInfo
+@implementation GiftInfo {
+    
+    CCLabelBMFont *_messageLabel;
+}
+
+- (void)didLoadFromCCB {
+    
+    _messageLabel.alignment = CCTextAlignmentCenter;
+    
+}
 
 - (void) homeButtonTapped {
     

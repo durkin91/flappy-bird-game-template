@@ -376,7 +376,7 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     }
     Obstacle *obstacle = (Obstacle *)[CCBReader load:[self obstacleName]];
     obstacle.position = ccp(previousObstacleXPosition + _distanceBetweenObstacles, 0);
-    [obstacle setupRandomPosition];
+    [obstacle setupRandomPositionWithPipeDistance:_distanceBetweenObstacles];
     obstacle.zOrder = DrawingOrderPipes;
     [_physicsNode addChild:obstacle];
     [_obstacles addObject:obstacle];

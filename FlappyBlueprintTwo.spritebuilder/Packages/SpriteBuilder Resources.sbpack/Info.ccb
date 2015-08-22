@@ -396,7 +396,7 @@
 								<key>displayName</key>
 								<string>CCLabelBMFont</string>
 								<key>memberVarAssignmentName</key>
-								<string></string>
+								<string>_messageLabel</string>
 								<key>memberVarAssignmentType</key>
 								<integer>1</integer>
 								<key>properties</key>
@@ -475,16 +475,13 @@
 										<string>Text</string>
 										<key>value</key>
 										<array>
-											<string>I love you
-etc etc
-etc etc
-Love, Ingrid</string>
+											<string>Happy anniversary baby.
+"Gotchya on my miiiiind".
+Love, Schnookie</string>
 											<false/>
 										</array>
 									</dict>
 								</array>
-								<key>selected</key>
-								<true/>
 							</dict>
 						</array>
 						<key>customClass</key>
@@ -695,6 +692,8 @@ Love, Ingrid</string>
 								<array/>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>

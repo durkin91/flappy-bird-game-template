@@ -23,6 +23,6 @@
 
 @interface Obstacle : CCNode
 
-- (void)setupRandomPosition;
+- (void)setupRandomPositionWithPipeDistance:(CGFloat)distanceBetweenPipes;
 
 @end

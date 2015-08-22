@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>35</integer>
+	<integer>37</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -194,8 +194,8 @@
 								<key>value</key>
 								<array>
 									<real>0.0</real>
-									<real>135</real>
-									<integer>0</integer>
+									<real>-140</real>
+									<integer>1</integer>
 									<integer>0</integer>
 									<integer>0</integer>
 								</array>
@@ -302,8 +302,8 @@
 								<key>value</key>
 								<array>
 									<real>298</real>
-									<real>135</real>
-									<integer>0</integer>
+									<real>-140</real>
+									<integer>1</integer>
 									<integer>0</integer>
 									<integer>0</integer>
 								</array>
@@ -404,8 +404,8 @@
 						<key>value</key>
 						<array>
 							<real>0.0</real>
-							<real>0.0</real>
-							<integer>0</integer>
+							<real>568</real>
+							<integer>1</integer>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -467,6 +467,8 @@
 						<real>0.5</real>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -573,8 +575,8 @@
 								<key>value</key>
 								<array>
 									<real>0.0</real>
-									<real>-58</real>
-									<integer>0</integer>
+									<real>626</real>
+									<integer>1</integer>
 									<integer>0</integer>
 									<integer>0</integer>
 								</array>
@@ -746,8 +748,8 @@
 								<key>value</key>
 								<array>
 									<real>420</real>
-									<real>-58</real>
-									<integer>0</integer>
+									<real>626</real>
+									<integer>1</integer>
 									<integer>0</integer>
 									<integer>0</integer>
 								</array>
@@ -820,8 +822,6 @@
 								<array/>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
