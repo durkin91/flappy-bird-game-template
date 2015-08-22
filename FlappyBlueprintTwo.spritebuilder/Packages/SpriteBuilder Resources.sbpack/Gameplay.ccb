@@ -820,6 +820,8 @@
 								<array/>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -1019,8 +1021,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1091,7 +1091,7 @@
 						<key>type</key>
 						<string>FntFile</string>
 						<key>value</key>
-						<string>MyResources/WhiteFont.bmfont</string>
+						<string>MyResources/Fonts/WhiteFont.bmfont</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1113,7 +1113,8 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>0</string>
+							<string>0
+</string>
 							<false/>
 						</array>
 					</dict>

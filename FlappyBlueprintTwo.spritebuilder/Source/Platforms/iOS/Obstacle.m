@@ -40,7 +40,7 @@ static const CGFloat minimumYPositionTopPipe = 48.f; //48.f
 // visibility ends at 480 and we want some meat
 static const CGFloat maximumYPositionBottomPipe = 400.f; //400.f
 // distance between top and bottom pipe
-static const CGFloat pipeDistance = 240.f;
+static const CGFloat pipeDistance = 160.f;
 // calculate the end of the range of top pipe
 static const CGFloat maximumYPositionTopPipe = maximumYPositionBottomPipe - pipeDistance;
 

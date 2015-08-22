@@ -1199,7 +1199,7 @@
 						<key>type</key>
 						<string>FntFile</string>
 						<key>value</key>
-						<string>MyResources/WhiteFont.bmfont</string>
+						<string>MyResources/Fonts/WhiteFont.bmfont</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1226,6 +1226,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
