@@ -36,9 +36,9 @@
 
 #define ARC4RANDOM_MAX      0x100000000
 // visibility on a 3,5-inch iPhone ends a 88 points and we want some meat
-static const CGFloat minimumYPositionTopPipe = 80.f; //48.f
+static const CGFloat minimumYPositionTopPipe = 48.f; //48.f
 // visibility ends at 480 and we want some meat
-static const CGFloat maximumYPositionBottomPipe = 460.f; //400.f
+static const CGFloat maximumYPositionBottomPipe = 400.f; //400.f
 // distance between top and bottom pipe
 static const CGFloat pipeDistance = 240.f;
 // calculate the end of the range of top pipe

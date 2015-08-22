@@ -92,6 +92,14 @@
     
 }
 
+- (void) infoButtonTapped {
+    
+    [Options playTapSound];
+    
+    CCScene *scene = [CCBReader loadAsScene:@"Info"];
+    [[CCDirector sharedDirector] replaceScene:scene];
+}
+
 - (void) animateCoinForNewBestScore {
     
     NSTimeInterval shakeDuration = 0.1;

@@ -62,6 +62,14 @@
     
 }
 
+- (void) infoButtonTapped {
+    
+    [Options playTapSound];
+    
+    CCScene *scene = [CCBReader loadAsScene:@"Info"];
+    [[CCDirector sharedDirector] replaceScene:scene];
+}
+
 
 
 #pragma mark - animations

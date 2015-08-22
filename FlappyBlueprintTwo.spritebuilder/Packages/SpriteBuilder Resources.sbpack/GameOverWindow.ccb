@@ -154,8 +154,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -405,8 +403,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>165.5</real>
-							<real>197</real>
+							<real>188</real>
+							<real>195</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -419,7 +417,7 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
+							<real>0.5</real>
 							<real>0.5</real>
 						</array>
 					</dict>
@@ -442,7 +440,7 @@
 						<key>type</key>
 						<string>FntFile</string>
 						<key>value</key>
-						<string>MyResources/grobold.bmfont</string>
+						<string>MyResources/WhiteFont.bmfont</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -464,7 +462,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>100</string>
+							<string>20</string>
 							<false/>
 						</array>
 					</dict>
@@ -502,8 +500,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>165.5</real>
-							<real>137</real>
+							<real>188</real>
+							<real>135</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -516,7 +514,7 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
+							<real>0.5</real>
 							<real>0.5</real>
 						</array>
 					</dict>
@@ -539,7 +537,7 @@
 						<key>type</key>
 						<string>FntFile</string>
 						<key>value</key>
-						<string>MyResources/grobold.bmfont</string>
+						<string>MyResources/WhiteFont.bmfont</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -561,7 +559,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>100</string>
+							<string>35</string>
 							<false/>
 						</array>
 					</dict>
