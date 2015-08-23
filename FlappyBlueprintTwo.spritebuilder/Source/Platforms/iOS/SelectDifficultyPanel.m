@@ -16,7 +16,7 @@
     
     [Options playTapSound];
     
-    [[NSUserDefaults standardUserDefaults] setObject:EASY_DIFFICULTY forKey:GAME_DIFFICULTY];
+    [[NSUserDefaults standardUserDefaults] setObject:kEASY_DIFFICULTY forKey:GAME_DIFFICULTY];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     [self play];
@@ -27,7 +27,7 @@
     
     [Options playTapSound];
     
-    [[NSUserDefaults standardUserDefaults] setObject:MEDIUM_DIFFICULTY forKey:GAME_DIFFICULTY];
+    [[NSUserDefaults standardUserDefaults] setObject:kMEDIUM_DIFFICULTY forKey:GAME_DIFFICULTY];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     [self play];
@@ -38,7 +38,7 @@
     
     [Options playTapSound];
     
-    [[NSUserDefaults standardUserDefaults] setObject:HARD_DIFFICULTY forKey:GAME_DIFFICULTY];
+    [[NSUserDefaults standardUserDefaults] setObject:kHARD_DIFFICULTY forKey:GAME_DIFFICULTY];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     [self play];

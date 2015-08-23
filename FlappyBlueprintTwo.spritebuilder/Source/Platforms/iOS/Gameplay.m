@@ -147,11 +147,38 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     //IS_BOOST_ACTIVE = NO;
     //IS_SUPER_BOOST_ACTIVE = NO;
     
+    //Set up some variables that effect level difficulty
+    NSString *gameDifficulty = [[NSUserDefaults standardUserDefaults] objectForKey:GAME_DIFFICULTY];
+    
+    if ([gameDifficulty isEqualToString:kEASY_DIFFICULTY]) {
+        
+        _distanceBetweenObstacles = DISTANCE_BETWEEN_PIPES_EASY;
+        
+    }
+    
+    else if ([gameDifficulty isEqualToString:kMEDIUM_DIFFICULTY]) {
+        
+        _distanceBetweenObstacles = DISTANCE_BETWEEN_PIPES_MEDIUM;
+        
+    }
+    
+    else if ([gameDifficulty isEqualToString:kHARD_DIFFICULTY]) {
+        
+        _distanceBetweenObstacles = DISTANCE_BETWEEN_PIPES_HARD;
+        
+    }
+    
+    else {
+        
+        _distanceBetweenObstacles = DISTANCE_BETWEEN_PIPES_MEDIUM;
+        
+    }
+    
     //Set these up. They were originally checking whether there was enough store inventory, but that is irrelevant now.
     _boostButton.visible = NO;
     _superBoostButton.visible = NO;
     coinsToAdd = 1;
-    _distanceBetweenObstacles = DISTANCE_BETWEEN_PIPES_NORMAL;
+    //_distanceBetweenObstacles = DISTANCE_BETWEEN_PIPES_NORMAL;
     _fog.visible = NO;
     _scrollSpeed = SCROLL_SPEED_NORMAL;
     

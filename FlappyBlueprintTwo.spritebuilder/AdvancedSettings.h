@@ -35,8 +35,21 @@ static float const SCROLL_SPEED_GADGET_05 = 90;
  * Distance between pipes
  */
 
-static float const DISTANCE_BETWEEN_PIPES_NORMAL = 260;
 static float const DISTANCE_BETWEEN_PIPES_GADGET_01 = 400;
+
+static float const DISTANCE_BETWEEN_PIPES_EASY = 400;
+static float const DISTANCE_BETWEEN_PIPES_MEDIUM = 260;
+static float const DISTANCE_BETWEEN_PIPES_HARD = 150;
+
+//---------------------------------------------------------------------------
+/*
+ * Gap distance between pipes
+ */
+
+static float const PIPE_DISTANCE_EASY = 140;
+static float const PIPE_DISTANCE_MEDIUM = 112;
+static float const PIPE_DISTANCE_HARD = 112;
+
 
 //---------------------------------------------------------------------------
 /*

@@ -33,4 +33,9 @@
 + (void) playBackgroundMusic;
 + (void) stopBackgroundMusic;
 
++ (BOOL)isEasy;
++ (BOOL)isMedium;
++ (BOOL)isHard;
+
+
 @end

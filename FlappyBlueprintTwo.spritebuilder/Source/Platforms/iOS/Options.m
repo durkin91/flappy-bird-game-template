@@ -122,5 +122,40 @@
     }
 }
 
+#pragma mark - Game difficulty
+
++ (BOOL)isEasy {
+    
+    NSString *gameDifficulty = [[NSUserDefaults standardUserDefaults] objectForKey:GAME_DIFFICULTY];
+    
+    if ([gameDifficulty isEqualToString:kEASY_DIFFICULTY]) {
+        return YES;
+    }
+    
+    else return NO;
+}
+
++ (BOOL)isMedium {
+    
+    NSString *gameDifficulty = [[NSUserDefaults standardUserDefaults] objectForKey:GAME_DIFFICULTY];
+    
+    if ([gameDifficulty isEqualToString:kMEDIUM_DIFFICULTY]) {
+        return YES;
+    }
+    
+    else return NO;
+}
+
++ (BOOL)isHard {
+    
+    NSString *gameDifficulty = [[NSUserDefaults standardUserDefaults] objectForKey:GAME_DIFFICULTY];
+    
+    if ([gameDifficulty isEqualToString:kHARD_DIFFICULTY]) {
+        return YES;
+    }
+    
+    else return NO;
+}
+
 
 @end

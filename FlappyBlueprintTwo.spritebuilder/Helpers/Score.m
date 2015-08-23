@@ -20,6 +20,7 @@
  */
 
 #import "Score.h"
+#import "Options.h"
 
 @implementation Score
 
@@ -35,14 +36,48 @@
 
 + (void) setBestScore:(NSUInteger) bestScore
 {
-    [[NSUserDefaults standardUserDefaults] setInteger:bestScore forKey:kBestScoreKey];
+    if ([Options isEasy]) {
+        
+        [[NSUserDefaults standardUserDefaults] setInteger:bestScore forKey:kBestScoreKeyEasy];
+        
+    }
+    
+    else if ([Options isMedium]) {
+        
+        [[NSUserDefaults standardUserDefaults] setInteger:bestScore forKey:kBestScoreKeyMedium];
+        
+    }
+    
+    else if ([Options isHard]) {
+        
+        [[NSUserDefaults standardUserDefaults] setInteger:bestScore forKey:kBestScoreKeyHard];
+        
+    }
+
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kIsBestScoreKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 + (NSUInteger) bestScore
 {
-    return [[NSUserDefaults standardUserDefaults] integerForKey:kBestScoreKey];
+    if ([Options isEasy]) {
+        
+        return [[NSUserDefaults standardUserDefaults] integerForKey:kBestScoreKeyEasy];
+                
+    }
+    
+    else if ([Options isMedium]) {
+        
+        return [[NSUserDefaults standardUserDefaults] integerForKey:kBestScoreKeyMedium];
+        
+    }
+    
+    else if ([Options isHard]) {
+        
+        return [[NSUserDefaults standardUserDefaults] integerForKey:kBestScoreKeyHard];
+        
+    }
+    
 }
 
 + (BOOL) isBestScore {

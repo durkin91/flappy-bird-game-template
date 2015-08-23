@@ -101,9 +101,9 @@
 // Game difficulty
 #define GAME_DIFFICULTY @"Game Difficulty"
 
-#define EASY_DIFFICULTY @"Easy"
-#define MEDIUM_DIFFICULTY @"Medium"
-#define HARD_DIFFICULTY @"Hard"
+#define kEASY_DIFFICULTY @"Easy"
+#define kMEDIUM_DIFFICULTY @"Medium"
+#define kHARD_DIFFICULTY @"Hard"
 
 /*
 typedef NS_ENUM(NSInteger, HeroType) {

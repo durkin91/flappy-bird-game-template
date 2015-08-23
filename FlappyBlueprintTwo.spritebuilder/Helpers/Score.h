@@ -21,7 +21,10 @@
 
 #import <Foundation/Foundation.h>
 
-#define kBestScoreKey @"BestScore"
+#define kBestScoreKeyEasy @"BestScoreEasy"
+#define kBestScoreKeyMedium @"BestScoreMedium"
+#define kBestScoreKeyHard @"BestScoreHard"
+
 #define kIsBestScoreKey @"IsBestScore"
 #define kCurrentScoreKey @"CurrentScore"
 

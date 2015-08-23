@@ -103,7 +103,32 @@
         
     }
     
-    pipeDistance = 112.f;
+    //Change pipe distance (the gap btwn pipes) according to level difficulty
+    NSString *gameDifficulty = [[NSUserDefaults standardUserDefaults] objectForKey:GAME_DIFFICULTY];
+    
+    if ([gameDifficulty isEqualToString:kEASY_DIFFICULTY]) {
+        
+        pipeDistance = PIPE_DISTANCE_EASY;
+        
+    }
+    
+    else if ([gameDifficulty isEqualToString:kMEDIUM_DIFFICULTY]) {
+        
+        pipeDistance = PIPE_DISTANCE_MEDIUM;
+        
+    }
+    
+    else if ([gameDifficulty isEqualToString:kHARD_DIFFICULTY]) {
+        
+        pipeDistance = PIPE_DISTANCE_HARD;
+        
+    }
+    
+    else {
+        pipeDistance = PIPE_DISTANCE_MEDIUM;
+    }
+    
+
     maximumYPositionTopPipe = maximumYPositionBottomPipe - pipeDistance;
 
     _topPipe.physicsBody.collisionType = @"obstacle";
@@ -117,9 +142,7 @@
     
     if ([StoreInventory isVirtualGoodWithItemIdEquipped:GADGETS_GOOD_06_ITEM_ID]) {
         pipeDistance = [Math randomFloatBetween:112.f and:312.f];
-    } else {
-        pipeDistance = 112.f;
-    }
+    } 
     
     if ([StoreInventory isVirtualGoodWithItemIdEquipped:GADGETS_GOOD_07_ITEM_ID]) {
         _topPipe.visible = NO;
