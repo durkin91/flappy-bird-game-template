@@ -24,7 +24,6 @@
 #import "FlappyBlueprintTwoStoreAssets.h"
 #import "Math.h"
 #import "Defaults.h"
-#import "DeviceUtil.h"
 
 @implementation Obstacle {
     CCNode *_topPipe;

@@ -10,7 +10,7 @@
 		159A623A1B8749B70026BA5F /* GameOverWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A62391B8749B70026BA5F /* GameOverWindow.m */; };
 		159A623D1B875AB70026BA5F /* OptionsWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A623C1B875AB70026BA5F /* OptionsWindow.m */; };
 		159A62401B87EEAE0026BA5F /* GiftInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A623F1B87EEAE0026BA5F /* GiftInfo.m */; };
-		159A624F1B894DD20026BA5F /* DeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A624E1B894DD20026BA5F /* DeviceUtil.m */; };
+		159A62591B89751C0026BA5F /* SelectDifficultyPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A62581B89751C0026BA5F /* SelectDifficultyPanel.m */; };
 		5B12100C19748281004C1E1D /* BridgeKitV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B12100B19748281004C1E1D /* BridgeKitV3.framework */; };
 		5B121029197484DA004C1E1D /* BridgeKitV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B12100B19748281004C1E1D /* BridgeKitV3.framework */; };
 		5B12102A197484DD004C1E1D /* FlappyBlueprintTwoActivity.java in Sources */ = {isa = PBXBuildFile; fileRef = 5B12101B19748413004C1E1D /* FlappyBlueprintTwoActivity.java */; };
@@ -162,8 +162,8 @@
 		159A623C1B875AB70026BA5F /* OptionsWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OptionsWindow.m; path = Source/Platforms/iOS/OptionsWindow.m; sourceTree = "<group>"; };
 		159A623E1B87EEAE0026BA5F /* GiftInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GiftInfo.h; path = Source/Platforms/iOS/GiftInfo.h; sourceTree = "<group>"; };
 		159A623F1B87EEAE0026BA5F /* GiftInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GiftInfo.m; path = Source/Platforms/iOS/GiftInfo.m; sourceTree = "<group>"; };
-		159A624D1B894DD20026BA5F /* DeviceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUtil.h; sourceTree = "<group>"; };
-		159A624E1B894DD20026BA5F /* DeviceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtil.m; sourceTree = "<group>"; };
+		159A62571B89751C0026BA5F /* SelectDifficultyPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectDifficultyPanel.h; path = Source/Platforms/iOS/SelectDifficultyPanel.h; sourceTree = "<group>"; };
+		159A62581B89751C0026BA5F /* SelectDifficultyPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectDifficultyPanel.m; path = Source/Platforms/iOS/SelectDifficultyPanel.m; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100B19748281004C1E1D /* BridgeKitV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BridgeKitV3.framework; path = System/Library/Frameworks/BridgeKitV3.framework; sourceTree = SDKROOT; };
 		5B12100F197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
@@ -389,16 +389,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		159A62501B894DD80026BA5F /* DeviceUtil */ = {
-			isa = PBXGroup;
-			children = (
-				159A624D1B894DD20026BA5F /* DeviceUtil.h */,
-				159A624E1B894DD20026BA5F /* DeviceUtil.m */,
-			);
-			name = DeviceUtil;
-			path = ThirdPartyLibs;
-			sourceTree = "<group>";
-		};
 		5B12100D197483EE004C1E1D /* res */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,7 +445,6 @@
 		7A40362119DDF08C007B6E8F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				159A62501B894DD80026BA5F /* DeviceUtil */,
 				B737893D1807617C0076A88C /* AppDelegate.h */,
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 				880359E81A20E773006AF815 /* Defaults.h */,
@@ -485,6 +474,8 @@
 				880359FA1A20E773006AF815 /* ShopGadgets.m */,
 				880359FB1A20E773006AF815 /* ShopMenu.h */,
 				880359FC1A20E773006AF815 /* ShopMenu.m */,
+				159A62571B89751C0026BA5F /* SelectDifficultyPanel.h */,
+				159A62581B89751C0026BA5F /* SelectDifficultyPanel.m */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -1115,9 +1106,9 @@
 				B73789871807631A0076A88C /* main.m in Sources */,
 				88035A031A20E773006AF815 /* ShopCharacters.m in Sources */,
 				159A623D1B875AB70026BA5F /* OptionsWindow.m in Sources */,
+				159A62591B89751C0026BA5F /* SelectDifficultyPanel.m in Sources */,
 				88035A001A20E773006AF815 /* Obstacle.m in Sources */,
 				88035A061A20E773006AF815 /* ShopMenu.m in Sources */,
-				159A624F1B894DD20026BA5F /* DeviceUtil.m in Sources */,
 				159A623A1B8749B70026BA5F /* GameOverWindow.m in Sources */,
 				159A62401B87EEAE0026BA5F /* GiftInfo.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,

@@ -25,6 +25,7 @@
 #import "RootViewControllerInterface.h"
 #import "AppDelegate.h"
 #import "Options.h"
+#import "SelectDifficultyPanel.h"
 
 @implementation MainMenu {
     CCButton *_toggleSoundOnOffButton;
@@ -35,6 +36,7 @@
     OptionsWindow *_optionsMenu;
     CCNode *_darkOverlay;
     CCButton *_infoButton;
+    SelectDifficultyPanel *_selectDifficultyPanel;
 }
 
 - (void)didLoadFromCCB {
@@ -49,8 +51,7 @@
     
     [Options playTapSound];
     
-    CCScene *gameplayScene = [CCBReader loadAsScene:@"Gameplay"];
-    [[CCDirector sharedDirector] replaceScene:gameplayScene];
+    [self showLevelDifficultyPanel];
 }
 
 
@@ -79,9 +80,7 @@
     
     float duration = 1.0;
     CCActionScaleTo *scaleDown = [CCActionScaleTo actionWithDuration:duration scale:0.95];
-    //CCActionEaseBackIn *down = [CCActionEaseBackIn actionWithAction:scaleDown];
     CCActionScaleTo *scaleUp = [CCActionScaleTo actionWithDuration:duration scale:1.0];
-    //CCActionEaseBackIn *up = [CCActionEaseBackIn actionWithAction:scaleUp];
     CCActionSequence *sequence = [CCActionSequence actions:scaleDown, scaleUp, nil];
     CCActionRepeatForever *repeat = [CCActionRepeatForever actionWithAction:sequence];
     
@@ -90,6 +89,7 @@
 }
 
 - (void)animateOptionsButton {
+    
     float duration = 0.3;
     CCActionRotateBy *rotate = [CCActionRotateBy actionWithDuration:duration angle:360 * 8];
     CCActionFadeOut *fadeOut = [CCActionFadeOut actionWithDuration:duration];
@@ -100,6 +100,7 @@
 }
 
 - (void)returnOptionsButton {
+    
     float duration = 0.3;
     CCActionRotateBy *rotate = [CCActionRotateBy actionWithDuration:duration angle:360 * 8];
     CCActionFadeIn *fadeIn = [CCActionFadeIn actionWithDuration:duration];
@@ -109,23 +110,24 @@
     [_optionsButton runAction:spawn];
 }
 
-- (void)showOptionsMenu {
+- (void)prepareForOverlayDisplay {
+    
     [_darkOverlay runAction:[CCActionFadeTo actionWithDuration:0.3 opacity:0.5]];
-    _optionsMenu.visible = YES;
     
     _playButton.enabled = NO;
     _infoButton.enabled = NO;
 }
 
-- (void)hideOptionsMenu {
+- (void)prepareForOverlayRemoval {
+    
     [_darkOverlay runAction:[CCActionFadeTo actionWithDuration:0.3 opacity:0]];
-    _optionsMenu.visible = NO;
     
     _playButton.enabled = YES;
     _infoButton.enabled = YES;
+    
 }
 
-#pragma mark  - Options window 
+#pragma mark  - Option Panel
 
 - (void) okButtonTapped {
     
@@ -133,6 +135,30 @@
     
     [self returnOptionsButton];
     [self hideOptionsMenu];
+}
+
+- (void)showOptionsMenu {
+    
+    [self prepareForOverlayDisplay];
+    _optionsMenu.visible = YES;
+    
+}
+
+- (void)hideOptionsMenu {
+    
+    [self prepareForOverlayRemoval];
+    _optionsMenu.visible = NO;
+    
+}
+
+#pragma mark - Level Difficulty panel
+
+- (void)showLevelDifficultyPanel {
+    
+    [self prepareForOverlayDisplay];
+    
+    _selectDifficultyPanel.visible = YES;
+    
 }
 
 @end

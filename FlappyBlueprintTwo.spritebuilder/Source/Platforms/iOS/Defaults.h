@@ -97,6 +97,14 @@
 
 #define IS_BOOST_ACTIVE @"IS_BOOST_ACTIVE"
 #define IS_SUPER_BOOST_ACTIVE @"IS_SUPER_BOOST_ACTIVE"
+
+// Game difficulty
+#define GAME_DIFFICULTY @"Game Difficulty"
+
+#define EASY_DIFFICULTY @"Easy"
+#define MEDIUM_DIFFICULTY @"Medium"
+#define HARD_DIFFICULTY @"Hard"
+
 /*
 typedef NS_ENUM(NSInteger, HeroType) {
     kHeroType01,
