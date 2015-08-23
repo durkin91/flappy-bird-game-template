@@ -24,6 +24,7 @@
 #import "FlappyBlueprintTwoStoreAssets.h"
 #import "Math.h"
 #import "Defaults.h"
+#import "DeviceUtil.h"
 
 @implementation Obstacle {
     CCNode *_topPipe;
@@ -35,23 +36,56 @@
     
     CGSize viewSize;
     
+    CGFloat minimumYPositionTopPipe;
+    CGFloat maximumYPositionBottomPipe;
+    CGFloat maximumYPositionTopPipe;
+    
 }
 
 #define ARC4RANDOM_MAX      0x100000000
 
-// visibility on a 3,5-inch iPhone ends a 88 points and we want some meat
-static const CGFloat minimumYPositionTopPipe = 120.f; //48.f
-// visibility ends at 480 and we want some meat
-static const CGFloat maximumYPositionBottomPipe = 400.f; //400.f
-// distance between top and bottom pipe
-static const CGFloat pipeDistance = 112.f;
+//// visibility on a 3,5-inch iPhone ends a 88 points and we want some meat
+//static const CGFloat minimumYPositionTopPipe = 120.f; //48.f
+//// visibility ends at 480 and we want some meat
+//static const CGFloat maximumYPositionBottomPipe = 400.f; //400.f
+//// distance between top and bottom pipe
+//static const CGFloat pipeDistance = 112.f;
 // calculate the end of the range of top pipe
-static const CGFloat maximumYPositionTopPipe = maximumYPositionBottomPipe - pipeDistance;
+//static const CGFloat maximumYPositionTopPipe = maximumYPositionBottomPipe - pipeDistance;
 
 
 - (void)didLoadFromCCB {
     
+    //Setup settings for different device types
     viewSize = [[CCDirector sharedDirector] viewSize];
+    
+    //iPhone 6
+    if (viewSize.height == 667 && viewSize.width == 375) {
+        
+        minimumYPositionTopPipe = 20.f;
+        maximumYPositionBottomPipe = 350.f;
+        pipeDistance = 112.f;
+        
+    }
+    
+    //iPhone 6+
+    if (viewSize.height == 736 && viewSize.width == 414) {
+        
+        NSLog(@"Is a 6+");
+        minimumYPositionTopPipe = 200.f;
+        maximumYPositionBottomPipe = 80.f;
+        pipeDistance = 112.f;
+        
+    }
+    
+    else {
+        
+        minimumYPositionTopPipe = 120.f;
+        maximumYPositionBottomPipe = 400.f;
+        pipeDistance = 112.f;
+    }
+    
+    maximumYPositionTopPipe = maximumYPositionBottomPipe - pipeDistance;
 
     _topPipe.physicsBody.collisionType = @"obstacle";
     _topPipe.physicsBody.sensor = TRUE;
@@ -100,16 +134,21 @@ static const CGFloat maximumYPositionTopPipe = maximumYPositionBottomPipe - pipe
     CGFloat randomPipe = ((double)arc4random() / ARC4RANDOM_MAX);
     CGFloat randomCoin = ((double)arc4random() / ARC4RANDOM_MAX);
     CGFloat range = maximumYPositionTopPipe - minimumYPositionTopPipe;
-    _topPipe.position = ccp(_topPipe.position.x, minimumYPositionTopPipe + (randomPipe * range));
+    _topPipe.position = ccp(_topPipe.position.x, minimumYPositionTopPipe + range);
     _bottomPipe.position = ccp(_bottomPipe.position.x, _topPipe.position.y + pipeDistance);
     _coin.position = ccp((distanceBetweenPipes / 2) + 40, minimumYPositionTopPipe + (randomCoin * range));
     
+//    // value between 0.f and 1.f
+//    CGFloat randomPipe = ((double)arc4random() / ARC4RANDOM_MAX);
+//    CGFloat randomCoin = ((double)arc4random() / ARC4RANDOM_MAX);
+//    CGFloat range = maximumYPositionTopPipe - minimumYPositionTopPipe;
+//    _topPipe.position = ccp(_topPipe.position.x, minimumYPositionTopPipe + (randomPipe * range));
+//    _bottomPipe.position = ccp(_bottomPipe.position.x, _topPipe.position.y + pipeDistance);
+//    _coin.position = ccp((distanceBetweenPipes / 2) + 40, minimumYPositionTopPipe + (randomCoin * range));
+    
+    NSLog(@"Range: %f", range);
+    
 }
 
-- (CGFloat) convertToTopLeftSpace:(CGFloat)yPosition {
-    
-    return viewSize.height - yPosition;
-    
-}
 
 @end
