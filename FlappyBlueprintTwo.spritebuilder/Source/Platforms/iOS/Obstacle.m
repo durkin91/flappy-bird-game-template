@@ -62,29 +62,49 @@
     //iPhone 6
     if (viewSize.height == 667 && viewSize.width == 375) {
         
-        minimumYPositionTopPipe = 20.f;
-        maximumYPositionBottomPipe = 350.f;
+        NSLog(@"Is an iPhone 6");
+        minimumYPositionTopPipe = 240.f;
+        maximumYPositionBottomPipe = 100.f;
         pipeDistance = 112.f;
         
     }
     
     //iPhone 6+
-    if (viewSize.height == 736 && viewSize.width == 414) {
+    else if (viewSize.height == 736 && viewSize.width == 414) {
         
         NSLog(@"Is a 6+");
         minimumYPositionTopPipe = 200.f;
         maximumYPositionBottomPipe = 80.f;
-        pipeDistance = 112.f;
         
     }
     
+    //iPhone 4s
+    else if (viewSize.height == 480 && viewSize.width == 320) {
+        
+        NSLog(@"Is a 4s");
+        minimumYPositionTopPipe = 150.f;
+        maximumYPositionBottomPipe = 370.f;
+        
+    }
+    
+    //iPad
+    else if (viewSize.height == 512 && viewSize.width == 384) {
+        
+        NSLog(@"Is an ipad");
+        minimumYPositionTopPipe = 120.f;
+        maximumYPositionBottomPipe = 370.f;
+        
+    }
+    
+    //iPhone 5 and everything else
     else {
         
-        minimumYPositionTopPipe = 120.f;
-        maximumYPositionBottomPipe = 400.f;
-        pipeDistance = 112.f;
+        minimumYPositionTopPipe = 80.f;
+        maximumYPositionBottomPipe = 370.f;
+        
     }
     
+    pipeDistance = 112.f;
     maximumYPositionTopPipe = maximumYPositionBottomPipe - pipeDistance;
 
     _topPipe.physicsBody.collisionType = @"obstacle";
@@ -134,19 +154,9 @@
     CGFloat randomPipe = ((double)arc4random() / ARC4RANDOM_MAX);
     CGFloat randomCoin = ((double)arc4random() / ARC4RANDOM_MAX);
     CGFloat range = maximumYPositionTopPipe - minimumYPositionTopPipe;
-    _topPipe.position = ccp(_topPipe.position.x, minimumYPositionTopPipe + range);
+    _topPipe.position = ccp(_topPipe.position.x, minimumYPositionTopPipe + (randomPipe * range));
     _bottomPipe.position = ccp(_bottomPipe.position.x, _topPipe.position.y + pipeDistance);
     _coin.position = ccp((distanceBetweenPipes / 2) + 40, minimumYPositionTopPipe + (randomCoin * range));
-    
-//    // value between 0.f and 1.f
-//    CGFloat randomPipe = ((double)arc4random() / ARC4RANDOM_MAX);
-//    CGFloat randomCoin = ((double)arc4random() / ARC4RANDOM_MAX);
-//    CGFloat range = maximumYPositionTopPipe - minimumYPositionTopPipe;
-//    _topPipe.position = ccp(_topPipe.position.x, minimumYPositionTopPipe + (randomPipe * range));
-//    _bottomPipe.position = ccp(_bottomPipe.position.x, _topPipe.position.y + pipeDistance);
-//    _coin.position = ccp((distanceBetweenPipes / 2) + 40, minimumYPositionTopPipe + (randomCoin * range));
-    
-    NSLog(@"Range: %f", range);
     
 }
 
