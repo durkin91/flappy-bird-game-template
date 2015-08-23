@@ -34,6 +34,7 @@
     CCButton *_optionsButton;
     OptionsWindow *_optionsMenu;
     CCNode *_darkOverlay;
+    CCButton *_infoButton;
 }
 
 - (void)didLoadFromCCB {
@@ -113,6 +114,7 @@
     _optionsMenu.visible = YES;
     
     _playButton.enabled = NO;
+    _infoButton.enabled = NO;
 }
 
 - (void)hideOptionsMenu {
@@ -120,6 +122,7 @@
     _optionsMenu.visible = NO;
     
     _playButton.enabled = YES;
+    _infoButton.enabled = YES;
 }
 
 #pragma mark  - Options window 

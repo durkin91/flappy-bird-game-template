@@ -10,29 +10,64 @@
 #import "Options.h"
 
 @implementation OptionsWindow {
-    CCButton *_toggleSoundOnOffButton;
+    CCButton *_toggleSoundOnButton;
+    CCButton *_toggleSoundOffButton;
 }
 
-- (void) toggleSoundOnOffButtonTapped:(id) sender {
+- (void)didLoadFromCCB {
     
-    [Options playTapSound];
-    
-    _toggleSoundOnOffButton = sender;
-    
-    if (_toggleSoundOnOffButton.selected)
-    {
-        NSLog(@"Sound is OFF.");
-        //[Options stopBackgroundMusic];
-        [Options registerFXState:NO];
+    //Setup the sound button
+    if ([Options getFXState] == TRUE) {
+        _toggleSoundOffButton.visible = YES;
+        _toggleSoundOnButton.visible = NO;
     }
-    else
-    {
-        NSLog(@"Sound is ON.");
-        [Options registerFXState:YES];
-        //[Options playBackgroundMusic];
+    
+    else {
+        _toggleSoundOnButton.visible = YES;
+        _toggleSoundOffButton.visible = NO;
     }
+}
+
+- (void) toggleSoundOffButtonTapped {
+    
+    NSLog(@"Sound is OFF.");
+    [Options registerFXState:NO];
+    
+    _toggleSoundOffButton.visible = NO;
+    _toggleSoundOnButton.visible = YES;
     
 }
+
+- (void) toggleSoundOnButtonTapped {
+    
+    NSLog(@"Sound is ON.");
+    [Options registerFXState:YES];
+    
+    _toggleSoundOnButton.visible = NO;
+    _toggleSoundOffButton.visible = YES;
+    
+}
+
+//- (void) toggleSoundOnOffButtonTapped:(id) sender {
+//    
+//    [Options playTapSound];
+//    
+//    _toggleSoundOnOffButton = sender;
+//    
+//    if (_toggleSoundOnOffButton.selected)
+//    {
+//        NSLog(@"Sound is OFF.");
+//        //[Options stopBackgroundMusic];
+//        [Options registerFXState:NO];
+//    }
+//    else
+//    {
+//        NSLog(@"Sound is ON.");
+//        [Options registerFXState:YES];
+//        //[Options playBackgroundMusic];
+//    }
+//    
+//}
 
 - (void)okButtonTapped {
     
