@@ -78,6 +78,8 @@
         
     }
     
+    else return [[NSUserDefaults standardUserDefaults] integerForKey:kBestScoreKeyMedium];
+    
 }
 
 + (BOOL) isBestScore {

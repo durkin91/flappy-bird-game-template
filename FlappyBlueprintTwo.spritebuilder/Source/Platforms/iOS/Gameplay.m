@@ -30,6 +30,7 @@
 #import "AppDelegate.h"
 #import "Options.h"
 #import "GameOverWindow.h"
+#import "Note.h"
 
 void dispatch_after_delta(float delta, dispatch_block_t block){
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delta * NSEC_PER_SEC), dispatch_get_main_queue(), block);
@@ -73,6 +74,7 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     CGSize theViewSize;
     
     CGFloat _distanceBetweenObstacles;
+    NSInteger _obstaclesSinceNote;
     
     CCSprite *_fog;
     
@@ -239,6 +241,7 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     self.userInteractionEnabled = TRUE;
     
     _obstacles = [NSMutableArray array];
+    _obstaclesSinceNote = 0;
     
     _cities = @[_city1, _city2];
 }
@@ -407,6 +410,15 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     obstacle.zOrder = DrawingOrderPipes;
     [_physicsNode addChild:obstacle];
     [_obstacles addObject:obstacle];
+    
+    if (_obstaclesSinceNote >= NUMBER_OF_HEARTS_BETWEEN_NOTES && USE_NOTES) {
+        obstacle.isNote = YES;
+        _obstaclesSinceNote = 0;
+    }
+    else {
+        obstacle.isNote = NO;
+        _obstaclesSinceNote ++;
+    }
 }
 
 - (NSString*) obstacleName {
@@ -510,6 +522,24 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     
     return TRUE;
 }
+
+-(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair hero:(CCNode *)hero note:(Note *)note {
+    
+    [Options playCoinSound];
+    
+    //hasCollectedCoin = YES;
+    note.physicsBody.collisionType = @"none";
+    
+    note.visible = NO;
+    
+    NSLog(@"Note!");
+    
+    [note pickUp];
+    
+    return TRUE;
+}
+
+
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair hero:(CCNode *)hero gate:(CCNode *)gate {
     

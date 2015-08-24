@@ -1221,11 +1221,13 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>A gift from Ingrid</string>
+							<string>A gift from Schnookie</string>
 							<false/>
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -2600,8 +2602,6 @@
 						<string>LevelDifficultyPanel.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

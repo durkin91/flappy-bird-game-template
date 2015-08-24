@@ -41,6 +41,7 @@
 #import <CommonCrypto/CommonDigest.h>
 #import <AdSupport/AdSupport.h>
 #import "Options.h"
+#import "Data.h"
 
 @interface AppController ()
 @end
@@ -169,6 +170,11 @@
     
     [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:kCountStartup]; // set this to 0 to show ad at first startup
     [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:kCountGameOver]; // set this to 0 to show ad at first game over
+      
+    //NOTES
+    [[NSUserDefaults standardUserDefaults] setObject:[Data notesData] forKey:NOTES_DATA];
+    [[NSUserDefaults standardUserDefaults] setObject:[Data notesData] forKey:NOTES_AWAITING_DISPLAY];
+    
     
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
     [[NSUserDefaults standardUserDefaults] synchronize];

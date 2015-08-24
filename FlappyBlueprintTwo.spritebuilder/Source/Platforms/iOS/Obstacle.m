@@ -24,12 +24,14 @@
 #import "FlappyBlueprintTwoStoreAssets.h"
 #import "Math.h"
 #import "Defaults.h"
+#import "Note.h"
 
 @implementation Obstacle {
     CCNode *_topPipe;
     CCNode *_bottomPipe;
     CCNode *_coin;
     CCNode *_gate;
+    Note *_note;
     
     CGFloat pipeDistance;
     
@@ -64,7 +66,6 @@
         NSLog(@"Is an iPhone 6");
         minimumYPositionTopPipe = 240.f;
         maximumYPositionBottomPipe = 100.f;
-        pipeDistance = 112.f;
         
     }
     
@@ -128,7 +129,8 @@
         pipeDistance = PIPE_DISTANCE_MEDIUM;
     }
     
-
+    NSLog(@"Pipe Distance = %f", pipeDistance);
+    
     maximumYPositionTopPipe = maximumYPositionBottomPipe - pipeDistance;
 
     _topPipe.physicsBody.collisionType = @"obstacle";
@@ -139,6 +141,8 @@
     _coin.physicsBody.sensor = TRUE;
     _gate.physicsBody.collisionType = @"gate";
     _gate.physicsBody.sensor = TRUE;
+    _note.physicsBody.collisionType = @"note";
+    _note.physicsBody.sensor = TRUE;
     
     if ([StoreInventory isVirtualGoodWithItemIdEquipped:GADGETS_GOOD_06_ITEM_ID]) {
         pipeDistance = [Math randomFloatBetween:112.f and:312.f];
@@ -179,7 +183,24 @@
     _topPipe.position = ccp(_topPipe.position.x, minimumYPositionTopPipe + (randomPipe * range));
     _bottomPipe.position = ccp(_bottomPipe.position.x, _topPipe.position.y + pipeDistance);
     _coin.position = ccp((distanceBetweenPipes / 2) + 40, minimumYPositionTopPipe + (randomCoin * range));
+    _note.position = ccp((distanceBetweenPipes / 2) + 40, minimumYPositionTopPipe + (randomCoin * range));
+        
+}
+
+- (void)setIsNote:(BOOL)isNote {
     
+    _isNote = isNote;
+    
+    if (isNote) {
+        _note.visible = YES;
+        _note.isActive = YES;
+        [_coin removeFromParent];
+    }
+    
+    else {
+        _coin.visible = YES;
+        [_note removeFromParent];
+    }
 }
 
 

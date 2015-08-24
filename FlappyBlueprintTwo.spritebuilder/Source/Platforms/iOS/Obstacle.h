@@ -23,6 +23,9 @@
 
 @interface Obstacle : CCNode
 
+@property (nonatomic) BOOL isNote;
+
 - (void)setupRandomPositionWithPipeDistance:(CGFloat)distanceBetweenPipes;
+
 
 @end

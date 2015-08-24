@@ -24,6 +24,14 @@
 
 //---------------------------------------------------------------------------
 /*
+ * Notes
+ */
+
+static BOOL const USE_NOTES = YES;
+static int const NUMBER_OF_HEARTS_BETWEEN_NOTES = 1;
+
+//---------------------------------------------------------------------------
+/*
  * Gameplay speed
  */
 
@@ -37,7 +45,7 @@ static float const SCROLL_SPEED_GADGET_05 = 90;
 
 static float const DISTANCE_BETWEEN_PIPES_GADGET_01 = 400;
 
-static float const DISTANCE_BETWEEN_PIPES_EASY = 400;
+static float const DISTANCE_BETWEEN_PIPES_EASY = 260;
 static float const DISTANCE_BETWEEN_PIPES_MEDIUM = 260;
 static float const DISTANCE_BETWEEN_PIPES_HARD = 150;
 
@@ -46,9 +54,9 @@ static float const DISTANCE_BETWEEN_PIPES_HARD = 150;
  * Gap distance between pipes
  */
 
-static float const PIPE_DISTANCE_EASY = 140;
-static float const PIPE_DISTANCE_MEDIUM = 112;
-static float const PIPE_DISTANCE_HARD = 112;
+static float const PIPE_DISTANCE_EASY = 160;
+static float const PIPE_DISTANCE_MEDIUM = 90;
+static float const PIPE_DISTANCE_HARD = 90;
 
 
 //---------------------------------------------------------------------------

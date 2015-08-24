@@ -105,6 +105,13 @@
 #define kMEDIUM_DIFFICULTY @"Medium"
 #define kHARD_DIFFICULTY @"Hard"
 
+
+//Notes
+#define NOTE_NUMBER_KEY @"Note Number Key"
+#define NOTE_MESSAGE_KEY @"Note Message Key"
+#define NOTES_DATA @"Notes Data"
+#define NOTES_AWAITING_DISPLAY @"Notes Awaiting Display"
+
 /*
 typedef NS_ENUM(NSInteger, HeroType) {
     kHeroType01,

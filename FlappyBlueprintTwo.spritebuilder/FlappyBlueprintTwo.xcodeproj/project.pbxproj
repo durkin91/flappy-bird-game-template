@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		151C8F761B8B3CF60031C8B6 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 151C8F751B8B3CF60031C8B6 /* Note.m */; };
+		151C8F7E1B8B4A3F0031C8B6 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 151C8F7D1B8B4A3F0031C8B6 /* Data.m */; };
 		159A623A1B8749B70026BA5F /* GameOverWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A62391B8749B70026BA5F /* GameOverWindow.m */; };
 		159A623D1B875AB70026BA5F /* OptionsWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A623C1B875AB70026BA5F /* OptionsWindow.m */; };
 		159A62401B87EEAE0026BA5F /* GiftInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A623F1B87EEAE0026BA5F /* GiftInfo.m */; };
@@ -66,9 +68,7 @@
 		88035A911A20E8AB006AF815 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 88035A8C1A20E8AB006AF815 /* Score.m */; };
 		88035A951A20EAA1006AF815 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A941A20EAA1006AF815 /* Security.framework */; };
 		88035A971A20EAB1006AF815 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A961A20EAB1006AF815 /* libsqlite3.0.dylib */; };
-		88035A991A20EAB9006AF815 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A981A20EAB9006AF815 /* StoreKit.framework */; };
 		88035A9B1A20EACB006AF815 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A9A1A20EACB006AF815 /* Social.framework */; };
-		88035A9D1A20EAD4006AF815 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A9C1A20EAD4006AF815 /* GameKit.framework */; };
 		88035A9F1A20EAE0006AF815 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035A9E1A20EAE0006AF815 /* SystemConfiguration.framework */; };
 		88035AA11A20EAEB006AF815 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035AA01A20EAEB006AF815 /* MobileCoreServices.framework */; };
 		88035AA31A20EAF8006AF815 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88035AA21A20EAF8006AF815 /* CFNetwork.framework */; };
@@ -156,6 +156,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		151C8F741B8B3CF60031C8B6 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Note.h; path = Source/Platforms/iOS/Note.h; sourceTree = "<group>"; };
+		151C8F751B8B3CF60031C8B6 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Note.m; path = Source/Platforms/iOS/Note.m; sourceTree = "<group>"; };
+		151C8F7C1B8B4A3F0031C8B6 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Data.h; path = Source/Platforms/iOS/Data.h; sourceTree = "<group>"; };
+		151C8F7D1B8B4A3F0031C8B6 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Data.m; path = Source/Platforms/iOS/Data.m; sourceTree = "<group>"; };
 		159A62381B8749B70026BA5F /* GameOverWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverWindow.h; path = Source/Platforms/iOS/GameOverWindow.h; sourceTree = "<group>"; };
 		159A62391B8749B70026BA5F /* GameOverWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameOverWindow.m; path = Source/Platforms/iOS/GameOverWindow.m; sourceTree = "<group>"; };
 		159A623B1B875AB70026BA5F /* OptionsWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionsWindow.h; path = Source/Platforms/iOS/OptionsWindow.h; sourceTree = "<group>"; };
@@ -277,9 +281,7 @@
 		88035A8C1A20E8AB006AF815 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
 		88035A941A20EAA1006AF815 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		88035A961A20EAB1006AF815 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		88035A981A20EAB9006AF815 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		88035A9A1A20EACB006AF815 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		88035A9C1A20EAD4006AF815 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		88035A9E1A20EAE0006AF815 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		88035AA01A20EAEB006AF815 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		88035AA21A20EAF8006AF815 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -365,9 +367,7 @@
 				88035AA31A20EAF8006AF815 /* CFNetwork.framework in Frameworks */,
 				88035AA11A20EAEB006AF815 /* MobileCoreServices.framework in Frameworks */,
 				88035A9F1A20EAE0006AF815 /* SystemConfiguration.framework in Frameworks */,
-				88035A9D1A20EAD4006AF815 /* GameKit.framework in Frameworks */,
 				88035A9B1A20EACB006AF815 /* Social.framework in Frameworks */,
-				88035A991A20EAB9006AF815 /* StoreKit.framework in Frameworks */,
 				88035A971A20EAB1006AF815 /* libsqlite3.0.dylib in Frameworks */,
 				88035A951A20EAA1006AF815 /* Security.framework in Frameworks */,
 				7A97911819E631CD001FFC4D /* libcocos2d.a in Frameworks */,
@@ -476,6 +476,8 @@
 				880359FC1A20E773006AF815 /* ShopMenu.m */,
 				159A62571B89751C0026BA5F /* SelectDifficultyPanel.h */,
 				159A62581B89751C0026BA5F /* SelectDifficultyPanel.m */,
+				151C8F741B8B3CF60031C8B6 /* Note.h */,
+				151C8F751B8B3CF60031C8B6 /* Note.m */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -738,6 +740,8 @@
 			isa = PBXGroup;
 			children = (
 				88035A071A20E81B006AF815 /* AdvancedSettings.h */,
+				151C8F7C1B8B4A3F0031C8B6 /* Data.h */,
+				151C8F7D1B8B4A3F0031C8B6 /* Data.m */,
 				88035A081A20E834006AF815 /* BMFont */,
 				88035A751A20E894006AF815 /* Music */,
 				88035A821A20E8AB006AF815 /* Helpers */,
@@ -775,9 +779,7 @@
 				88035AA21A20EAF8006AF815 /* CFNetwork.framework */,
 				88035AA01A20EAEB006AF815 /* MobileCoreServices.framework */,
 				88035A9E1A20EAE0006AF815 /* SystemConfiguration.framework */,
-				88035A9C1A20EAD4006AF815 /* GameKit.framework */,
 				88035A9A1A20EACB006AF815 /* Social.framework */,
-				88035A981A20EAB9006AF815 /* StoreKit.framework */,
 				88035A961A20EAB1006AF815 /* libsqlite3.0.dylib */,
 				88035A941A20EAA1006AF815 /* Security.framework */,
 				7A59493C19E37FB200F65F90 /* libz.dylib */,
@@ -914,10 +916,13 @@
 						CreatedOnToolsVersion = 6.0.1;
 					};
 					B77F1B2D17B978D7009739AE = {
-						DevelopmentTeam = R252PR8AVU;
+						DevelopmentTeam = 5D5882VX58;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
-								enabled = 1;
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
 							};
 						};
 					};
@@ -1105,6 +1110,8 @@
 				88035A021A20E773006AF815 /* ShopBoosts.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				88035A031A20E773006AF815 /* ShopCharacters.m in Sources */,
+				151C8F761B8B3CF60031C8B6 /* Note.m in Sources */,
+				151C8F7E1B8B4A3F0031C8B6 /* Data.m in Sources */,
 				159A623D1B875AB70026BA5F /* OptionsWindow.m in Sources */,
 				159A62591B89751C0026BA5F /* SelectDifficultyPanel.m in Sources */,
 				88035A001A20E773006AF815 /* Obstacle.m in Sources */,
@@ -1411,6 +1418,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1445,6 +1453,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

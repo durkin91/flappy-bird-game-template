@@ -26,6 +26,7 @@
 #import "AppDelegate.h"
 #import "Options.h"
 #import "SelectDifficultyPanel.h"
+#import "Data.h"
 
 @implementation MainMenu {
     CCButton *_toggleSoundOnOffButton;
@@ -41,9 +42,12 @@
 
 - (void)didLoadFromCCB {
     
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"HasLaunchedOnce"];
+    
     _optionsMenu.delegate = self;
     
     [self animatePlayButton];
+    
 }
 
 

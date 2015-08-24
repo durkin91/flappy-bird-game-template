@@ -38,4 +38,5 @@
 + (BOOL)isHard;
 
 
+
 @end
