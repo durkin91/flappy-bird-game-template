@@ -13,17 +13,6 @@
     NSMutableArray *_notesAwaitingDisplay;
 }
 
-- (void)didLoadFromCCB {
-
-    
-}
-
-- (void)pickUp {
-    
-    NSLog(@"Note #%@: %@", _currentNoteNumber, _currentNoteMessage);
-    
-    
-}
 
 - (void) setIsActive:(BOOL)isActive {
     

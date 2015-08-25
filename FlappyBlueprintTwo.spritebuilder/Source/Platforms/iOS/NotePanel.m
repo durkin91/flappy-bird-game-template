@@ -25,20 +25,51 @@
     CCLabelBMFont *messageLabel = (CCLabelBMFont *)[_scrollView.contentNode getChildByName:@"message" recursively:YES];
     
     NSMutableArray *individualWords = [[_note.currentNoteMessage componentsSeparatedByString:@" "] mutableCopy];
-    NSLog(@"%@", individualWords);
+    NSMutableArray *lines = [NSMutableArray array];
     
-    float width = 220;
-    NSString *oneLineMessage;
     while ([individualWords count] > 0) {
         
-        for (NSString *string in individualWords) {
-            messageLabel.string = [NSString stringWithFormat:@"%@ %@", oneLineMessage, string];
+        for (NSString *word in individualWords) {
             
-            if (messageLabel.contentSizeInPoints.width > width) {
-                messageLabel.string = oneLineMessage;
-            }
         }
+    }
+    
+    
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+//        CCLabelBMFont *label = [CCLabelBMFont labelWithString:@"" fntFile:messageLabel.fntFile];
+//        label.position = CGPointMake(messageLabel.position.x, messageLabel.position.y - 50);
+//        label.scale = messageLabel.scale;
+//        [self addChild:label];
+//        
+//        for (NSString *string in individualWords) {
+//            label.string = [NSString stringWithFormat:@"%@ %@", oneLineMessage, string];
+//            
+//            if (label.contentSizeInPoints.width > width) {
+//                label.string = oneLineMessage;
+//                messageLabel = label;
+//                break;
+//            }
+//            
+//            else {
+//                oneLineMessage = [NSString stringWithFormat:@"%@ %@", oneLineMessage, string];
+//                [individualWords removeObject:string];
+//            }
+    
     }
     
     
