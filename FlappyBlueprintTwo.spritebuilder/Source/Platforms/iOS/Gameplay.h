@@ -20,7 +20,8 @@
  */
 
 #import "CCNode.h"
+#import "NotePanel.h"
 
-@interface Gameplay : CCNode <CCPhysicsCollisionDelegate>
+@interface Gameplay : CCNode <CCPhysicsCollisionDelegate, NotePanelDelegate>
 
 @end

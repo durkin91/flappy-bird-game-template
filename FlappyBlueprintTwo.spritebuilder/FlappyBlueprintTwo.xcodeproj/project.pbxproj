@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		151C8F761B8B3CF60031C8B6 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 151C8F751B8B3CF60031C8B6 /* Note.m */; };
 		151C8F7E1B8B4A3F0031C8B6 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 151C8F7D1B8B4A3F0031C8B6 /* Data.m */; };
+		151C8F811B8C129D0031C8B6 /* NotePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 151C8F801B8C129D0031C8B6 /* NotePanel.m */; };
 		159A623A1B8749B70026BA5F /* GameOverWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A62391B8749B70026BA5F /* GameOverWindow.m */; };
 		159A623D1B875AB70026BA5F /* OptionsWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A623C1B875AB70026BA5F /* OptionsWindow.m */; };
 		159A62401B87EEAE0026BA5F /* GiftInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 159A623F1B87EEAE0026BA5F /* GiftInfo.m */; };
@@ -160,6 +161,8 @@
 		151C8F751B8B3CF60031C8B6 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Note.m; path = Source/Platforms/iOS/Note.m; sourceTree = "<group>"; };
 		151C8F7C1B8B4A3F0031C8B6 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Data.h; path = Source/Platforms/iOS/Data.h; sourceTree = "<group>"; };
 		151C8F7D1B8B4A3F0031C8B6 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Data.m; path = Source/Platforms/iOS/Data.m; sourceTree = "<group>"; };
+		151C8F7F1B8C129D0031C8B6 /* NotePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotePanel.h; path = Source/Platforms/iOS/NotePanel.h; sourceTree = "<group>"; };
+		151C8F801B8C129D0031C8B6 /* NotePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotePanel.m; path = Source/Platforms/iOS/NotePanel.m; sourceTree = "<group>"; };
 		159A62381B8749B70026BA5F /* GameOverWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverWindow.h; path = Source/Platforms/iOS/GameOverWindow.h; sourceTree = "<group>"; };
 		159A62391B8749B70026BA5F /* GameOverWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameOverWindow.m; path = Source/Platforms/iOS/GameOverWindow.m; sourceTree = "<group>"; };
 		159A623B1B875AB70026BA5F /* OptionsWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionsWindow.h; path = Source/Platforms/iOS/OptionsWindow.h; sourceTree = "<group>"; };
@@ -478,6 +481,8 @@
 				159A62581B89751C0026BA5F /* SelectDifficultyPanel.m */,
 				151C8F741B8B3CF60031C8B6 /* Note.h */,
 				151C8F751B8B3CF60031C8B6 /* Note.m */,
+				151C8F7F1B8C129D0031C8B6 /* NotePanel.h */,
+				151C8F801B8C129D0031C8B6 /* NotePanel.m */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -1106,6 +1111,7 @@
 				88035A911A20E8AB006AF815 /* Score.m in Sources */,
 				88035A8D1A20E8AB006AF815 /* FlappyBlueprintTwoStoreAssets.m in Sources */,
 				88035A671A20E85B006AF815 /* ProgressHUD.m in Sources */,
+				151C8F811B8C129D0031C8B6 /* NotePanel.m in Sources */,
 				880359FE1A20E773006AF815 /* Gameplay.m in Sources */,
 				88035A021A20E773006AF815 /* ShopBoosts.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,

@@ -29,6 +29,7 @@
 
 static BOOL const USE_NOTES = YES;
 static int const NUMBER_OF_HEARTS_BETWEEN_NOTES = 1;
+static int const MAXIMUM_NOTE_NUMBER = 10;
 
 //---------------------------------------------------------------------------
 /*

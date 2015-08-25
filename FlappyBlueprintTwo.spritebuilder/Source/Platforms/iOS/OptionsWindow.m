@@ -48,26 +48,6 @@
     
 }
 
-//- (void) toggleSoundOnOffButtonTapped:(id) sender {
-//    
-//    [Options playTapSound];
-//    
-//    _toggleSoundOnOffButton = sender;
-//    
-//    if (_toggleSoundOnOffButton.selected)
-//    {
-//        NSLog(@"Sound is OFF.");
-//        //[Options stopBackgroundMusic];
-//        [Options registerFXState:NO];
-//    }
-//    else
-//    {
-//        NSLog(@"Sound is ON.");
-//        [Options registerFXState:YES];
-//        //[Options playBackgroundMusic];
-//    }
-//    
-//}
 
 - (void)okButtonTapped {
     

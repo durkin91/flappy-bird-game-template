@@ -113,6 +113,8 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     CCLabelBMFont *_gamePausedLabel;
     NSString *gamePausedString;
     BOOL _gameIsPaused;
+    
+    NotePanel *_notePanel;
 
 }
 
@@ -125,6 +127,9 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
 - (void) startGameWithScore:(int) theScore andCoins:(int) theCoins {
   
     [Options playBackgroundMusic];
+    
+    _notePanel.visible = NO;
+    _notePanel.delegate = self;
   
     _gameOver = NO;
     _nearGameOver = NO;
@@ -534,7 +539,7 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     
     NSLog(@"Note!");
     
-    [note pickUp];
+    [self showNotePanelForNote:note];
     
     return TRUE;
 }
@@ -767,46 +772,81 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     
     if (_togglePauseOnOffButton.selected)
     {
-        NSLog(@"Pause is ON.");
-        _gameIsPaused = YES;
-        
-        //_gamePausedLabel.visible = YES;
-        _darkOverlay.visible = YES;
-        _darkOverlay.zOrder = GameplayZeeOrderContinuePanel;
+        [self pauseGame];
         _pauseText.visible = YES;
         _pauseText.zOrder = GameplayZeeOrderContinuePanel;
-    
-        _scrollSpeed = 0.f;
-        
-        // setting hero as a static body
-        [[_physicsNode space] addPostStepBlock:^{
-            _hero.physicsBody.type = CCPhysicsBodyTypeStatic;
-        } key:_hero];
-        
-        CCAnimationManager* animationManager = _hero.userObject;
-        [animationManager setPaused:YES];
-        
+
     }
     else
     {
-        NSLog(@"Pause is OFF.");
-        _gameIsPaused = NO;
         
-        //_gamePausedLabel.visible = NO;
-        _darkOverlay.visible = NO;
+        [self unpauseGame];
         _pauseText.visible = NO;
         
-        _scrollSpeed = SCROLL_SPEED_NORMAL;
-        
-        // setting hero as a dynamic body
-        [[_physicsNode space] addPostStepBlock:^{
-            _hero.physicsBody.type = CCPhysicsBodyTypeDynamic;
-        } key:_hero];
-        
-        CCAnimationManager* animationManager = _hero.userObject;
-        [animationManager setPaused:NO];
-        
     }
+    
+}
+
+- (void) pauseGame {
+    NSLog(@"Game paused");
+    _gameIsPaused = YES;
+    
+    _darkOverlay.visible = YES;
+    _darkOverlay.zOrder = GameplayZeeOrderContinuePanel;
+    
+    _scrollSpeed = 0.f;
+    
+    // setting hero as a static body
+    [[_physicsNode space] addPostStepBlock:^{
+        _hero.physicsBody.type = CCPhysicsBodyTypeStatic;
+    } key:_hero];
+    
+    CCAnimationManager* animationManager = _hero.userObject;
+    [animationManager setPaused:YES];
+
+}
+
+- (void) unpauseGame {
+    
+    NSLog(@"Pause is OFF.");
+    _gameIsPaused = NO;
+    
+    _darkOverlay.visible = NO;
+    
+    _scrollSpeed = SCROLL_SPEED_NORMAL;
+    
+    // setting hero as a dynamic body
+    [[_physicsNode space] addPostStepBlock:^{
+        _hero.physicsBody.type = CCPhysicsBodyTypeDynamic;
+    } key:_hero];
+    
+    CCAnimationManager* animationManager = _hero.userObject;
+    [animationManager setPaused:NO];
+
+}
+
+#pragma mark - Note Panel
+
+- (void)showNotePanelForNote:(Note *)note {
+    
+    [self pauseGame];
+    
+    _notePanel.note = note;
+    _notePanel.zOrder = GameplayZeeOrderContinuePanel;
+    _notePanel.visible = YES;
+    
+    _togglePauseOnOffButton.visible = NO;
+    
+}
+
+- (void) closeNotePanel {
+    
+    [self unpauseGame];
+    
+    _notePanel.note = nil;
+    _notePanel.visible = NO;
+    
+    _togglePauseOnOffButton.visible = YES;
     
 }
 

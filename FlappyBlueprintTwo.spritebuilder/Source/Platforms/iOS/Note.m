@@ -11,8 +11,6 @@
 
 @implementation Note {
     NSMutableArray *_notesAwaitingDisplay;
-    NSNumber *_currentNoteNumber;
-    NSString *_currentNoteMessage;
 }
 
 - (void)didLoadFromCCB {
