@@ -115,6 +115,8 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     BOOL _gameIsPaused;
     
     NotePanel *_notePanel;
+    CCButton *_noteAlreadyViewedPanel;
+    Note *_currentNote;
 
 }
 
@@ -130,6 +132,7 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     
     _notePanel.visible = NO;
     _notePanel.delegate = self;
+    _noteAlreadyViewedPanel.visible = NO;
   
     _gameOver = NO;
     _nearGameOver = NO;
@@ -539,7 +542,31 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     
     NSLog(@"Note!");
     
-    [self showNotePanelForNote:note];
+    //check if the note has already been viewed
+    NSArray *notesAlreadyViewed = [[NSUserDefaults standardUserDefaults] objectForKey:NOTES_ALREADY_VIEWED];
+    BOOL alreadyViewed = NO;
+    
+    for (NSNumber *number in notesAlreadyViewed) {
+        if (note.currentNoteNumber == [number integerValue]) {
+            alreadyViewed = YES;
+            break;
+        }
+    }
+    
+    _currentNote = note;
+    
+    //If it hasn't been viewed already, show the note panel
+    if (alreadyViewed) {
+        
+        [self displayNoteAlreadyViewedPanel];
+
+    }
+    
+    else {
+        
+        [self showNotePanel];
+        
+    }
     
     return TRUE;
 }
@@ -657,6 +684,9 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
 }
 
 - (void) showGameOverScene {
+    
+    _noteAlreadyViewedPanel.visible = NO;
+    _notePanel.visible = NO;
     
     // checking if it is new best score
     if(currentScore > [Score bestScore]){
@@ -827,29 +857,15 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
 
 #pragma mark - Note Panel
 
-- (void)showNotePanelForNote:(Note *)note {
+- (void)showNotePanel {
     
-    //check if the note has already been viewed
-    NSArray *notesAlreadyViewed = [[NSUserDefaults standardUserDefaults] objectForKey:NOTES_ALREADY_VIEWED];
-    BOOL alreadyViewed = NO;
+    [self pauseGame];
     
-    for (NSNumber *number in notesAlreadyViewed) {
-        if (note.currentNoteNumber == [number integerValue]) {
-            alreadyViewed = YES;
-            break;
-        }
-    }
+    _notePanel.note = _currentNote;
+    _notePanel.zOrder = GameplayZeeOrderContinuePanel;
+    _notePanel.visible = YES;
     
-    //If it hasn't been viewed already, show the note panel
-    if (alreadyViewed == NO) {
-        [self pauseGame];
-        
-        _notePanel.note = note;
-        _notePanel.zOrder = GameplayZeeOrderContinuePanel;
-        _notePanel.visible = YES;
-        
-        _togglePauseOnOffButton.visible = NO;
-    }
+    _togglePauseOnOffButton.visible = NO;
     
 }
 
@@ -860,7 +876,29 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     _notePanel.note = nil;
     _notePanel.visible = NO;
     
+    _currentNote = nil;
+    
     _togglePauseOnOffButton.visible = YES;
+    
+}
+
+- (void) noteAlreadyViewedPanelTapped {
+    [self showNotePanel];
+    
+    _noteAlreadyViewedPanel.visible = NO;
+}
+
+- (void) displayNoteAlreadyViewedPanel {
+    
+    _noteAlreadyViewedPanel.cascadeOpacityEnabled = YES;
+    _noteAlreadyViewedPanel.visible = YES;
+    _noteAlreadyViewedPanel.opacity = 1;
+    _noteAlreadyViewedPanel.zOrder = GameplayZeeOrderContinuePanel;
+    
+    CCActionFadeOut *fadeOut = [CCActionFadeOut actionWithDuration:0.5];
+    CCActionSequence *sequence = [CCActionSequence actions:[CCActionDelay actionWithDuration:5.0], fadeOut, nil];
+    
+    [_noteAlreadyViewedPanel runAction:sequence];
     
 }
 

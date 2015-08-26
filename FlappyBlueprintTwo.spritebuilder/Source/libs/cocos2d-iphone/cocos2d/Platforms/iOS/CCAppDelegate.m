@@ -146,6 +146,7 @@ FindPOTScale(CGFloat size, CGFloat fixedSize)
 
 - (void) setupCocos2dWithOptions:(NSDictionary*)config
 {
+    
 	// Create the main window
 	window_ = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	

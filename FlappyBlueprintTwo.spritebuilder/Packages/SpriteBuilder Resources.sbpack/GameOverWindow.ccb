@@ -404,7 +404,7 @@
 						<key>value</key>
 						<array>
 							<real>188</real>
-							<real>195</real>
+							<real>190</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -467,6 +467,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -501,7 +503,7 @@
 						<key>value</key>
 						<array>
 							<real>188</real>
-							<real>135</real>
+							<real>130</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -564,8 +566,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

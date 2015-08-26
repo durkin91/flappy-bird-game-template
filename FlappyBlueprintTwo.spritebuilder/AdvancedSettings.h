@@ -28,7 +28,7 @@
  */
 
 static BOOL const USE_NOTES = YES;
-static int const NUMBER_OF_HEARTS_BETWEEN_NOTES = 1;
+static int const NUMBER_OF_HEARTS_BETWEEN_NOTES = 4;
 static int const MAXIMUM_NOTE_NUMBER = 10;
 
 //---------------------------------------------------------------------------
@@ -131,7 +131,7 @@ static NSInteger const FINAL_BLASTS_TO_GIVE_THE_USER_ON_FIRST_APP_LAUNCH = 5;
  */
 
 #warning MAKE SURE YOU SET "RESET_FIRTS_LAUNCH_OPTIONS" TO "NO" BEFORE SUBMITTING FOR APPLE REVIEW. OTHERWISE DON'T WORRY ABOUT THIS WARNING, IT'S JUST A REMINDER.
-static BOOL const RESET_FIRTS_LAUNCH_OPTIONS = YES;
+static BOOL const RESET_FIRTS_LAUNCH_OPTIONS = NO;
 
 //---------------------------------------------------------------------------
 /*
