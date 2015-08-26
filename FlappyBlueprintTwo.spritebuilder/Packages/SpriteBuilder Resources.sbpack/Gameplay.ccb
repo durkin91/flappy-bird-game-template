@@ -376,6 +376,8 @@
 								<array/>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -1053,7 +1055,7 @@
 						<key>value</key>
 						<array>
 							<real>60</real>
-							<real>30</real>
+							<real>15</real>
 							<integer>2</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1067,7 +1069,7 @@
 						<key>value</key>
 						<array>
 							<real>1</real>
-							<real>0.5</real>
+							<real>1</real>
 						</array>
 					</dict>
 					<dict>
@@ -1815,8 +1817,6 @@
 						<string>NotePanel.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

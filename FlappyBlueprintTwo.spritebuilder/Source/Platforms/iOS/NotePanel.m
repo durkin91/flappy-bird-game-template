@@ -21,62 +21,53 @@
 - (void) setNote:(Note *)note {
     
     _note = note;
-
+    
     CCLabelBMFont *messageLabel = (CCLabelBMFont *)[_scrollView.contentNode getChildByName:@"message" recursively:YES];
+    messageLabel.alignment = CCTextAlignmentCenter;
     
     NSMutableArray *individualWords = [[_note.currentNoteMessage componentsSeparatedByString:@" "] mutableCopy];
-    NSMutableArray *lines = [NSMutableArray array];
+    
+    CGFloat width = 260;
+    NSMutableArray *allLines = [NSMutableArray array];
+    
     
     while ([individualWords count] > 0) {
         
+        NSMutableArray *newLine = [NSMutableArray array];
+        [allLines addObject:newLine];
+        
+        
         for (NSString *word in individualWords) {
             
+            [newLine addObject:word];
+            
+            messageLabel.string = [newLine componentsJoinedByString:@" "];
+            
+            if (messageLabel.contentSizeInPoints.width > width) {
+                
+                [newLine removeObject:word];
+                break;
+            }
+        }
+        
+        for (NSInteger i = 1; i <= [newLine count]; i++) {
+            [individualWords removeObjectAtIndex:0];
         }
     }
     
+    NSLog(@"All lines: %@", allLines);
     
+    //Now concatenate into a string to give the label
+    NSMutableArray *allStrings = [NSMutableArray array];
+    for (NSMutableArray *line in allLines) {
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-//        CCLabelBMFont *label = [CCLabelBMFont labelWithString:@"" fntFile:messageLabel.fntFile];
-//        label.position = CGPointMake(messageLabel.position.x, messageLabel.position.y - 50);
-//        label.scale = messageLabel.scale;
-//        [self addChild:label];
-//        
-//        for (NSString *string in individualWords) {
-//            label.string = [NSString stringWithFormat:@"%@ %@", oneLineMessage, string];
-//            
-//            if (label.contentSizeInPoints.width > width) {
-//                label.string = oneLineMessage;
-//                messageLabel = label;
-//                break;
-//            }
-//            
-//            else {
-//                oneLineMessage = [NSString stringWithFormat:@"%@ %@", oneLineMessage, string];
-//                [individualWords removeObject:string];
-//            }
-    
+        NSString *string = [line componentsJoinedByString:@" "];
+        [allStrings addObject:string];
     }
     
+    NSString *finalString = [allStrings componentsJoinedByString:@"\n"];
+    messageLabel.string = finalString;
     
-    messageLabel.string = _note.currentNoteMessage;
-    messageLabel.alignment = CCTextAlignmentCenter;
-    [messageLabel setWidth:220.0];
-
 }
 
 @end

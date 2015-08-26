@@ -476,7 +476,7 @@
 										<key>value</key>
 										<array>
 											<string>Happy anniversary baby.
-"Gotchya on my miiiiind".
+Gotchya on my miiiiind.
 Love, Schnookie</string>
 											<false/>
 										</array>
@@ -692,8 +692,6 @@ Love, Schnookie</string>
 								<array/>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>

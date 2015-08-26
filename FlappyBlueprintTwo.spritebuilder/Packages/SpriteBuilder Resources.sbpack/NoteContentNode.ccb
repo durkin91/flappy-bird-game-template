@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>4</integer>
+	<integer>104</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -28,7 +28,24 @@
 	<key>gridspaceWidth</key>
 	<integer>64</integer>
 	<key>guides</key>
-	<array/>
+	<array>
+		<dict>
+			<key>orientation</key>
+			<integer>1</integer>
+			<key>position</key>
+			<real>-110</real>
+			<key>type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>orientation</key>
+			<integer>1</integer>
+			<key>position</key>
+			<real>111</real>
+			<key>type</key>
+			<integer>0</integer>
+		</dict>
+	</array>
 	<key>joints</key>
 	<array/>
 	<key>jsControlled</key>
@@ -49,7 +66,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>Message</string>
+				<string>1</string>
 				<key>memberVarAssignmentName</key>
 				<string>_messageLabel</string>
 				<key>memberVarAssignmentType</key>
@@ -71,10 +88,10 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
+							<real>90</real>
 							<real>10</real>
 							<integer>1</integer>
-							<integer>2</integer>
+							<integer>0</integer>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -130,7 +147,9 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>I love you so much!</string>
+							<string>Testing testing this
+text and the gaps
+between lines</string>
 							<false/>
 						</array>
 					</dict>
@@ -178,7 +197,7 @@
 				<string>Size</string>
 				<key>value</key>
 				<array>
-					<real>175</real>
+					<real>220</real>
 					<real>163</real>
 					<integer>0</integer>
 					<integer>0</integer>

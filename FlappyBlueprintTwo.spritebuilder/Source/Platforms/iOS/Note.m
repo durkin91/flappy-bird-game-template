@@ -33,7 +33,7 @@
         [_notesAwaitingDisplay removeObjectAtIndex:randomIndex];
         
         _currentNoteMessage = [currentNote objectForKey:NOTE_MESSAGE_KEY];
-        _currentNoteNumber = [currentNote objectForKey:NOTE_NUMBER_KEY];
+        _currentNoteNumber = [[currentNote objectForKey:NOTE_NUMBER_KEY] integerValue];
         
         [[NSUserDefaults standardUserDefaults] setObject:[_notesAwaitingDisplay copy] forKey:NOTES_AWAITING_DISPLAY];
         [[NSUserDefaults standardUserDefaults] synchronize];

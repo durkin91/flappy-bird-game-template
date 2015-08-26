@@ -11,9 +11,8 @@
 @interface Note : CCSprite
 
 @property (nonatomic) BOOL isActive;
-@property (nonatomic) NSInteger index;
-
-- (void)pickUp;
+@property (strong, nonatomic) NSString *currentNoteMessage;
+@property (nonatomic) NSInteger currentNoteNumber;
 
 
 @end
