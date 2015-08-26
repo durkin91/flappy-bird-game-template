@@ -111,6 +111,7 @@
 #define NOTE_MESSAGE_KEY @"Note Message Key"
 #define NOTES_DATA @"Notes Data"
 #define NOTES_AWAITING_DISPLAY @"Notes Awaiting Display"
+#define NOTES_ALREADY_VIEWED @"Notes Already Viewed"
 
 /*
 typedef NS_ENUM(NSInteger, HeroType) {

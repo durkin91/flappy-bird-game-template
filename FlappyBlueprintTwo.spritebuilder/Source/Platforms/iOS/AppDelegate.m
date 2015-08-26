@@ -174,6 +174,7 @@
     //NOTES
     [[NSUserDefaults standardUserDefaults] setObject:[Data notesData] forKey:NOTES_DATA];
     [[NSUserDefaults standardUserDefaults] setObject:[Data notesData] forKey:NOTES_AWAITING_DISPLAY];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSArray array] forKey:NOTES_ALREADY_VIEWED];
     
     
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];

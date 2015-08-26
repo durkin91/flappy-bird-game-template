@@ -829,13 +829,27 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
 
 - (void)showNotePanelForNote:(Note *)note {
     
-    [self pauseGame];
+    //check if the note has already been viewed
+    NSArray *notesAlreadyViewed = [[NSUserDefaults standardUserDefaults] objectForKey:NOTES_ALREADY_VIEWED];
+    BOOL alreadyViewed = NO;
     
-    _notePanel.note = note;
-    _notePanel.zOrder = GameplayZeeOrderContinuePanel;
-    _notePanel.visible = YES;
+    for (NSNumber *number in notesAlreadyViewed) {
+        if (note.currentNoteNumber == [number integerValue]) {
+            alreadyViewed = YES;
+            break;
+        }
+    }
     
-    _togglePauseOnOffButton.visible = NO;
+    //If it hasn't been viewed already, show the note panel
+    if (alreadyViewed == NO) {
+        [self pauseGame];
+        
+        _notePanel.note = note;
+        _notePanel.zOrder = GameplayZeeOrderContinuePanel;
+        _notePanel.visible = YES;
+        
+        _togglePauseOnOffButton.visible = NO;
+    }
     
 }
 

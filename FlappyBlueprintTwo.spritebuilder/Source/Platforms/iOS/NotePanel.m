@@ -7,6 +7,7 @@
 //
 
 #import "NotePanel.h"
+#import "Defaults.h"
 
 @implementation NotePanel {
     CCScrollView *_scrollView;
@@ -21,6 +22,15 @@
 - (void) setNote:(Note *)note {
     
     _note = note;
+    
+    [self displayNoteMessage];
+    
+    [self saveToViewedNotes];
+
+    
+}
+
+- (void)displayNoteMessage {
     
     CCLabelBMFont *messageLabel = (CCLabelBMFont *)[_scrollView.contentNode getChildByName:@"message" recursively:YES];
     messageLabel.alignment = CCTextAlignmentCenter;
@@ -55,8 +65,6 @@
         }
     }
     
-    NSLog(@"All lines: %@", allLines);
-    
     //Now concatenate into a string to give the label
     NSMutableArray *allStrings = [NSMutableArray array];
     for (NSMutableArray *line in allLines) {
@@ -67,6 +75,29 @@
     
     NSString *finalString = [allStrings componentsJoinedByString:@"\n"];
     messageLabel.string = finalString;
+    
+}
+
+- (void)saveToViewedNotes {
+    NSArray *viewedNotesImmutable = [[NSUserDefaults standardUserDefaults] objectForKey:NOTES_ALREADY_VIEWED];
+    NSMutableArray *viewedNotes = [viewedNotesImmutable mutableCopy];
+    BOOL needsSaving = YES;
+    
+    for (NSNumber *number in viewedNotes) {
+        if ([number integerValue] == _note.currentNoteNumber) {
+            needsSaving = NO;
+            break;
+        }
+    }
+    
+    if (needsSaving) {
+        [viewedNotes addObject:[NSNumber numberWithInteger:_note.currentNoteNumber]];
+        viewedNotesImmutable = viewedNotes;
+        [[NSUserDefaults standardUserDefaults] setObject:viewedNotesImmutable forKey:NOTES_ALREADY_VIEWED];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    NSLog(@"Notes already viewed: %@", viewedNotesImmutable);
     
 }
 
