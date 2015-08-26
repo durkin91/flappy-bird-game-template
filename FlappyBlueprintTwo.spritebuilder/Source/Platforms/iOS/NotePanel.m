@@ -11,6 +11,13 @@
 
 @implementation NotePanel {
     CCScrollView *_scrollView;
+    CCClippingNode *_clippingNode;
+    CCSprite *_clippingNodeSilhouette;
+}
+
+- (void) didLoadFromCCB {
+    _clippingNode.stencil = _clippingNodeSilhouette;
+    _clippingNode.alphaThreshold = 0.0;
 }
 
 - (void) continueButtonTapped {

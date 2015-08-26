@@ -235,6 +235,7 @@ FindPOTScale(CGFloat size, CGFloat fixedSize)
 	[window_ makeKeyAndVisible];
     
     [self forceOrientation];
+    
 }
 
 - (void)setupFlexibleScreenMode:(NSDictionary *)config director:(CCDirectorIOS *)director
