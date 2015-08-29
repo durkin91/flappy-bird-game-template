@@ -64,8 +64,8 @@
     if (viewSize.height == 667 && viewSize.width == 375) {
         
         NSLog(@"Is an iPhone 6");
-        minimumYPositionTopPipe = 240.f;
-        maximumYPositionBottomPipe = 100.f;
+        minimumYPositionTopPipe = 180.f;
+        maximumYPositionBottomPipe = 120.f;
         
     }
     
