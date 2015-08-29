@@ -14,5 +14,7 @@
 @property (strong, nonatomic) NSString *currentNoteMessage;
 @property (nonatomic) NSInteger currentNoteNumber;
 
+- (void)chooseNumberAndMessage;
+
 
 @end

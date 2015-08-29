@@ -539,6 +539,7 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     note.physicsBody.collisionType = @"none";
     
     note.visible = NO;
+    [note chooseNumberAndMessage];
     
     [_noteAlreadyViewedPanel stopAllActions];
     _noteAlreadyViewedPanel.visible = NO;
