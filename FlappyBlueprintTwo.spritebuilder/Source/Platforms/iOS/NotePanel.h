@@ -23,4 +23,7 @@
 
 @property (strong, nonatomic) Note *note;
 
+- (void)displayNoteMessage;
+- (void)saveToViewedNotes;
+
 @end

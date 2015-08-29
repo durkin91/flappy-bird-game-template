@@ -8,6 +8,7 @@
 
 #import "Note.h"
 #import "Defaults.h"
+#import "Data.h"
 
 @implementation Note {
     NSMutableArray *_notesAwaitingDisplay;
@@ -20,10 +21,16 @@
     
     if (isActive) {
         NSArray *notesAwaitingDisplayImmutable = [[NSUserDefaults standardUserDefaults] objectForKey:NOTES_AWAITING_DISPLAY];
-        _notesAwaitingDisplay = [notesAwaitingDisplayImmutable mutableCopy];
+        
+        if (notesAwaitingDisplayImmutable) {
+            _notesAwaitingDisplay = [notesAwaitingDisplayImmutable mutableCopy];
+        }
+        else {
+            _notesAwaitingDisplay = [NSMutableArray array];
+        }
         
         if ([_notesAwaitingDisplay count] == 0) {
-            _notesAwaitingDisplay = [[[NSUserDefaults standardUserDefaults] objectForKey:NOTES_DATA] mutableCopy];
+            _notesAwaitingDisplay = [[Data notesData] mutableCopy];
         }
         
         //Pick a random note

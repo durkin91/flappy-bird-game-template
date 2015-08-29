@@ -26,17 +26,6 @@
     
 }
 
-- (void) setNote:(Note *)note {
-    
-    _note = note;
-    
-    [self displayNoteMessage];
-    
-    [self saveToViewedNotes];
-
-    
-}
-
 - (void)displayNoteMessage {
     
     CCLabelBMFont *messageLabel = (CCLabelBMFont *)[_scrollView.contentNode getChildByName:@"message" recursively:YES];
@@ -87,7 +76,16 @@
 
 - (void)saveToViewedNotes {
     NSArray *viewedNotesImmutable = [[NSUserDefaults standardUserDefaults] objectForKey:NOTES_ALREADY_VIEWED];
-    NSMutableArray *viewedNotes = [viewedNotesImmutable mutableCopy];
+
+    NSMutableArray *viewedNotes;
+    
+    if (viewedNotesImmutable) {
+        viewedNotes = [viewedNotesImmutable mutableCopy];
+    }
+    else {
+        viewedNotes = [NSMutableArray array];
+    }
+
     BOOL needsSaving = YES;
     
     for (NSNumber *number in viewedNotes) {
@@ -104,7 +102,7 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
-    NSLog(@"Notes already viewed: %@", viewedNotesImmutable);
+    NSLog(@"Notes already viewed: %@", [[NSUserDefaults standardUserDefaults] objectForKey:NOTES_ALREADY_VIEWED]);
     
 }
 

@@ -160,6 +160,7 @@
 - (void)showLevelDifficultyPanel {
     
     [self prepareForOverlayDisplay];
+    _optionsButton.enabled = NO;
     
     _selectDifficultyPanel.visible = YES;
     

@@ -540,6 +540,9 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     
     note.visible = NO;
     
+    [_noteAlreadyViewedPanel stopAllActions];
+    _noteAlreadyViewedPanel.visible = NO;
+    
     NSLog(@"Note!");
     
     //check if the note has already been viewed
@@ -864,6 +867,8 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     _notePanel.note = _currentNote;
     _notePanel.zOrder = GameplayZeeOrderContinuePanel;
     _notePanel.visible = YES;
+    [_notePanel saveToViewedNotes];
+    [_notePanel displayNoteMessage];
     
     _togglePauseOnOffButton.visible = NO;
     

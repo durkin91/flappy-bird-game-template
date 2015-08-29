@@ -123,7 +123,8 @@
 
 
 - (void) setupAppWithThirdPartyLibs {
-  
+
+    NSLog(@"Notes Already Viewed BEFORE: %@", [[NSUserDefaults standardUserDefaults] objectForKey:NOTES_ALREADY_VIEWED]);
   
   // store
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goodBalanceChanged) name:EVENT_GOOD_BALANCE_CHANGED object:nil];
@@ -173,9 +174,9 @@
     [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:kCountGameOver]; // set this to 0 to show ad at first game over
       
     //NOTES
-    [[NSUserDefaults standardUserDefaults] setObject:[Data notesData] forKey:NOTES_DATA];
-    [[NSUserDefaults standardUserDefaults] setObject:[Data notesData] forKey:NOTES_AWAITING_DISPLAY];
-    [[NSUserDefaults standardUserDefaults] setObject:[NSArray array] forKey:NOTES_ALREADY_VIEWED];
+//    [[NSUserDefaults standardUserDefaults] setObject:[Data notesData] forKey:NOTES_DATA];
+//    [[NSUserDefaults standardUserDefaults] setObject:[Data notesData] forKey:NOTES_AWAITING_DISPLAY];
+//    [[NSUserDefaults standardUserDefaults] setObject:[NSArray array] forKey:NOTES_ALREADY_VIEWED];
     
     
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
@@ -184,6 +185,7 @@
     
   }
   
+    NSLog(@"Notes Already Viewed AFTER: %@", [[NSUserDefaults standardUserDefaults] objectForKey:NOTES_ALREADY_VIEWED]);
   
 }
 
