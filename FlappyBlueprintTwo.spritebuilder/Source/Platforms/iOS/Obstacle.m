@@ -73,8 +73,8 @@
     else if (viewSize.height == 736 && viewSize.width == 414) {
         
         NSLog(@"Is a 6+");
-        minimumYPositionTopPipe = 200.f;
-        maximumYPositionBottomPipe = 80.f;
+        minimumYPositionTopPipe = 150.f;
+        maximumYPositionBottomPipe = 100.f;
         
     }
     
@@ -184,7 +184,18 @@
     _bottomPipe.position = ccp(_bottomPipe.position.x, _topPipe.position.y + pipeDistance);
     _coin.position = ccp((distanceBetweenPipes / 2) + 40, minimumYPositionTopPipe + (randomCoin * range));
     _note.position = ccp((distanceBetweenPipes / 2) + 40, minimumYPositionTopPipe + (randomCoin * range));
-        
+    
+    
+//    // value between 0.f and 1.f
+//    CGFloat randomPipe = ((double)arc4random() / ARC4RANDOM_MAX);
+//    CGFloat randomCoin = ((double)arc4random() / ARC4RANDOM_MAX);
+//    CGFloat range = maximumYPositionTopPipe - minimumYPositionTopPipe;
+//    _topPipe.position = ccp(_topPipe.position.x, minimumYPositionTopPipe + (randomPipe * range));
+//    _bottomPipe.position = ccp(_bottomPipe.position.x, _topPipe.position.y + pipeDistance);
+//    _coin.position = ccp((distanceBetweenPipes / 2) + 40, minimumYPositionTopPipe + (randomCoin * range));
+//    _note.position = ccp((distanceBetweenPipes / 2) + 40, minimumYPositionTopPipe + (randomCoin * range));
+
+    
 }
 
 - (void)setIsNote:(BOOL)isNote {

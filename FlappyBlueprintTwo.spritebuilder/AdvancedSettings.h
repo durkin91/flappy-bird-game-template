@@ -27,8 +27,8 @@
  * Notes
  */
 
-static BOOL const USE_NOTES = YES;
-static int const NUMBER_OF_HEARTS_BETWEEN_NOTES = 4;
+static BOOL const USE_NOTES = NO;
+static int const NUMBER_OF_HEARTS_BETWEEN_NOTES = 1;
 static int const MAXIMUM_NOTE_NUMBER = 10;
 
 //---------------------------------------------------------------------------
@@ -46,9 +46,9 @@ static float const SCROLL_SPEED_GADGET_05 = 90;
 
 static float const DISTANCE_BETWEEN_PIPES_GADGET_01 = 400;
 
-static float const DISTANCE_BETWEEN_PIPES_EASY = 260;
+static float const DISTANCE_BETWEEN_PIPES_EASY = 360;
 static float const DISTANCE_BETWEEN_PIPES_MEDIUM = 260;
-static float const DISTANCE_BETWEEN_PIPES_HARD = 150;
+static float const DISTANCE_BETWEEN_PIPES_HARD = 200;
 
 //---------------------------------------------------------------------------
 /*
@@ -56,8 +56,8 @@ static float const DISTANCE_BETWEEN_PIPES_HARD = 150;
  */
 
 static float const PIPE_DISTANCE_EASY = 160;
-static float const PIPE_DISTANCE_MEDIUM = 90;
-static float const PIPE_DISTANCE_HARD = 90;
+static float const PIPE_DISTANCE_MEDIUM = 120;
+static float const PIPE_DISTANCE_HARD = 120;
 
 
 //---------------------------------------------------------------------------

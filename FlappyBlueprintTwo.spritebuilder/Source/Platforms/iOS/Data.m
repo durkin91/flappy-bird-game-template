@@ -19,10 +19,10 @@
 
 + (NSArray *)notesMessages {
     
-    NSArray *messages = @[ @"This is a long message with weird wrapping",
-                           @"Testing this message. Testing this message.",
-                           @"Testing testing 1 2 3. This is a longer message that I'm testing",
-                           @"Oh hello, cutie."
+    NSArray *messages = @[ @"You never forget to buy toilet paper.",
+                           @"You always remember to buy me that thick strawberry yoghurt that I love.",
+                           @"You buy cat food for Calico, even though you really don't like cats.",
+                           @"You always make me laugh."
                            ];
 
     return messages;
