@@ -390,7 +390,7 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     for (CCNode *obstacle in _obstacles) {
         CGPoint obstacleWorldPosition = [_physicsNode convertToWorldSpace:obstacle.position];
         CGPoint obstacleScreenPosition = [self convertToNodeSpace:obstacleWorldPosition];
-        if (obstacleScreenPosition.x < (-2 * obstacle.contentSize.width)) {
+        if (obstacleScreenPosition.x < (-3 * obstacle.contentSize.width)) {
             if (!offScreenObstacles) {
                 offScreenObstacles = [NSMutableArray array];
             }
