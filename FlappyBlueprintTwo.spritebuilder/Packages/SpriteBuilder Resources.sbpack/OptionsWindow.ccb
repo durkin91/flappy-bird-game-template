@@ -174,7 +174,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonOptionsItem02On.png</string>
+							<string>MyResources/ColorScheme/ButtonOptionsOn.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -185,7 +185,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonOptionsItem02On.png</string>
+							<string>MyResources/ColorScheme/ButtonOptionsOn.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -209,7 +209,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonOptionsItem02On.png</string>
+							<string>MyResources/ColorScheme/ButtonOptionsOn.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -228,7 +228,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonOptionsItem02On.png</string>
+							<string>MyResources/ColorScheme/ButtonOptionsOn.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -508,7 +508,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonOptionsItem02Off.png</string>
+							<string>MyResources/ColorScheme/ButtonOptionsOff.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -519,7 +519,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonOptionsItem02Off.png</string>
+							<string>MyResources/ColorScheme/ButtonOptionsOff.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -543,7 +543,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonOptionsItem02Off.png</string>
+							<string>MyResources/ColorScheme/ButtonOptionsOff.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -562,7 +562,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonOptionsItem02Off.png</string>
+							<string>MyResources/ColorScheme/ButtonOptionsOff.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -706,8 +706,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -836,7 +834,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonOptionsOk.png</string>
+							<string>MyResources/ColorScheme/ButtonOptionsOk.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -847,7 +845,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonOptionsOk.png</string>
+							<string>MyResources/ColorScheme/ButtonOptionsOk.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -871,7 +869,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonOptionsOk.png</string>
+							<string>MyResources/ColorScheme/ButtonOptionsOk.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -890,7 +888,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonOptionsOk.png</string>
+							<string>MyResources/ColorScheme/ButtonOptionsOk.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1100,7 +1098,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>MyResources/OptionsWindow.png</string>
+					<string>MyResources/ColorScheme/OptionsPanel.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -1136,6 +1134,8 @@
 				<array/>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

@@ -118,7 +118,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/GameOverPanelNewBest.png</string>
+							<string>MyResources/ColorScheme/GameOverPanelNewBest.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -467,8 +467,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -701,7 +699,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonReplay.png</string>
+									<string>MyResources/ColorScheme/ButtonReplay.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -712,7 +710,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonReplay.png</string>
+									<string>MyResources/ColorScheme/ButtonReplay.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -736,7 +734,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonReplay.png</string>
+									<string>MyResources/ColorScheme/ButtonReplay.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -755,7 +753,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonReplay.png</string>
+									<string>MyResources/ColorScheme/ButtonReplay.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1027,7 +1025,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonHome.png</string>
+									<string>MyResources/ButtonHome1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1038,7 +1036,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonHome.png</string>
+									<string>MyResources/ButtonHome1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1062,7 +1060,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonHome.png</string>
+									<string>MyResources/ButtonHome1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1081,7 +1079,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonHome.png</string>
+									<string>MyResources/ButtonHome1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1353,7 +1351,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonInfo.png</string>
+									<string>MyResources/ColorScheme/ButtonInfo1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1364,7 +1362,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonInfo.png</string>
+									<string>MyResources/ColorScheme/ButtonInfo1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1388,7 +1386,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonInfo.png</string>
+									<string>MyResources/ColorScheme/ButtonInfo1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1407,7 +1405,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonInfo.png</string>
+									<string>MyResources/ColorScheme/ButtonInfo1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1551,6 +1549,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -1695,7 +1695,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>MyResources/GameOverPanel.png</string>
+					<string>MyResources/ColorScheme/GameOverPanel.png</string>
 				</array>
 			</dict>
 			<dict>

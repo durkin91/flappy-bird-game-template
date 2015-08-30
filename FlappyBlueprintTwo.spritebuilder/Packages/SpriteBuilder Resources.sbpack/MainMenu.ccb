@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>45</integer>
+	<integer>47</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -41,7 +41,7 @@
 		<array>
 			<dict>
 				<key>UUID</key>
-				<integer>25</integer>
+				<integer>46</integer>
 				<key>baseClass</key>
 				<string>CCNodeGradient</string>
 				<key>children</key>
@@ -122,9 +122,9 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>0.20999999344348907</real>
-							<real>0.64999997615814209</real>
-							<real>0.87000000476837158</real>
+							<real>0.69698339700698853</real>
+							<real>0.73344922065734863</real>
+							<real>0.78283053636550903</real>
 							<real>1</real>
 						</array>
 					</dict>
@@ -135,8 +135,8 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>0.12999999523162842</real>
-							<real>0.5</real>
+							<real>0.12941177189350128</real>
+							<real>0.49803921580314636</real>
 							<real>0.80000001192092896</real>
 							<real>1</real>
 						</array>
@@ -1032,7 +1032,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>Ground</string>
+				<string>Ground1</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -1055,7 +1055,7 @@
 						<key>value</key>
 						<array>
 							<real>0.5</real>
-							<real>100</real>
+							<real>0.0</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>0</integer>
@@ -1068,8 +1068,8 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
 							<real>1</real>
+							<real>0.0</real>
 						</array>
 					</dict>
 					<dict>
@@ -1079,9 +1079,9 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
+							<real>0.69999998807907104</real>
+							<real>0.69999998807907104</real>
+							<true/>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1093,7 +1093,115 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/GameplayGround.png</string>
+							<string>MyResources/ground1.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>normalMapSpriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string></string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>effects</string>
+						<key>type</key>
+						<string>EffectControl</string>
+						<key>value</key>
+						<array/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>45</integer>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>ground2</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.0</real>
+							<integer>0</integer>
+							<integer>2</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.0</real>
+							<real>0.0</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>0.69999998807907104</real>
+							<real>0.69999998807907104</real>
+							<true/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>spriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string>MyResources/ground2.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1226,8 +1334,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1372,8 +1478,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>60</real>
-							<real>60</real>
+							<real>70</real>
+							<real>73</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -1426,7 +1532,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonMainMenuOptions.png</string>
+							<string>MyResources/ColorScheme/ButtonOptions.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1437,7 +1543,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonMainMenuOptions.png</string>
+							<string>MyResources/ColorScheme/ButtonOptions.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1461,7 +1567,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonMainMenuOptions.png</string>
+							<string>MyResources/ColorScheme/ButtonOptions.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1480,7 +1586,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonMainMenuOptions.png</string>
+							<string>MyResources/ColorScheme/ButtonOptions.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1760,7 +1866,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonInfoYellow.png</string>
+							<string>MyResources/ColorScheme/ButtonInfo2.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1771,7 +1877,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonInfoYellow.png</string>
+							<string>MyResources/ButtonInfo2.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1795,7 +1901,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonInfoYellow.png</string>
+							<string>MyResources/ColorScheme/ButtonInfo2.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1814,7 +1920,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonInfoYellow.png</string>
+							<string>MyResources/ColorScheme/ButtonInfo2.png</string>
 						</array>
 					</dict>
 					<dict>

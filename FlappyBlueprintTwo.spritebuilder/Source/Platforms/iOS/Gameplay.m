@@ -370,7 +370,7 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
         CGPoint groundScreenPosition = [self convertToNodeSpace:groundWorldPosition];
         // if the left corner is one complete width off the screen, move it to the right
         if (groundScreenPosition.x <= (-1 * ground.contentSize.width)) {
-            ground.position = ccp((ground.position.x + 2 * ground.contentSize.width) - 2, ground.position.y);
+            ground.position = ccp((ground.position.x + 2 * ground.contentSize.width) - 1, ground.position.y);
         }
     }
     
@@ -382,7 +382,7 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
         CGPoint cityScreenPosition = [self convertToNodeSpace:cityWorldPosition];
         // if the left corner is one complete width off the screen, move it to the right
         if (cityScreenPosition.x <= (-1 * city.contentSize.width)) {
-            city.position = ccp(city.position.x + 2 * city.contentSize.width - 2, city.position.y);
+            city.position = ccp(city.position.x + 2 * city.contentSize.width, city.position.y);
         }
     }
     

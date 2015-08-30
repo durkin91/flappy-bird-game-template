@@ -110,7 +110,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/NotePanel.png</string>
+							<string>MyResources/ColorScheme/NotePanel.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -369,8 +369,6 @@
 								<array/>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -768,7 +766,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonContinue.png</string>
+							<string>MyResources/ColorScheme/ButtonContinue.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -779,7 +777,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonContinue.png</string>
+							<string>MyResources/ColorScheme/ButtonContinue.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -803,7 +801,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonContinue.png</string>
+							<string>MyResources/ColorScheme/ButtonContinue.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -822,7 +820,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ButtonContinue.png</string>
+							<string>MyResources/ColorScheme/ButtonContinue.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -966,6 +964,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

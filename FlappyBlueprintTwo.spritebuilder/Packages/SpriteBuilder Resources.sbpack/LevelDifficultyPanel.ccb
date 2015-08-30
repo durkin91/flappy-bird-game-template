@@ -173,7 +173,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonLevelDifficultyHard.png</string>
+									<string>MyResources/ColorScheme/ButtonLevelDifficultyHard.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -184,7 +184,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonLevelDifficultyHard.png</string>
+									<string>MyResources/ColorScheme/ButtonLevelDifficultyHard.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -208,7 +208,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonLevelDifficultyHard.png</string>
+									<string>MyResources/ColorScheme/ButtonLevelDifficultyHard.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -227,7 +227,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonLevelDifficultyHard.png</string>
+									<string>MyResources/ColorScheme/ButtonLevelDifficultyHard.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -499,7 +499,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonLevelDifficultyMedium.png</string>
+									<string>MyResources/ColorScheme/ButtonLevelDifficultyMedium.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -510,7 +510,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonLevelDifficultyMedium.png</string>
+									<string>MyResources/ColorScheme/ButtonLevelDifficultyMedium.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -534,7 +534,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonLevelDifficultyMedium.png</string>
+									<string>MyResources/ColorScheme/ButtonLevelDifficultyMedium.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -553,7 +553,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonLevelDifficultyMedium.png</string>
+									<string>MyResources/ColorScheme/ButtonLevelDifficultyMedium.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -825,7 +825,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonLevelDifficultyEasy.png</string>
+									<string>MyResources/ColorScheme/ButtonLevelDifficultyEasy.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -836,7 +836,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonLevelDifficultyEasy.png</string>
+									<string>MyResources/ColorScheme/ButtonLevelDifficultyEasy.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -860,7 +860,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonLevelDifficultyEasy.png</string>
+									<string>MyResources/ColorScheme/ButtonLevelDifficultyEasy.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -879,7 +879,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonLevelDifficultyEasy.png</string>
+									<string>MyResources/ColorScheme/ButtonLevelDifficultyEasy.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1167,7 +1167,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>MyResources/LevelDifficultyPanel.png</string>
+					<string>MyResources/ColorScheme/LevelDifficultyPanel.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -1203,8 +1203,6 @@
 				<array/>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
