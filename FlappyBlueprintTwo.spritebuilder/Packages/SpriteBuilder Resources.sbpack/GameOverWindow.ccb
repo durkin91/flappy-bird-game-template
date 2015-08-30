@@ -1025,7 +1025,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonHome1.png</string>
+									<string>MyResources/ColorScheme/ButtonHome1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1036,7 +1036,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonHome1.png</string>
+									<string>MyResources/ColorScheme/ButtonHome1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1060,7 +1060,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonHome1.png</string>
+									<string>MyResources/ColorScheme/ButtonHome1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1079,7 +1079,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonHome1.png</string>
+									<string>MyResources/ColorScheme/ButtonHome1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1549,8 +1549,6 @@
 								</array>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>

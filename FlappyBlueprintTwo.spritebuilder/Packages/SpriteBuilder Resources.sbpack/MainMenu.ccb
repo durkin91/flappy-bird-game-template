@@ -2199,7 +2199,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonMainMenuPlay.png</string>
+									<string>MyResources/ColorScheme/ButtonMainMenuPlay.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -2210,7 +2210,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonMainMenuPlay.png</string>
+									<string>MyResources/ColorScheme/ButtonMainMenuPlay.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -2234,7 +2234,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonMainMenuPlay.png</string>
+									<string>MyResources/ColorScheme/ButtonMainMenuPlay.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -2253,7 +2253,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/ButtonMainMenuPlay.png</string>
+									<string>MyResources/ColorScheme/ButtonMainMenuPlay.png</string>
 								</array>
 							</dict>
 							<dict>
