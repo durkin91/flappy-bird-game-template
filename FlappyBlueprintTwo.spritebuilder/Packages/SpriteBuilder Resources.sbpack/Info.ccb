@@ -340,7 +340,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/InfoTitle.png</string>
+									<string>MyResources/Personalized/InfoTitle.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -656,7 +656,7 @@ Love, Schnookie</string>
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>MyResources/InfoPhoto.png</string>
+									<string>MyResources/Personalized/InfoPhoto.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -764,6 +764,8 @@ Love, Schnookie</string>
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1090,8 +1092,6 @@ Love, Schnookie</string>
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

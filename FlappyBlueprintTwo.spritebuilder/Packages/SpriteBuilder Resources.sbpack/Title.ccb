@@ -118,7 +118,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/MainMenuHeroHead.png</string>
+							<string>MyResources/Personalized/MainMenuHeroHead.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -226,7 +226,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/MainMenuTitle.png</string>
+							<string>MyResources/Personalized/MainMenuTitle.png</string>
 						</array>
 					</dict>
 					<dict>

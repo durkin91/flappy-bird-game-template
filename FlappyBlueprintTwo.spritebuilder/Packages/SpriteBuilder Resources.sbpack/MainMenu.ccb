@@ -233,7 +233,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/coin.png</string>
+							<string>MyResources/Personalized/coin.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -357,7 +357,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/coin.png</string>
+							<string>MyResources/Personalized/coin.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -481,7 +481,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/coin.png</string>
+							<string>MyResources/Personalized/coin.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -605,7 +605,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/coin.png</string>
+							<string>MyResources/Personalized/coin.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -729,7 +729,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/coin.png</string>
+							<string>MyResources/Personalized/coin.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -853,7 +853,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/coin.png</string>
+							<string>MyResources/Personalized/coin.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -977,7 +977,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/coin.png</string>
+							<string>MyResources/Personalized/coin.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1021,6 +1021,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1129,8 +1131,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
