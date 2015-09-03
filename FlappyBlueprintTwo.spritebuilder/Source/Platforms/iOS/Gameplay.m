@@ -117,6 +117,7 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     NotePanel *_notePanel;
     CCButton *_noteAlreadyViewedPanel;
     Note *_currentNote;
+    NSInteger _numberOfCoinsBetweenNotes;
 
 }
 
@@ -163,24 +164,28 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     if ([gameDifficulty isEqualToString:kEASY_DIFFICULTY]) {
         
         _distanceBetweenObstacles = DISTANCE_BETWEEN_PIPES_EASY;
+        _numberOfCoinsBetweenNotes = NUMBER_OF_COINS_BETWEEN_NOTES_EASY;
         
     }
     
     else if ([gameDifficulty isEqualToString:kMEDIUM_DIFFICULTY]) {
         
         _distanceBetweenObstacles = DISTANCE_BETWEEN_PIPES_MEDIUM;
+        _numberOfCoinsBetweenNotes = NUMBER_OF_COINS_BETWEEN_NOTES_MEDIUM;
         
     }
     
     else if ([gameDifficulty isEqualToString:kHARD_DIFFICULTY]) {
         
         _distanceBetweenObstacles = DISTANCE_BETWEEN_PIPES_HARD;
+        _numberOfCoinsBetweenNotes = NUMBER_OF_COINS_BETWEEN_NOTES_HARD;
         
     }
     
     else {
         
         _distanceBetweenObstacles = DISTANCE_BETWEEN_PIPES_MEDIUM;
+        _numberOfCoinsBetweenNotes = NUMBER_OF_COINS_BETWEEN_NOTES_MEDIUM;
         
     }
     
@@ -419,7 +424,7 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     [_physicsNode addChild:obstacle];
     [_obstacles addObject:obstacle];
     
-    if (_obstaclesSinceNote >= NUMBER_OF_HEARTS_BETWEEN_NOTES && USE_NOTES) {
+    if (_obstaclesSinceNote >= _numberOfCoinsBetweenNotes && USE_NOTES) {
         obstacle.isNote = YES;
         _obstaclesSinceNote = 0;
     }

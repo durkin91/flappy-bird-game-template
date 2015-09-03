@@ -27,9 +27,11 @@
  * Notes
  */
 
-static BOOL const USE_NOTES = NO;
-static int const NUMBER_OF_HEARTS_BETWEEN_NOTES = 1;
-static int const MAXIMUM_NOTE_NUMBER = 10;
+static BOOL const USE_NOTES = YES;
+static int const NUMBER_OF_COINS_BETWEEN_NOTES_EASY = 2;
+static int const NUMBER_OF_COINS_BETWEEN_NOTES_MEDIUM = 6;
+static int const NUMBER_OF_COINS_BETWEEN_NOTES_HARD = 6;
+
 
 //---------------------------------------------------------------------------
 /*
