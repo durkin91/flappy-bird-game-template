@@ -302,7 +302,7 @@
 								<key>value</key>
 								<array>
 									<real>0.0</real>
-									<real>92</real>
+									<real>115</real>
 									<integer>0</integer>
 									<integer>2</integer>
 									<integer>0</integer>
@@ -394,7 +394,7 @@
 								<key>customClass</key>
 								<string></string>
 								<key>displayName</key>
-								<string>CCLabelBMFont</string>
+								<string>TEXT HERE</string>
 								<key>memberVarAssignmentName</key>
 								<string>_messageLabel</string>
 								<key>memberVarAssignmentType</key>
@@ -417,10 +417,10 @@
 										<key>value</key>
 										<array>
 											<real>0.5</real>
-											<real>37</real>
+											<real>0.5</real>
 											<integer>0</integer>
 											<integer>2</integer>
-											<integer>0</integer>
+											<integer>2</integer>
 										</array>
 									</dict>
 									<dict>
@@ -475,9 +475,10 @@
 										<string>Text</string>
 										<key>value</key>
 										<array>
-											<string>Happy anniversary baby.
-Gotchya on my miiiiind.
-Love, Schnookie</string>
+											<string>Happy father's day! 
+I love you so so much. 
+Thanks for not abusing me
+as a child. Nikki xx</string>
 											<false/>
 										</array>
 									</dict>
@@ -510,7 +511,7 @@ Love, Schnookie</string>
 								<key>value</key>
 								<array>
 									<real>0.0</real>
-									<real>-7</real>
+									<real>7</real>
 									<integer>0</integer>
 									<integer>2</integer>
 									<integer>0</integer>
@@ -892,7 +893,7 @@ Love, Schnookie</string>
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ColorScheme/ButtonHome1.png</string>
+							<string>MyResources/ColorScheme/ButtonHome2.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -903,7 +904,7 @@ Love, Schnookie</string>
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ColorScheme/ButtonHome1.png</string>
+							<string>MyResources/ColorScheme/ButtonHome2.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -927,7 +928,7 @@ Love, Schnookie</string>
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ColorScheme/ButtonHome1.png</string>
+							<string>MyResources/ColorScheme/ButtonHome2.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -946,7 +947,7 @@ Love, Schnookie</string>
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>MyResources/ColorScheme/ButtonHome1.png</string>
+							<string>MyResources/ColorScheme/ButtonHome2.png</string>
 						</array>
 					</dict>
 					<dict>
