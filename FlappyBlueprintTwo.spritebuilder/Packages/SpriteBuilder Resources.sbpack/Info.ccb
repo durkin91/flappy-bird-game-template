@@ -51,7 +51,7 @@
 				<key>displayName</key>
 				<string>CCNodeGradient</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_gradientNode</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -1163,6 +1163,8 @@ as a child. Nikki xx</string>
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

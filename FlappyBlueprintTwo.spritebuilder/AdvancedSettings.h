@@ -32,6 +32,14 @@ static int const NUMBER_OF_COINS_BETWEEN_NOTES_EASY = 2;
 static int const NUMBER_OF_COINS_BETWEEN_NOTES_MEDIUM = 6;
 static int const NUMBER_OF_COINS_BETWEEN_NOTES_HARD = 6;
 
+//---------------------------------------------------------------------------
+/*
+ * Game Color Scheme
+ * If it is NOT a blue color scheme, it is a purple color scheme
+ */
+
+static BOOL IS_BLUE_COLOR_SCHEME = NO;
+
 
 //---------------------------------------------------------------------------
 /*

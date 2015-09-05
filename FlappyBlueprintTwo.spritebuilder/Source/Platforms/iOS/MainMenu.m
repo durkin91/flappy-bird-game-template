@@ -38,6 +38,7 @@
     CCNode *_darkOverlay;
     CCButton *_infoButton;
     SelectDifficultyPanel *_selectDifficultyPanel;
+    CCNodeGradient *_gradientNode;
 }
 
 - (void)didLoadFromCCB {
@@ -47,6 +48,10 @@
     _optionsMenu.delegate = self;
     
     [self animatePlayButton];
+    
+    //Set up gradient node with correct color scheme
+    _gradientNode.startColor = [Data startColorForGradientNode];
+    _gradientNode.endColor = [Data endColorForGradientNode];
     
 }
 

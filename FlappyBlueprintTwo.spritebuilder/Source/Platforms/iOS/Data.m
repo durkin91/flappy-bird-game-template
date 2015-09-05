@@ -8,6 +8,7 @@
 
 #import "Data.h"
 #import "Defaults.h"
+#import "AdvancedSettings.h"
 
 @implementation Data
 
@@ -51,5 +52,34 @@
     return allData;
 }
 
++ (CCColor *)startColorForGradientNode {
+    
+    CCColor *color;
+    
+    if (IS_BLUE_COLOR_SCHEME) {
+        color = [CCColor colorWithRed:178 / 255.0 green:187 / 255.0 blue:200 / 255.0];
+    }
+    else {
+        color = [CCColor colorWithRed:200 / 255.0 green:142 / 255.0 blue:198 / 255.0];
+    }
+    
+    return color;
+    
+}
+
++ (CCColor *)endColorForGradientNode {
+    
+    CCColor *color;
+    
+    if (IS_BLUE_COLOR_SCHEME) {
+        color = [CCColor colorWithRed:33 / 255.0 green:127 / 255.0 blue:204 / 255.0];
+    }
+    else {
+        color = [CCColor colorWithRed:89 / 255.0 green:149 / 255.0 blue:204 / 255.0];
+    }
+    
+    return color;
+    
+}
 
 @end

@@ -8,15 +8,20 @@
 
 #import "GiftInfo.h"
 #import "Options.h"
+#import "Data.h"
 
 @implementation GiftInfo {
     
     CCLabelBMFont *_messageLabel;
+    CCNodeGradient *_gradientNode;
 }
 
 - (void)didLoadFromCCB {
     
     _messageLabel.alignment = CCTextAlignmentCenter;
+    
+    _gradientNode.startColor = [Data startColorForGradientNode];
+    _gradientNode.endColor = [Data endColorForGradientNode];
     
 }
 

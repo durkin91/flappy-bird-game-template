@@ -31,12 +31,15 @@
 #import "Options.h"
 #import "GameOverWindow.h"
 #import "Note.h"
+#import "Data.h"
 
 void dispatch_after_delta(float delta, dispatch_block_t block){
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delta * NSEC_PER_SEC), dispatch_get_main_queue(), block);
 }
 
 @implementation Gameplay {
+    
+    CCNodeGradient *_gradientNode;
     
     CCPhysicsNode *_physicsNode;
     CCNode *_hero;
@@ -130,6 +133,9 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
 - (void) startGameWithScore:(int) theScore andCoins:(int) theCoins {
   
     [Options playBackgroundMusic];
+    
+    _gradientNode.startColor = [Data startColorForGradientNode];
+    _gradientNode.endColor = [Data endColorForGradientNode];
     
     _notePanel.visible = NO;
     _notePanel.delegate = self;

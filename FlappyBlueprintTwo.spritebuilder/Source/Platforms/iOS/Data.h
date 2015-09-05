@@ -11,5 +11,7 @@
 @interface Data : NSObject
 
 + (NSArray *)notesData;
++ (CCColor *)startColorForGradientNode;
++ (CCColor *)endColorForGradientNode;
 
 @end
