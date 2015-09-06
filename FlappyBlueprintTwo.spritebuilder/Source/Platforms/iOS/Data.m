@@ -56,7 +56,7 @@
     
     CCColor *color;
     
-    if (IS_BLUE_COLOR_SCHEME) {
+    if (IS_RED_COLOR_SCHEME) {
         color = [CCColor colorWithRed:178 / 255.0 green:187 / 255.0 blue:200 / 255.0];
     }
     else {
@@ -71,7 +71,7 @@
     
     CCColor *color;
     
-    if (IS_BLUE_COLOR_SCHEME) {
+    if (IS_RED_COLOR_SCHEME) {
         color = [CCColor colorWithRed:33 / 255.0 green:127 / 255.0 blue:204 / 255.0];
     }
     else {

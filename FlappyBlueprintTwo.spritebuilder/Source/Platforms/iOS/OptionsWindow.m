@@ -8,10 +8,13 @@
 
 #import "OptionsWindow.h"
 #import "Options.h"
+#import "AdvancedSettings.h"
 
 @implementation OptionsWindow {
     CCButton *_toggleSoundOnButton;
     CCButton *_toggleSoundOffButton;
+    CCSprite *_banner;
+    CCButton *_OKButton;
 }
 
 - (void)didLoadFromCCB {
@@ -26,6 +29,7 @@
         _toggleSoundOnButton.visible = YES;
         _toggleSoundOffButton.visible = NO;
     }
+    
 }
 
 - (void) toggleSoundOffButtonTapped {
