@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>14</integer>
+	<integer>16</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -386,7 +386,7 @@
 						<array>
 							<dict>
 								<key>UUID</key>
-								<integer>12</integer>
+								<integer>15</integer>
 								<key>baseClass</key>
 								<string>CCLabelBMFont</string>
 								<key>children</key>
@@ -394,9 +394,9 @@
 								<key>customClass</key>
 								<string></string>
 								<key>displayName</key>
-								<string>TEXT HERE</string>
+								<string>CCLabelBMFont</string>
 								<key>memberVarAssignmentName</key>
-								<string>_messageLabel</string>
+								<string></string>
 								<key>memberVarAssignmentType</key>
 								<integer>1</integer>
 								<key>properties</key>
@@ -417,10 +417,10 @@
 										<key>value</key>
 										<array>
 											<real>0.5</real>
-											<real>0.5</real>
+											<real>43</real>
 											<integer>0</integer>
 											<integer>2</integer>
-											<integer>2</integer>
+											<integer>0</integer>
 										</array>
 									</dict>
 									<dict>
@@ -475,10 +475,10 @@
 										<string>Text</string>
 										<key>value</key>
 										<array>
-											<string>Happy father's day! 
-I love you so so much. 
+											<string>Happy Father's Day!
 Thanks for not abusing me
-as a child. Nikki xx</string>
+as a child. Love you long
+time. Nikki xx</string>
 											<false/>
 										</array>
 									</dict>
@@ -1163,8 +1163,6 @@ as a child. Nikki xx</string>
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

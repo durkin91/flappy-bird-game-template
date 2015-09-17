@@ -123,8 +123,6 @@
 
 
 - (void) setupAppWithThirdPartyLibs {
-
-    NSLog(@"Notes Already Viewed BEFORE: %@", [[NSUserDefaults standardUserDefaults] objectForKey:NOTES_ALREADY_VIEWED]);
   
   // store
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goodBalanceChanged) name:EVENT_GOOD_BALANCE_CHANGED object:nil];
@@ -149,6 +147,8 @@
     // app already launched
   }
   else {
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:showTutorial];
+      
     [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:heroType];
     
     [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:theCurrentScore];

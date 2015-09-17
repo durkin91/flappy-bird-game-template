@@ -39,6 +39,8 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
 
 @implementation Gameplay {
     
+    CCSprite *_tutorial;
+    
     CCNodeGradient *_gradientNode;
     
     CCPhysicsNode *_physicsNode;
@@ -263,6 +265,22 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     _obstaclesSinceNote = 0;
     
     _cities = @[_city1, _city2];
+    
+    
+    //Setup tutorial if necessary
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:showTutorial] == YES) {
+        
+        _darkOverlay.visible = YES;
+        _darkOverlay.zOrder = GameplayZeeOrderContinuePanel;
+        
+        _tutorial.visible = YES;
+        _tutorial.zOrder = GameplayZeeOrderContinuePanel;
+    }
+    
+    else {
+        _darkOverlay.visible = NO;
+        _tutorial.visible = NO;
+    }
 }
 
 - (NSString*) heroName {
@@ -481,6 +499,11 @@ void dispatch_after_delta(float delta, dispatch_block_t block){
     
     if (!hasTouched) {
         // this is the first touch
+        
+        //Remove tutorial
+        _tutorial.visible = NO;
+        _darkOverlay.visible = NO;
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:showTutorial];
         
         // removing boostButtons
         _boostButton.visible = NO;

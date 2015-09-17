@@ -89,6 +89,8 @@
 
 //NSString *NEXTPEER_GAME_KEY;
 
+//Tutorial
+#define showTutorial @"Show Tutorial"
 
 // sound on off key
 #define kFXState @"FXState"
